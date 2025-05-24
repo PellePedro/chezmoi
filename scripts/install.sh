@@ -78,6 +78,14 @@ get_gopass() {
   chmod +x "$USER_BIN/gopass"
 }
 
+install_uv() {
+  log "Installing uv"
+  curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="$HOME/.local/bin" sh
+  uv venv --python 3.12 $HOME/.local/share/venv
+  source $HOME/.local/share/venv/bin/activate
+  uv pip install pyvim
+}
+
 run_chezmoi() {
   log "Running chezmoi"
   chezmoi init -y git@github.com:pellpedro/chezmoi.git
@@ -95,6 +103,7 @@ main() {
   get_age
   get_chezmoi
   get_gopass
+  install_uv
   # get_homebrew
   # run_chezmoi
   log "Dotfiles configured!"
