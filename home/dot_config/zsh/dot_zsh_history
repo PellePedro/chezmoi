@@ -1,0 +1,4184 @@
+exit
+nvim
+x
+nvim bookmarks.md
+x
+x
+nvim bookmarks.md
+exit
+nvim bookmarks.md
+exit
+nvim bookmarks.md
+exit
+pass -c rbc/bpelle
+exit
+make all
+exit
+pass -c rbc/bpelle
+z sky
+g
+make all
+make test
+make test
+killall python3
+ps aux
+ps aux | grep python3
+ps aux | grep python
+sudo killall python3
+k9s
+pass
+pass show claude/key 
+pass show claude/key | head -n 1
+pass show claude/key | head -n 1 | tr -d '\n'
+pass -c rbc/bpelle
+sudo nvim /etc/hosts
+g
+cd skyramp
+g
+make all
+ps aux | grep golangci-lint | grep -v grep | awk '{print $2}' | xargs kill -9
+make all
+nnn
+make worker
+make release-so
+rm -rf venv
+make pip-package-and-install
+source venv/bin/activate
+cd scripts/daily
+ls
+./test_adobe_aem.sh
+cd ../..
+make worker
+cd scripts/daily
+./test_adobe_aem.sh
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp version
+cd ../../
+make build-worker
+cd scripts/daily
+./test_adobe_aem.sh
+nnn
+./test_nasa_api.sh
+n
+g
+rm -rf venv
+deactivate
+make all
+cd ../..
+make all
+make build-worker
+make test
+make pip-package-and-install
+cd scripts/daily
+./test_nasa_api.sh
+./test_adobe_aem.sh
+docker rm $(docker ps -q -a) --force
+./test_adobe_aem.sh
+source ../../venv/bin/activate
+./test_adobe_aem.sh
+docker rm $(docker ps -q -a) --force
+./test_adobe_aem.sh
+git clone git@github.com:jherr/react-vs-solid-fight.git
+ls
+cd react-vs-solid-fight
+ls
+cd solid-ecommerce-finished
+npm install
+npm audit fix
+npm run dev
+curl skyramp.dev
+curl https://skyramp.dev
+curl -I https://skyramp.dev
+curl https://www.skyramp.dev/
+zellij attach mbp
+ssh rachzucco
+nnn
+ssh rachzucco
+pass -c rbc/bpelle
+pass -c rbc/bpelle
+g
+nnn
+docker ps
+docker rm $(docker ps -q -a) --force
+z sky
+pwd
+./.vscode/scripts/setup-debug-worker.sh
+g
+./.vscode/scripts/setup-debug-worker.sh
+g
+nnn
+pwd
+cd examples/v1/graphql
+rm -rf test.go tests
+go mod tidy
+go mod tidy
+go get github.com/testcontainers/testcontainers-go
+go get github.com/testcontainers/testcontainers-go/wait
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+go mod tidy
+go mod tidy
+go mod tidy
+nnn
+go test 
+go test 
+go test 
+go test 
+go test 
+go test 
+go test 
+go test 
+go test 
+cursor .
+docker compose up
+cat docker-compose.yml
+cat docker-compose.yml
+docker compose up
+docker compose up &
+docker compose ps
+docker compose up
+nnn
+zsh
+curl -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+    "metric": "skyramp.response.time.p99",\
+    "timestamp": TIMESTAMP,\
+    "value": 1.20,\
+    "tags": {\
+      "host": "HOSTNAME",\
+      "env": "ENVIRONMENT",\
+      "endpoint": "ENDPOINT"\
+    }\
+  }' \\
+  http://localhost:4242/api/put
+curl -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+    "metric": "skyramp.response.time.p99",\
+    "timestamp": TIMESTAMP,\
+    "value": 1.20,\
+    "tags": {\
+      "host": "HOSTNAME",\
+      "env": "ENVIRONMENT",\
+      "endpoint": "ENDPOINT"\
+    }\
+  }' \\
+  http://localhost:4242/api/put
+go mod init opentsb
+go mod tidy
+touch opentspdb_test.go
+cursor .
+nnn
+git clone git@github.com:PeterGrace/opentsdb-docker.git
+ls
+cd opentsdb-docker
+ls
+make build
+/git@github.com:PeterGrace/opentsdb-docker.git
+pwd
+nnn
+cp -r client-go client-go-1
+code .
+staticcheck .../.
+brew update staticcheck
+brew update formula staticcheck
+brew upgrade formula staticcheck
+brew upgrade formulae staticcheck
+cd ../skyramp
+git pull
+ls
+g
+staticcheck .../.
+staticcheck ./...
+pwd
+g
+make all
+export SKYRAMP=$HOME/git/letsramp/skyramp/bin/skyramp\
+$SKYRAMP tester generate rest --alias digitalocean \\
+  --port 443 \\
+  --address api.digitalocean.com  \\
+  --path /v2/apps/{id} \\
+  --api-schema https://raw.githubusercontent.com/digitalocean/openapi/main/specification/DigitalOcean-public.v2.yaml \\
+  --language python -f
+lazygit
+staticcheck ./...
+laxygit
+lazygit
+staticcheck ./...
+make all
+lazygit
+ssh rachzucco
+ls
+ls
+cd staging
+pwd
+ssh rachzucco
+nnn
+ssh rachzucco
+ssh rachzucco
+\
+q
+r 
+./.vscode/scripts/setup-debug-worker.sh
+./.vscode/scripts/setup-debug-worker.sh
+./.vscode/scripts/setup-debug-worker.sh
+s\
+
+g
+nnn
+ssh rachzucco
+ssh rachzucco
+ssh nuc
+ssh rachzucco
+nnn
+g
+cursor .
+pass -c rbc/bpelle
+nnn
+/usr/bin/python3 /Users/pedro/.vscode/extensions/ms-python.python-2024.14.1-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.vscode/extensions/ms-python.python-2024.14.1-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/usr/bin/python3 /Users/pedro/.vscode/extensions/ms-python.python-2024.14.1-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.vscode/extensions/ms-python.python-2024.14.1-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/usr/bin/python3 /Users/pedro/.vscode/extensions/ms-python.python-2024.14.1-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.vscode/extensions/ms-python.python-2024.14.1-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+g
+make all
+ps aux | grep golangci-lint | grep -v grep | awk '{print $2}' | xargs kill -9
+make all
+nvim
+./scripts/daily/test_nasa_api.sh
+nvim
+./scripts/daily/test_nasa_api.sh
+g
+make all
+g
+make all
+g
+make all
+g
+make all
+./scripts/daily/test_nasa_api.sh
+nnn
+./scripts/daily/test_nasa_api.sh
+nvim
+./scripts/daily/test_nasa_api.sh
+g
+make all
+nvim
+./scripts/daily/test_nasa_api.sh
+nvim
+g
+nnn 
+nv
+nvim
+./scripts/daily/test_nasa_api.sh
+nnn
+g
+make all
+ps aux | grep golangci-lint | grep -v grep | awk '{print $2}' | xargs kill -9
+make all
+nvim
+./scripts/daily/test_nasa_api.sh
+nvim
+./scripts/daily/test_nasa_api.sh
+g
+make all
+g
+make all
+g
+make all
+g
+make all
+./scripts/daily/test_nasa_api.sh
+nnn
+./scripts/daily/test_nasa_api.sh
+nvim
+./scripts/daily/test_nasa_api.sh
+g
+make all
+nvim
+./scripts/daily/test_nasa_api.sh
+nvim
+g
+nnn 
+nv
+nvim
+./scripts/daily/test_nasa_api.sh
+nnn
+./test_apple.sh
+vi test_apple.sh
+nnn
+./test_apple.sh
+nnn
+pushd ../..
+rm -rf venv
+make all
+make build-worker
+make release-so
+make pip-package-and-install
+source venv/bin/activate
+popd
+ls
+nvim ./test_apple.sh
+./test_apple.sh
+tail ./test_apple.sh
+docker inspect $(docker ps --filter "name=worker" --format "{{.ID}}") | jq '.[0].NetworkSettings.Networks[] | .Aliases'
+ docker inspect $(docker ps --filter "name=worker" --format "{{.ID}}")
+docker ps
+docker rm $(docker ps -q -a) --force
+docker volume prune
+docker container prune
+./test_apple.sh
+nvim ./test_apple.sh
+docker inspect $(docker ps --filter "name=worker" --format "{{.ID}}") | jq '.[0].NetworkSettings.Networks[] | .Aliases | index("apple")'
+docker inspect $(docker ps --filter "name=worker" --format "{{.ID}}") | jq '.[0].NetworkSettings.Networks[] | .Aliases | index("avple")'
+if docker inspect $(docker ps --filter "name=worker" --format "{{.ID}}") | jq '.[0].NetworkSettings.Networks[] | .Aliases' | grep -q "apple"; then\
+    echo "The alias 'apple' is present."\
+else\
+    echo "The alias 'apple' is not present."\
+fi
+nvim ./test_apple.sh
+nnn
+./test_apple.sh
+nnn
+nnn ~/dotfiles
+gpg --export-secret-keys ABCDEFG1234567 > my-private-key.asc
+gpg list
+gpg --help
+gpg -k
+gpg --export-secret-keys keyboxd  > my-private-key.asc
+gpg --list-keys
+gpg --export-secret-keys 0021A9FDC6006864B15FD4C20E70BA6FCD0A3F3F > my-private-key.asc
+ls
+rsync my-private-key.asc imac:~/dotfiles
+scp my-private-key.asc imac:~/dotfiles
+ls
+ping imac
+ssh imac
+ssh rachzucco
+scp my-private-key.asc rachzucco:~/dotfiles
+ifconfig
+ls -al
+cd ..
+ls .password-store
+ls -al .password-store
+rsync ~/.password-store rachzucco:/home/pedro/.password-store
+rsync -avh ~/.password-store rachzucco:/home/pedro/.password-store
+rsync -avh ~/.password-store rachzucco:/home/pedro/
+pass git init
+### pass git add .\
+
+pass git ad .
+pass git add .
+pass git commit -m "Initial commit"
+pwd
+cd .password-store
+pass git add .
+pass git commit -m "Initial commit"
+lazygit
+brew install git-remote-gcrypt
+z skyramp
+g
+r
+nvim
+./scripts/v1/run_all.sh
+g
+nnn
+nnn examples/v1/staging-crud-dir
+nvim
+./scripts/v1/run_all.sh
+nvim
+./scripts/v1/run_all.sh
+nvim
+nnn
+./scripts/v1/run_all.sh
+pwd
+touch breakpoint.md
+vi breakpoint.md
+nnn
+make all
+vi Makefile
+make all
+nnn
+g
+./scripts/v1/run_all.sh
+nnn
+nvim
+./scripts/v1/run_all.sh
+pwd
+cd scripts/daily
+./test_poke.sh
+git add .
+g
+nnn
+./test_apple.sh
+g
+make all
+pushd ../..
+make all
+make all
+nnn
+g
+nnn
+z sky
+./.vscode/scripts/setup-debug-worker.sh
+./.vscode/scripts/setup-debug-worker.sh
+./.vscode/scripts/setup-debug-worker.sh
+ls bin
+nnn
+./test_platform.sh
+open .
+nnn
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+ls
+cd ..
+skyramp mocker apply mocks/helloworld_chain --address localhost:45555
+skyramp mocker apply mocks/helloworld_chain --address localhost:45555
+skyramp mocker apply mocks/helloworld_chain --address localhost:45555
+skyramp mocker apply mocks/helloworld_chain --address 127.0.0.1:45555
+ls tests
+skyramp tester start test-chain --address 127.0.0.1:45555
+skyramp tester start test-chain --address 127.0.0.1:45555
+c
+g
+nnn
+open .
+g
+make all
+cd ..
+mv test_nasa tn
+make all
+g
+make all
+./scripts/daily/test_nasa_api.sh
+nnn
+g
+make release
+g
+g
+make release
+nvim pkg/creator/rest.go +95
+make release
+g
+make release
+nnn
+npm install solid-js @solidjs/router
+npm create vite@latest my-solid-shop -- --template solid\
+cd my-solid-shop
+z sky
+zellij attach mbp
+nnn
+z sky
+nnn
+npm run dev
+go test
+cd pkg/mgmtplane
+go test
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+npm create vite@latest my-store -- --template solid-ts\
+cd my-store\
+npm install
+cursor .
+npm install @solidjs/router solid-icons @solid-primitives/storage
+npm install @solid-auth/google
+pass -c rbc/bpelle
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp deployer --help
+skyramp dashboard --help
+cd
+cd git
+cd cursor
+cursor .
+nnn
+npm nistall
+pwd
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ls
+cursor .
+cursor .
+x
+npm run dev
+npm install
+npm run dev
+npm run dev
+npm run dev
+npm install
+npm run dev
+npm install
+npm install
+npm run dev
+npm run dev
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+curl -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '[\
+    {\
+      "metric": "test.p90",\
+      "timestamp": 1697520510,\
+      "value": 123.45,\
+      "tags": {\
+        "host": "test-host",\
+        "env": "test"\
+      }\
+    },\
+    {\
+      "metric": "test.p95",\
+      "timestamp": 1697520510,\
+      "value": 200.15,\
+      "tags": {\
+        "host": "test-host",\
+        "env": "prod"\
+      }\
+    },\
+    {\
+      "metric": "test.p99",\
+      "timestamp": 1697520510,\
+      "value": 300.50,\
+      "tags": {\
+        "host": "test-host",\
+        "env": "prod"\
+      }\
+    }\
+  ]' \\
+  http://127.0.0.1:4242/api/put
+nnn 
+./push-tsdc.sh
+sudo ngrep -d lo -W byline port 4242
+brew install ngrep
+sudo ngrep -d lo -W byline port 4242
+sudo ngrep -d 127.0.0.1 -W byline port 4242
+sudo ngrep -d 127.0.0.1 -W byline port 4242
+lo: No such device exists (No such device exists): Device not configured
+sudo ngrep -d lo0 -W byline port 4242
+cd ../..
+cd ..
+nvim
+pass -c rbc/bpelle
+pwd
+z sky
+mkdir doc
+touch doc/mocker.mf
+rm doc/mocker.mf doc/mocker.md
+nnn
+docker up opentsdb
+docker compose up opentsdb
+docker compose up opentsdb
+./test_all_daily.sh
+./test_all_daily.sh
+pushd ../..
+make all
+make build-worker
+popd
+./test_all_daily.sh
+pushd ../..
+r
+make release-so
+make pip-package-and-install
+source ../../venv/bin/activate
+popd
+./test_all_daily.sh
+docker rm $(docker ps -q -a) --force
+./test_all_daily.sh
+source ../../venv/bin/activate
+docker rm $(docker ps -q -a) --force
+./test_all_daily.sh
+docker rm $(docker ps -q -a) --force
+./test_all_daily.sh
+docker rm $(docker ps -q -a) --force
+./test_all_daily.sh
+./test_all_daily.sh
+./test_all_daily.sh
+ls
+ls
+rm -rf tests
+./test_all_daily.sh
+./test_all_daily.sh
+nnn
+cd ../../
+./scripts/daily/test_all_daily.sh
+nnn
+./scripts/daily/test_all_daily.sh
+nnn
+./scripts/daily/test_all_daily.sh
+g
+ls
+g
+g
+g
+go mod tidy
+nnn
+./.vscode/scripts/setup-debug-worker.sh
+curl -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '[\
+    {\
+      "metric": "test.p90",\
+      "timestamp": 1697520510,\
+      "value": 123.45,\
+      "tags": {\
+        "host": "test-host",\
+        "env": "test"\
+      }\
+    },\
+    {\
+      "metric": "test.p95",\
+      "timestamp": 1697520510,\
+      "value": 200.15,\
+      "tags": {\
+        "host": "test-host",\
+        "env": "prod"\
+      }\
+    },\
+    {\
+      "metric": "test.p99",\
+      "timestamp": 1697520510,\
+      "value": 300.50,\
+      "tags": {\
+        "host": "test-host",\
+        "env": "prod"\
+      }\
+    }\
+  ]' \\
+  http://127.0.0.1:4242/api/put
+./.vscode/scripts/setup-debug-worker.sh
+./.vscode/scripts/setup-debug-worker.sh
+nvim
+nvim
+nnn .vscode/dockerfiles/docker-debug
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/bin/bash
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ps 
+ps aux | grep gopls | grep -v grep | awk '{print $2}' | xargs kill -9
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp dashboard --help
+nnn
+curl -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+        "start": "1h-ago",\
+        "queries": [\
+          {\
+            "aggregator": "sum",\
+            "metric": "skyramp.p99.metric",\
+            "tags": {\
+              "host": "golang_app",\
+              "env": "development"\
+            }\
+          }\
+        ]\
+      }' \\
+  http://localhost:4242/api/query
+curl -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+        "start": "1h-ago",\
+        "queries": [\
+          {\
+            "aggregator": "sum",\
+            "metric": "skyramp.p99.metric",\
+            "tags": {\
+              "host": "golang_app",\
+              "env": "development"\
+            }\
+          }\
+        ]\
+      }' \\
+  http://127.0.0.1:4242/api/query
+curl -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+        "start": "1h-ago",\
+        "queries": [\
+          {\
+            "aggregator": "sum",\
+            "metric": "skyramp.p99.metric",\
+            "tags": {\
+              "host": "golang_app",\
+              "env": "development"\
+            }\
+          }\
+        ]\
+      }' \\
+  http://127.0.0.1:4242/api/put
+curl http://localhost:4242
+curl http://127.0.0.1:4242
+curl -i http://localhost:4242
+curl -i http://localhost:4242/api/put
+curl -i -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+        "start": "1h-ago",\
+        "queries": [\
+          {\
+            "aggregator": "sum",\
+            "metric": "skyramp.p99.metric",\
+            "tags": {\
+              "host": "worker",\
+              "env": "development"\
+            }\
+          }\
+        ]\
+      }' \\
+  http://localhost:4242/api/put
+curl -i -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+        "start": "1h-ago",\
+        "queries": [\
+          {\
+            "aggregator": "sum",\
+            "metric": "skyramp.p99.metric",\
+			"details": "sample"\
+            "tags": {\
+              "host": "worker",\
+              "env": "development"\
+            }\
+          }\
+        ]\
+      }' \\
+  http://localhost:4242/api/put
+curl -i -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+        "start": "1h-ago",\
+        "queries": [\
+          {\
+            "aggregator": "sum",\
+            "metric": "skyramp.p99.metric",\
+			"details": "sample"\
+            "tags": {\
+              "host": "worker",\
+              "env": "development"\
+            }\
+          }\
+        ]\
+      }' \\
+  http://127.0.0.1:4242/api/put
+curl -i -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+        "start": "1h-ago",\
+        "queries": [\
+          {\
+            "aggregator": "sum",\
+            "metric": "skyramp.p99.metric",\
+            "tags": {\
+              "host": "worker",\
+              "env": "development"\
+            }\
+          }\
+        ]\
+      }' \\
+  http://localhost:4242/api/put
+curl -i -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+        "start": "1h-ago",\
+        "queries": [\
+          {\
+            "aggregator": "sum",\
+            "metric": "skyramp.p99.metric",\
+            "tags": {\
+              "host": "worker",\
+              "env": "development"\
+            }\
+          }\
+        ]\
+      }' \\
+  http://localhost:4242/api/put
+curl -i -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+        "start": "1h-ago",\
+        "queries": [\
+          {\
+            "aggregator": "sum",\
+            "metric": "skyramp.p99.metric",\
+            "tags": {\
+              "host": "worker",\
+              "env": "development"\
+            }\
+          }\
+        ]\
+      }' \\
+  http://localhost:4242/api/put
+curl -i -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+        "start": "1h-ago",\
+        "queries": [\
+          {\
+            "aggregator": "sum",\
+            "metric": "skyramp.p99.metric",\
+            "tags": {\
+              "host": "worker",\
+              "env": "development"\
+            }\
+          }\
+        ]\
+      }' \\
+  http://localhost:4242/api/put
+curl -i -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+        "start": "1h-ago",\
+        "queries": [\
+          {\
+            "aggregator": "sum",\
+            "metric": "skyramp.p99.metric",\
+			"details": "sample"\
+            "tags": {\
+              "host": "worker",\
+              "env": "development"\
+            }\
+          }\
+        ]\
+      }' \\
+  http://localhost:4242/api/put
+curl -i -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+        "start": "1h-ago",\
+        "queries": [\
+          {\
+            "aggregator": "sum",\
+            "metric": "skyramp.p99.metric",\
+			"details": "sample",\
+            "tags": {\
+              "host": "worker",\
+              "env": "development"\
+            }\
+          }\
+        ]\
+      }' \\
+  http://localhost:4242/api/put
+curl -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '[\
+    {\
+      "metric": "test.p90",\
+      "timestamp": 1697520510,\
+      "value": 123.45,\
+      "tags": {\
+        "host": "test-host",\
+        "env": "test"\
+      }\
+    },\
+    {\
+      "metric": "test.p95",\
+      "timestamp": 1697520510,\
+      "value": 200.15,\
+      "tags": {\
+        "host": "test-host",\
+        "env": "prod"\
+      }\
+    },\
+    {\
+      "metric": "test.p99",\
+      "timestamp": 1697520510,\
+      "value": 300.50,\
+      "tags": {\
+        "host": "test-host",\
+        "env": "prod"\
+      }\
+    }\
+  ]' \\
+  http://127.0.0.1:4242/api/put
+curl -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '[\
+    {\
+      "metric": "skyramp.p90",\
+      "timestamp": 1697520510,\
+      "value": 123.45,\
+      "tags": {\
+        "host": "worker",\
+        "env": "test"\
+      }\
+    },\
+    {\
+      "metric": "test.p95",\
+      "timestamp": 1697520510,\
+      "value": 200.15,\
+      "tags": {\
+        "host": "worker",\
+        "env": "prod"\
+      }\
+    },\
+    {\
+      "metric": "test.p99",\
+      "timestamp": 1697520510,\
+      "value": 300.50,\
+      "tags": {\
+        "host": "worker",\
+        "env": "prod"\
+      }\
+    }\
+  ]' \\
+  http://127.0.0.1:4242/api/put
+curl -G "http://127.0.0.1:4242/api/query" \\
+    --data-urlencode "start=1697520510" \\
+    --data-urlencode "end=1697520515" \\
+    --data-urlencode "m=sum:skyramp.p90{host=worker,env=test}" \\
+    --data-urlencode "m=sum:test.p95{host=worker,env=prod}" \\
+    --data-urlencode "m=sum:test.p99{host=worker,env=prod}"
+curl -G "http://127.0.0.1:4242/api/query" \\
+    --data-urlencode "start=1697520510" \\
+    --data-urlencode "end=1697520515" \\
+    --data-urlencode "m=sum:skyramp.p90{host=worker,env=test}" \\
+    --data-urlencode "m=sum:test.p95{host=worker,env=prod}" \\
+    --data-urlencode "m=sum:test.p99{host=worker,env=prod}" |jq .
+curl -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '[\
+    {\
+      "metric": "skyramp.p90",\
+      "timestamp": 1697520510,\
+      "value": 123.45,\
+      "tags": {\
+        "host": "worker",\
+        "env": "test"\
+      }\
+    },\
+    {\
+      "metric": "test.p95",\
+      "timestamp": 1697520510,\
+      "value": 200.15,\
+      "tags": {\
+        "host": "worker",\
+        "env": "prod"\
+      }\
+    },\
+    {\
+      "metric": "test.p99",\
+      "timestamp": 1697520510,\
+      "value": 300.50,\
+      "tags": {\
+        "host": "worker",\
+        "env": "prod"\
+      }\
+    }\
+  ]' \\
+  http://127.0.0.1:4242/api/put
+curl -G "http://127.0.0.1:4242/api/query" \\
+    --data-urlencode "start=1697520510" \\
+    --data-urlencode "end=1697520515" \\
+    --data-urlencode "m=sum:skyramp.p90{host=worker,env=test}" \\
+    --data-urlencode "m=sum:test.p95{host=worker,env=prod}" \\
+    --data-urlencode "m=sum:test.p99{host=worker,env=prod}"
+curl -G "http://127.0.0.1:4242/api/query" \\
+    --data-urlencode "start=1697520510" \\
+    --data-urlencode "end=1697520515" \\
+    --data-urlencode "m=sum:skyramp.p90{host=worker,env=test}" \\
+    --data-urlencode "m=sum:test.p95{host=worker,env=prod}" \\
+    --data-urlencode "m=sum:test.p99{host=worker,env=prod}"
+curl -G "http://127.0.0.1:4242/api/query" \\
+    --data-urlencode "start=1697520510" \\
+    --data-urlencode "end=1697520515" \\
+    --data-urlencode "m=sum:skyramp.p90{host=worker,env=test}" \\
+    --data-urlencode "m=sum:test.p95{host=worker,env=prod}" \\
+    --data-urlencode "m=sum:test.p99{host=worker,env=prod}" | jq .
+ls
+z sky
+nnn
+cursor .
+nnn
+cursor .
+curl http://localhost:5173
+curl -i http://localhost:5173
+nnn
+z sky
+nvim
+nnn
+cursor .
+cursor .
+ls
+ls
+npm install
+npm run dev
+cursor .
+sudo ngrep -d 127.0.0.1 -W byline port 4242
+sudo ngrep -d lo0 -W byline port 4242
+code .
+cursor .
+nnn
+curl -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '[\
+    {\
+      "metric": "skyramp.p90",\
+      "timestamp": 1697520510,\
+      "value": 123.45,\
+      "tags": {\
+        "host": "worker",\
+        "env": "test"\
+      }\
+    },\
+    {\
+      "metric": "test.p95",\
+      "timestamp": 1697520510,\
+      "value": 200.15,\
+      "tags": {\
+        "host": "worker",\
+        "env": "prod"\
+      }\
+    },\
+    {\
+      "metric": "test.p99",\
+      "timestamp": 1697520510,\
+      "value": 300.50,\
+      "tags": {\
+        "host": "worker",\
+        "env": "prod"\
+      }\
+    }\
+  ]' \\
+  http://127.0.0.1:4242/api/put
+curl -G "http://127.0.0.1:4242/api/query" \\
+    --data-urlencode "start=1697520510" \\
+    --data-urlencode "end=1697520515" \\
+    --data-urlencode "m=sum:skyramp.p90{host=worker,env=test}" \\
+    --data-urlencode "m=sum:test.p95{host=worker,env=prod}" \\
+    --data-urlencode "m=sum:test.p99{host=worker,env=prod}" | jq .
+nnn
+npm install
+pass -c rbc/bpelle
+pass show rbc/bpelle
+nnn
+/bin/bash
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/usr/bin/python3 /Users/pedro/.vscode/extensions/ms-python.python-2024.16.1-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.vscode/extensions/ms-python.python-2024.16.1-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/usr/bin/python3 /Users/pedro/.vscode/extensions/ms-python.python-2024.16.1-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.vscode/extensions/ms-python.python-2024.16.1-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+npm run dev
+npm install
+npm run dev
+npm install -g npm-check-updates
+ncu
+ncu -u
+g
+npm install
+x
+git clone git@github.com:letsramp/sample-microservices.git
+cd sample-microservices
+nnn
+x
+ncu
+ncu -u
+git add package.json
+g
+npm install
+x
+rg npm-protobufjs
+rg npm-ws
+rg npm-semver
+rg npm-body-parser
+rg pip-grpcio
+rg pip-protobuf
+x
+python3 -m pip install --upgrade pip
+pip install --upgrade -r requirements.txt
+x
+docker compose build recommendationservice
+x
+docker images
+docker ps
+docker ps -a
+docker ps 
+docker network ls
+docker run -it alpine:latest ash
+z sky
+g
+nnn
+docker compose build emailservice
+g
+docker compose build emailservice
+nnn
+cd ../
+ls
+docker compose build emailservice
+cd emailservice
+source venv/bin/activate
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade -r requirements.txt
+python --version
+nnn
+pip install --upgrade -r requirements.txt
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade -r requirements.txt
+python3 -m pip install --upgrade pip
+pip install --upgrade -r requirements.txt
+nnn
+pass -c rbc/bpelle
+g
+rm -rf ~/go/pkg/mod/
+sudo rm -rf ~/go/pkg/mod/
+pwd
+go mod download
+cd skyramp
+go mod download
+make all
+curl -G "http://127.0.0.1:4242/api/query" \\
+    --data-urlencode "start=1697520510" \\
+    --data-urlencode "end=1697520515" \\
+    --data-urlencode "m=sum:skyramp.p90{host=worker,env=test}" \\
+    --data-urlencode "m=sum:test.p95{host=worker,env=prod}" \\
+    --data-urlencode "m=sum:test.p99{host=worker,env=prod}" | jq .
+curl -G "http://127.0.0.1:4242/api/query" \\
+    --data-urlencode "start=1h-ago" \\
+    --data-urlencode "m=avg:"tsdbtest-0.avg_latency"{host=worker,env=test}"
+curl -G "http://127.0.0.1:4242/api/query" \\
+    --data-urlencode "start=1h-ago" \\
+    --data-urlencode "m=avg:tsdbtest-0.avg_latency{host=worker,env=test}"
+curl -G "http://127.0.0.1:4242/api/suggest" \\
+    --data-urlencode "type=metrics" \\
+    --data-urlencode "q=tsdbtest-p" \\
+    --data-urlencode "max=10"
+curl -G "http://127.0.0.1:4242/api/suggest" \\
+    --data-urlencode "type=metrics" \\
+    --data-urlencode "q=tsdbtest" \\
+    --data-urlencode "max=10"
+curl -G "http://127.0.0.1:4242/api/query" \\
+    --data-urlencode "start=1h-ago" \\
+    --data-urlencode "m=avg:tsdbtest.p0.avg_latency{host=worker,env=test}"
+curl -G "http://127.0.0.1:4242/api/query" \\
+    --data-urlencode "start=1h-ago" \\
+    --data-urlencode "m=avg:tsdbtest.p0.avg_latency"
+nvim
+nvim
+g
+nnn
+nnn
+git clone git@github.com:traefik/traefik.git
+nnn
+docker compose build emailservice
+x
+go get -u ./...
+go mod tidy
+x
+go get -u ./...
+x
+cursor .
+x
+g
+x
+nnn
+g
+exit
+g
+x
+n
+rm -rf loadgenerator
+g
+nnn
+git clone git@github.com:cequoi-ca/sample-microservices.git
+g
+cd sample-microservices
+nnn
+bbb
+nnn
+/bin/bash
+nnn
+vi ~/.gitignore
+/bin/bash
+make -n
+make -n all
+make --dry-run all
+make --dry-run build-worker
+g
+cd
+nvim .gitignore
+go get github.com/testcontainers/testcontainers-go/modules/compose
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+curl -X -v POST \\
+  -H "Content-Type: application/json" \\
+  -d '[{"metric":"test.0.rps","timestamp":1729868557,"value":892,"tags":{"duration":"1s"}},{"metric":"test.0.error_rate","timestamp":1729868557,"value":0,"tags":{"duration":"1s"}},{"metric":"test.0.avg_latency","timestamp":1729868557,"value":2953754,"tags":{"duration":"1s"}},{"metric":"test.p0.s0.count","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.executed","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.fail","timestamp":1729868557,"value":0,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.avg_latency","timestamp":1729868557,"value":0.001664269,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.max_latency","timestamp":1729868557,"value":0.052782678,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.min_latency","timestamp":1729868557,"value":0.00037449,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.l90th_latency","timestamp":1729868557,"value":0.001833235,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.l95th_latency","timestamp":1729868557,"value":0.002395122,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.l99th_latency","timestamp":1729868557,"value":0.028464124,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.count","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.executed","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.fail","timestamp":1729868557,"value":0,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.avg_latency","timestamp":1729868557,"value":0.002643062,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.max_latency","timestamp":1729868557,"value":0.054483353,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.min_latency","timestamp":1729868557,"value":0.000842782,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.l90th_latency","timestamp":1729868557,"value":0.00340227,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.l95th_latency","timestamp":1729868557,"value":0.004544232,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.l99th_latency","timestamp":1729868557,"value":0.029142459,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s1.count","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s1.executed","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s1.fail","timestamp":1729868557,"value":0,"tags":{"host":"localhost:45555"}}]' \\
+  http://127.0.0.1:4242/api/put
+curl -v -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '[{"metric":"test.0.rps","timestamp":1729868557,"value":892,"tags":{"duration":"1s"}},{"metric":"test.0.error_rate","timestamp":1729868557,"value":0,"tags":{"duration":"1s"}},{"metric":"test.0.avg_latency","timestamp":1729868557,"value":2953754,"tags":{"duration":"1s"}},{"metric":"test.p0.s0.count","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.executed","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.fail","timestamp":1729868557,"value":0,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.avg_latency","timestamp":1729868557,"value":0.001664269,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.max_latency","timestamp":1729868557,"value":0.052782678,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.min_latency","timestamp":1729868557,"value":0.00037449,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.l90th_latency","timestamp":1729868557,"value":0.001833235,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.l95th_latency","timestamp":1729868557,"value":0.002395122,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.l99th_latency","timestamp":1729868557,"value":0.028464124,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.count","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.executed","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.fail","timestamp":1729868557,"value":0,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.avg_latency","timestamp":1729868557,"value":0.002643062,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.max_latency","timestamp":1729868557,"value":0.054483353,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.min_latency","timestamp":1729868557,"value":0.000842782,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.l90th_latency","timestamp":1729868557,"value":0.00340227,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.l95th_latency","timestamp":1729868557,"value":0.004544232,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.l99th_latency","timestamp":1729868557,"value":0.029142459,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s1.count","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s1.executed","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s1.fail","timestamp":1729868557,"value":0,"tags":{"host":"localhost:45555"}}]' \\
+  http://127.0.0.1:4242/api/put
+curl -v POST \\
+  -H "Content-Type: application/json" \\
+  -d '[{"metric":"test.0.rps","timestamp":1729868557,"value":892,"tags":{"duration":"1s"}},{"metric":"test.0.error_rate","timestamp":1729868557,"value":0,"tags":{"duration":"1s"}},{"metric":"test.0.avg_latency","timestamp":1729868557,"value":2953754,"tags":{"duration":"1s"}},{"metric":"test.p0.s0.count","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.executed","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.fail","timestamp":1729868557,"value":0,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.avg_latency","timestamp":1729868557,"value":0.001664269,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.max_latency","timestamp":1729868557,"value":0.052782678,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.min_latency","timestamp":1729868557,"value":0.00037449,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.l90th_latency","timestamp":1729868557,"value":0.001833235,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.l95th_latency","timestamp":1729868557,"value":0.002395122,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.l99th_latency","timestamp":1729868557,"value":0.028464124,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.count","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.executed","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.fail","timestamp":1729868557,"value":0,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.avg_latency","timestamp":1729868557,"value":0.002643062,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.max_latency","timestamp":1729868557,"value":0.054483353,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.min_latency","timestamp":1729868557,"value":0.000842782,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.l90th_latency","timestamp":1729868557,"value":0.00340227,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.l95th_latency","timestamp":1729868557,"value":0.004544232,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.l99th_latency","timestamp":1729868557,"value":0.029142459,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s1.count","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s1.executed","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s1.fail","timestamp":1729868557,"value":0,"tags":{"host":"localhost:45555"}}]' \\
+  http://127.0.0.1:4242/api/put
+curl -X POST \\
+  -H "Content-Type: application/json" \\
+  -d '[{"metric":"test.0.rps","timestamp":1729868557,"value":892,"tags":{"duration":"1s"}},{"metric":"test.0.error_rate","timestamp":1729868557,"value":0,"tags":{"duration":"1s"}},{"metric":"test.0.avg_latency","timestamp":1729868557,"value":2953754,"tags":{"duration":"1s"}},{"metric":"test.p0.s0.count","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.executed","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.fail","timestamp":1729868557,"value":0,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.avg_latency","timestamp":1729868557,"value":0.001664269,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.max_latency","timestamp":1729868557,"value":0.052782678,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.min_latency","timestamp":1729868557,"value":0.00037449,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.l90th_latency","timestamp":1729868557,"value":0.001833235,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.l95th_latency","timestamp":1729868557,"value":0.002395122,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s0.l99th_latency","timestamp":1729868557,"value":0.028464124,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.count","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.executed","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.fail","timestamp":1729868557,"value":0,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.avg_latency","timestamp":1729868557,"value":0.002643062,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.max_latency","timestamp":1729868557,"value":0.054483353,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.min_latency","timestamp":1729868557,"value":0.000842782,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.l90th_latency","timestamp":1729868557,"value":0.00340227,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.l95th_latency","timestamp":1729868557,"value":0.004544232,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.l99th_latency","timestamp":1729868557,"value":0.029142459,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s1.count","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s1.executed","timestamp":1729868557,"value":1500,"tags":{"host":"localhost:45555"}},{"metric":"test.p0.s1.fail","timestamp":1729868557,"value":0,"tags":{"host":"localhost:45555"}}]' \\
+  http://127.0.0.1:4242/api/put
+z skyramp
+nnn
+pass -c rbc/bpelle
+pwd
+pass -c rbc/bpelle
+zellij attach mbp
+ssh rachzucco
+0;27;11m
+ssh rachzucco
+0;76;12M32;76;12M0;76;12m
+ssh rachzucco
+ssh rachzucco
+ssh imac
+ssh imac
+z sky
+nnn
+brew uninstall gpg
+brew uninstall pass
+brew uninstall pass
+brew uninstall gpg
+brew uninstall --force pinentry
+brew uninstall --force libksba
+brew uninstall --force libassuan
+x
+exit
+g
+exit
+git add .
+g
+nnn
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp version
+x
+ssh rachzucco
+ssh rachzucco
+64;29;20M
+ssh rachzucco
+35;21;1M35;22;1M35;23;1M35;24;1M35;25;1M35;26;1M35;26;2M35;27;2M35;28;3M35;29;3M35;30;4M35;31;4M35;32;5M35;33;6M35;34;6M35;35;7M35;36;7M35;37;8M35;38;9M35;39;10M35;40;10M35;41;11M35;42;11M35;42;12M35;43;12M35;43;13M35;44;13M
+ssh rachzucco
+make build-worker
+pushd ../../..
+make build-worker
+make build-worker
+docker images
+kind load docker-image ${WORKER_URL}:${WORKER_TAG} --name skyramp-local-kind-cluster
+SKYRAMP=${HOME}/git/letsramp/skyramp/bin/skyramp\
+WORKER_URL=$($SKYRAMP version | grep "Worker Repo" | awk '{print $4}')\
+WORKER_TAG=$($SKYRAMP version | grep "Worker Tag" | awk '{print $4}')
+kind load docker-image ${WORKER_URL}:${WORKER_TAG} --name skyramp-local-kind-cluster
+helm install my-worker skyramp/worker --namespace skyramp --create-namespace --setimage.repository=${WORKER_URL} --set image.tag=${WORKER_TAG} 
+helm install my-worker skyramp/worker --namespace skyramp --create-namespace --set image.repository=${WORKER_URL} --set image.tag=${WORKER_TAG} 
+kubectl get ns
+kubectl get pod -n skyramp
+kubectl delete ns skyramp
+helm install my-worker skyramp/worker --namespace worker --create-namespace --set image.repository=${WORKER_URL} --set image.tag=${WORKER_TAG} 
+kubectl get ns
+kubectl get pods -n worker
+x
+rsync -avh ~/.password-store imac:/Users/pedro/
+rsync my-private-key.asc imac:~/dotfiles
+brew unistall gpg
+brew remove gpg
+brew remove gpgme, pass , pass-otp
+brew remove gpg
+brew remove pass , pass-otp
+brew remove pass 
+brew remove gpgme 
+brew remove pass-otp
+brew remove gpg
+ls
+vi compose.yaml
+z sky
+cd examples
+cd v1/rest
+ls
+cat targets/demo.yaml
+ls targets
+cat targets/echo.yaml
+kind
+kind get clusters
+kind delete cluster --name skyramp-debug
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp cluster create -l
+cp ~/.skyramp/kind-cluster.kubeconfig ~/.kube/config
+kindd get clusters
+kind get clusters
+WORKER_URL=$($SKYRAMP version | grep "Worker Repo" | awk '{print $4}')\
+WORKER_TAG=$($SKYRAMP version | grep "Worker Tag" | awk '{print $4}')
+bash
+SKYRAMP=${HOME}/git/letsramp/skyramp/bin/skyramp\
+WORKER_URL=$($SKYRAMP version | grep "Worker Repo" | awk '{print $4}')\
+WORKER_TAG=$($SKYRAMP version | grep "Worker Tag" | awk '{print $4}')
+env
+kind load docker-image ${WORKER_URL}:${WORKER_TAG}  --name <cluster-name>\
+
+kind load docker-image ${WORKER_URL}:${WORKER_TAG} --name skyramp-local-kind-cluster
+pushd ../../..
+make all
+popd
+kind load docker-image ${WORKER_URL}:${WORKER_TAG} --name skyramp-local-kind-cluster
+pushd ../../..
+make build-worker
+x
+helm uninstall my-opentspdb - skyramp
+helm uninstall my-opentpdb - skyramp
+helm list -n skyramp
+helm uninstall my-opentsdb - skyramp
+helm uninstall my-opentsdb -n skyramp
+helm install opentsdb skyramp/opentsdb --namespace skyramp --create-namespace 
+helm install opentsdb .  --namespace skyramp --create-namespace 
+kubectl get svc -n skyramp
+LAST DEPLOYED: Thu Oct 31 18:49:04 2024
+exit
+docker build -t my-opentsdb .
+exit
+cat docker-compose.yaml
+docker compose up opentsdb
+nnn
+exit
+docker build -t my-opentsdb .
+nnn Dockerfile
+docker build -t my-opentsdb .
+docker run -it openjdk:24-slim-bookworm bash
+docker run -it openjdk:24-slim-bookworm bash
+docker run -it openjdk:24-slim-bookworm bash
+docker run -it openjdk:11-jre-slim bash
+exit
+docker builder prune
+docker build -t my-opentsdb .
+docker builder prune
+docker build -t my-opentsdb .
+nvim Dockerfile
+docker build -t my-opentsdb .
+nvim Dockerfile
+nvim Makefile
+nvim Dockerfile
+xxx
+exit
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp tester start test-load --address localhost:45555
+curl -G "http://127.0.0.1:14242/api/suggest" \\
+    --data-urlencode "type=metrics" \\
+    --data-urlencode "q=test.p" \\
+    --data-urlencode "max=10"
+curl -G "http://127.0.0.1:14242/api/suggest" \\
+    --data-urlencode "type=metrics" \\
+    --data-urlencode "q=test.p" \\
+    --data-urlencode "max=10"
+netatat -al
+netstat -al
+netatat -al
+curl -G "http://localhost:14242/api/suggest" \\
+    --data-urlencode "type=metrics" \\
+    --data-urlencode "q=test.p" \\
+    --data-urlencode "max=10"
+curl -G "http://127.0.0.1:14242/api/suggest" \\
+    --data-urlencode "type=metrics" \\
+    --data-urlencode "q=test" \\
+    --data-urlencode "max=10"
+curl -G "http://127.0.0.1:14242/api/suggest" \\
+    --data-urlencode "type=metrics" \\
+    --data-urlencode "q=test" \\
+    --data-urlencode "max=10"
+curl -G "http://127.0.0.1:14242/api/suggest" \\
+    --data-urlencode "type=metrics" \\
+    --data-urlencode "q=test" \\
+    --data-urlencode "max=10"
+curl -G "http://localhost:14242/api/suggest" \\
+    --data-urlencode "type=metrics" \\
+    --data-urlencode "q=test.p" \\
+    --data-urlencode "max=10"
+curl -G "http://localhost:14242/api/suggest" \\
+    --data-urlencode "type=metrics" \\
+    --data-urlencode "q=test.p" \\
+    --data-urlencode "max=10"
+curl -G "http://opentsdb.skyramp:4242/api/suggest" \\
+    --data-urlencode "type=metrics" \\
+    --data-urlencode "q=test" \\
+    --data-urlencode "max=10"
+nslookup opentsdb.skyramp
+kubectl get svc -n skyramp
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp --help
+cd ../../..
+make all
+nvim pkg/cmd/config_cmd.go +86
+nvim pkg/cmd/config_cmd.go +86
+make all
+ps aux | grep golangci | grep -v grep | awk '{print $2}' | xargs kill -9
+make all
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp config metrics get --namespace worker
+skyramp config metrics --help
+skyramp config metrics get --namespace worker
+skyramp config metrics get --namespace worker 
+skyramp config metrics set --namespace worker --type opentsdb --url http://opentsdb.skyramp:4242
+skyramp config metrics get --namespace worker 
+skyramp config metrics get --namespace worker
+skyramp config metrics get --namespace worker 
+skyramp config metrics get --namespace worker 
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+make build
+exit
+docker build -t my-opentsdb .
+x
+z rest
+metrics=$(curl --silent -G "http://localhost:4242/api/suggest" \\
+          --data-urlencode "type=metrics" \\
+          --data-urlencode "q=test.p" \\
+          --data-urlencode "max=100" | jq -r '.[]')\
+for metric in $metrics; do\
+  echo "Querying OpenTSDB for metric: $metric"\
+  curl -G "http://localhost:4242/api/query" \\
+        --data-urlencode "start=1h-ago" \\
+        --data-urlencode "m=avg:1m-avg:$metric"\
+  echo -e "\n"\
+done
+nvim docker-compose.yaml
+z rest
+curl --silent -G "http://localhost:4242/api/suggest" \\
+          --data-urlencode "type=metrics" \\
+          --data-urlencode "q=test.p" \\
+          --data-urlencode "max=100" | jq -r '.[]'
+curl --silent -G "http://localhost:4242/api/suggest" \\
+          --data-urlencode "type=metrics" \\
+          --data-urlencode "q=test.p" \\
+          --data-urlencode "max=100" | jq -r '.[]'[B
+docker compose down
+nvim docker-compose.yaml
+docker compose up -d --wait
+nvim docker-compose.yaml
+nvim docker-compose.yaml
+docker compose down
+docker compose up -d --wait
+skyramp mocker apply mocks/echo.yaml --address localhost:35142
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp mocker apply mocks/echo.yaml --address localhost:35142
+skyramp tester start test-load --address localhost:35142
+docker pull public.ecr.aws/j1n2c2p2/rampup/worker:v0.4.99
+nnn
+ls
+ls -al
+cd ..
+ls
+cd skyramp-opentsdb
+ls -al
+make build_opentsdb_server
+ls
+docker run  opentsdb/opentsdb
+docker pull opentsdb/opentsdb:3.0.90-SNAPSHOT-jdk17
+docker run -it opentsdb/opentsdb:3.0.90-SNAPSHOT-jdk17
+docker run -it --platform linux/amd64 opentsdb/opentsdb:3.0.90-SNAPSHOT-jdk17
+aws-mfa
+aws pull docker run -it --platform linux/amd64 opentsdb/opentsdb:3.0.90-SNAPSHOT-jdk17         mbp [07:45:59 pm]\
+Exception in thread "main" java.lang.Error: Failed to load plugins for type [interface net.opentsdb.configuration.provider.ProviderFactory] and namespace [net.opentsdb]\
+        at net.opentsdb.utils.PluginLoader.loadPlugins(PluginLoader.java:279)\
+        at net.opentsdb.utils.PluginLoader.loadPlugins(PluginLoader.java:193)\
+        at net.opentsdb.configuration.Configuration.loadPlugins(Configuration.java:1247)\
+        at net.opentsdb.configuration.Configuration.<init>(Configuration.java:289)\
+        at net.opentsdb.configuration.Configuration.<init>(Configuration.java:222)\
+        at net.opentsdb.tsd.TSDMain.main(TSDMain.java:121)\
+Caused by: java.lang.NoClassDefFoundError: com/google/protobuf/AbstractParser\
+        at java.base/java.lang.ClassLoader.defineClass1(Native Method)\
+        at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1012)\
+        at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)\
+        at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)\
+        at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)\
+        at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)\
+        at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)\
+        at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)\
+        at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)\
+        at com.google.common.reflect.ClassPath$ClassInfo.load(ClassPath.java:328)\
+        at net.opentsdb.utils.PluginLoader.loadPlugins(PluginLoader.java:255)
+docker pull http://296613639307.dkr.ecr.us-west-2.amazonaws.com/dev/metrics-server:13b6fc9
+docker pull 296613639307.dkr.ecr.us-west-2.amazonaws.com/dev/metrics-server:13b6fc9
+aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 296613639307.dkr.ecr.us-west-2.amazonaws.com
+docker pull 296613639307.dkr.ecr.us-west-2.amazonaws.com/dev/metrics-server:13b6fc9
+docker pull 296613639307.dkr.ecr.us-west-2.amazonaws.com/dev/metrics-server:13b6fc9
+docker run 296613639307.dkr.ecr.us-west-2.amazonaws.com/dev/metrics-server:13b6fc9
+zellij attach mbp
+docker build -t my-opentsdb .
+nvim docker-compose.yaml
+docker run -it my-opentsdb bash
+ls
+ls -l
+ls -la
+echo "# metrics-server" >> README.md\
+git init\
+git add README.md\
+git commit -m "first commit"\
+git branch -M main
+g
+git branch -M main\
+git remote add origin git@github.com:letsramp/metrics-server.git\
+git push -u origin main
+g 
+nnn
+docker build -t my-opentsdb .
+docker run -it my-opentsdb ash
+docker run -it my-opentsdb bash
+nvim Dockerfile
+nnn
+git clone git@github.com:PeterGrace/opentsdb-docker.git
+ls
+cd ../../..
+cd -
+cd opentsdb-docker
+ls
+docker compose build
+docker build -t my-opentsdb .
+pwd
+ls
+cd ..
+ls
+rm -rf opentsdb-docker
+git clone git@github.com:PeterGrace/opentsdb-docker.git
+cd opentsdb-docker
+ls
+docker build -t my-opentsdb .
+docker builder prune
+docker builder prune
+docker build -t my-opentsdb .
+nnn
+docker build -t my-opentsdb .
+nnn
+ls
+cd ../../skyramp-opentsdb
+docker run -it openjdk:11-jre-slim bash
+nvim Dockerfile
+nnn
+kubectl exec -n worker $(kubectl get pods -n worker -o jsonpath="{.items[0].metadata.name}") -- curl --silent -X POST http://localhost:35142/skyramp/deploy/metrics \\
+-H "Content-Type: application/json" \\
+-d '{\
+	"type":"opentsdb",\
+	"pushGatewayUrl":"http://opentsdb.skyramp:4242"\
+}'
+kubectl exec -n worker $(kubectl get pods -n worker -o jsonpath="{.items[0].metadata.name}") -- curl --silent http://localhost:35142/skyramp/deploy/metrics 
+docker run -it my-opentsdb bash
+docker run -it my-opentsdb bash
+nnn
+docker builder prune
+docker build -t my-opentsdb .
+cd ..
+docker build -t my-opentsdb .
+docker builder prune
+docker build -t my-opentsdb .
+docker run -it my-opentsdb bash
+vi Dockerfile
+docker builder prune
+docker build -t my-opentsdb .
+docker run -it my-opentsdb bash
+cursor .
+docker builder prune
+docker build -t my-opentsdb .
+docker run -it my-opentsdb bash
+nvim docker-compose.yaml
+docker compose build
+cursor .
+nnn
+nnn
+z rest
+docker compose up
+z skyramp
+make woker
+make all
+make build-worker
+z rest
+docker compose up
+kubectl exec -n worker $(kubectl get pods -n worker -o jsonpath="{.items[0].metadata.name}") -- curl --silent -G "http://opentsdb.skyramp:4242/api/suggest" \\
+    --data-urlencode "type=metrics" \\
+    --data-urlencode "q=test" \\
+    --data-urlencode "max=10"
+k9s
+pushd ../../..
+make all
+make build-worker
+kubectl get ns
+kubectl delete ns worker
+SKYRAMP=${HOME}/git/letsramp/skyramp/bin/skyramp\
+WORKER_URL=$($SKYRAMP version | grep "Worker Repo" | awk '{print $4}')\
+WORKER_TAG=$($SKYRAMP version | grep "Worker Tag" | awk '{print $4}')\
+kind load docker-image ${WORKER_URL}:${WORKER_TAG} --name skyramp-local-kind-cluster
+SKYRAMP=${HOME}/git/letsramp/skyramp/bin/skyramp\
+WORKER_URL=$($SKYRAMP version | grep "Worker Repo" | awk '{print $4}')\
+WORKER_TAG=$($SKYRAMP version | grep "Worker Tag" | awk '{print $4}')\
+helm install my-worker skyramp/worker --namespace worker --create-namespace --set image.repository=${WORKER_URL} --set image.tag=${WORKER_TAG} --set rbac=true
+kubectl get ns
+kubectl exec -n worker $(kubectl get pods -n worker -o jsonpath="{.items[0].metadata.name}") -- curl http://120.0.0.1:35142/skyramp/deployments/metrics 
+kubectl exec -n worker $(kubectl get pods -n worker -o jsonpath="{.items[0].metadata.name}") -- curl -S http://localhost:35142/skyramp/deployments/metrics 
+kubectl exec -n worker $(kubectl get pods -n worker -o jsonpath="{.items[0].metadata.name}") -- curl --silent http://localhost:35142/skyramp/deploy/metrics 
+kubectl exec -n worker $(kubectl get pods -n worker -o jsonpath="{.items[0].metadata.name}") -- curl --silent -G http://localhost:35142/skyramp/deploy/metrics \\
+-H "Content-Type: application/json" \\
+-d '{\
+	"type":"opentsdb",\
+	"pushGatewayUrl":"http://opentsdb.skyramp:4242"\
+}'
+kubectl exec -n worker $(kubectl get pods -n worker -o jsonpath="{.items[0].metadata.name}") -- curl --silent http://localhost:35142/skyramp/deploy/metrics 
+kubectl exec -n worker $(kubectl get pods -n worker -o jsonpath="{.items[0].metadata.name}") -- bash
+kubectl exec -n worker $(kubectl get pods -n worker -o jsonpath="{.items[0].metadata.name}") -- ash
+kubectl exec -n worker -it $(kubectl get pods -n worker -o jsonpath="{.items[0].metadata.name}") -- ash
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp cluster delete -l
+skyramp cluster remove -l
+nnn
+zellij attach mbp
+kubectl exec -n worker $(kubectl get pods -n worker -o jsonpath="{.items[0].metadata.name}") -- curl --silent -G "http://opentsdb.skyramp:4242/api/suggest" \\
+    --data-urlencode "type=metrics" \\
+    --data-urlencode "q=test" \\
+    --data-urlencode "max=10"
+kubectl get ns
+kubectl exec -n worker $(kubectl get pods -n worker -o jsonpath="{.items[0].metadata.name}") -- curl --silent -G "http://opentsdb.skyramp:4242/api/suggest" \\
+    --data-urlencode "type=metrics" \\
+    --data-urlencode "q=test" \\
+    --data-urlencode "max=10"
+POD_NAME=$(kubectl get pods -n worker -o jsonpath="{.items[0].metadata.name}")
+echo $POD_NAME
+POD_NAME=$(kubectl get pods -n worker -o jsonpath="{.items[0].metadata.name}")\
+kubectl exec -n worker ${POD_NAME} -- curl http://opentsdb.skyramp:4242/api/suggest
+kubectl get ns
+kubectl get svc -n skyramp
+nnn
+LAST DEPLOYED: Thu Oct 31 18:49:04 2024
+$SKYRAMP tester start test-load --namespace worker
+SKYRAMP=${HOME}/git/letsramp/skyramp/bin/skyramp\
+
+$SKYRAMP tester start test-load --namespace worker
+g
+z sky
+nnn
+docker rm $(docker ps -q -a) --force
+docker compose up &
+zellij attach mbp
+docker run 296613639307.dkr.ecr.us-west-2.amazonaws.com/dev/metrics-server:13b6fc9
+docker run  --platform linux/amd64   296613639307.dkr.ecr.us-west-2.amazonaws.com/dev/metrics-server:13b6fc9
+z rest
+nvim  docker-compose.yaml
+docker compose up -d --wait
+nvim  docker-compose.yaml
+docker compose up -d --wait
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp mocker apply mocks/echo.yaml --namespace worker
+skyramp mocker apply mocks/echo.yaml --address localhost:35142
+skyramp tester start test-load --address localhost:35142
+exit
+git checkout  main
+g
+exit
+ /usr/bin/env /Users/pedro/git/pellepedro/sample-microservices/src/recommendationservice/venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 61089 -- -m uvicorn main:app --reload --host 0.0.0.0 --port 8000 
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+docker compose exec  -it opentsdb bash
+docker compose run -it opentsdb bash
+docker compose exec  -it opentsdb bash
+#
+docker buildx use cloud-pellepedro-pers-cloud-builder --global\
+
+docker compose build
+#\
+#\
+#
+\
+\
+
+docker compose build
+docker compose push
+make build_opentsdb_server
+make build_opentsdb_server
+make build_opentsdb_server
+make build_opentsdb_server
+make build_opentsdb_server
+cd opentsdb
+git add .
+cd ..
+git add Makefile
+pwd
+make build_opentsdb_server
+docker compose build recommendationservice
+pip install upgrade thrift
+docker compose build recommendationservice
+docker compose build recommendationservice
+ls
+cd recommendationservice
+ls -l
+git add *.py
+git status
+gut add -u
+git status
+g
+exit
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ /usr/bin/env /Users/pedro/git/pellepedro/sample-microservices/src/recommendationservice/venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 62674 -- -m uvicorn main:app --reload --host 0.0.0.0 --port 8000 
+cursor .
+g
+cat ../../.git/config
+g
+ld
+ls
+python -m venv venv
+source venv/bin/activate
+python pip install upgrade pip
+pip install --upgrade -r requirements.txt
+pip install --upgrade -r requirements.txt
+pip install thrift
+pip install --upgrade -r requirements.txt
+pip install --upgrade -r requirements.txt
+nvim Dockerfile
+pwd
+exit
+z sky
+/usr/bin/python3 /Users/pedro/.vscode/extensions/ms-python.python-2024.16.1-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.vscode/extensions/ms-python.python-2024.16.1-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+nppm install
+npm install
+npm run dev
+/bin/bash
+docker compose build recommendationservice
+docker compose up  recommendationservice
+g
+g
+g
+x
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+exit
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+nnn
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+x
+python -m venv venv
+source venv/bin/activate
+pip install skyramp
+x
+gr request
+rg request
+exit
+nnn
+nnn Dockerfile
+cd ..
+docker compose build recommendationservice
+docker compose run  recommendationservice
+g
+docker compose build recommendationservice
+docker compose run  recommendationservice
+g
+docker compose build recommendationservice
+nnn recommendationservice/requirements.txt
+nvim requirements.txt
+pip list --outdated
+source ./venv/bin/activate
+python -m venv venv
+source ./venv/bin/activate
+python install --upgrade pip
+python -m pio--upgrade pip
+python -m pip
+python --install pip
+python -m pip
+python install pip
+pip version
+g
+nnn
+docker compose build concurrecnyservice
+docker compose build currecnyservice
+docker compose build currencyservice
+docker compose run currencyservice
+docker compose build recommendationservice
+nnn recommendationservice/requirements.txt
+go get -u google.golang.org/protobuf
+go run ./cmd/cart/addCart.go
+g
+nnn
+go get update google.golang.org/protobuf\
+
+go get --update google.golang.org/protobuf
+go get -u google.golang.org/protobuf
+google.golang.org/protobuf ~> 1.33.0\
+
+ls
+cd ../
+docker compose build productcatalogservice
+docker compose up productcatalogservice
+g
+nnn
+nnn
+ssh rachzucco
+open .
+x
+wget https://productionresultssa12.blob.core.windows.net/actions-results/8a4a0e5f-9f5a-4c23-8f0e-252513f4d337/workflow-job-run-26adc826-abde-5382-1625-2e236e1082fa/logs/job/job-logs.txt?rsct=text%2Fplain&se=2024-11-10T13%3A20%3A04Z&sig=5rC7LEKVQbJ7hLmnqxsQNT9UOyDGjmE2YzSrkpi0lq4%3D&ske=2024-11-10T22%3A38%3A34Z&skoid=ca7593d4-ee42-46cd-af88-8b886a2f84eb&sks=b&skt=2024-11-10T10%3A38%3A34Z&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skv=2024-08-04&sp=r&spr=https&sr=b&st=2024-11-10T13%3A09%3A59Z&sv=2024-08-04
+x
+cat run_test.sh
+exit
+docker compose build
+docker compose up -d --wait
+docker compose ps
+docker compose exec  -it worker bash
+x
+git clone git@github.com:letsramp/web-server.git
+cd skyramp
+x
+ls
+docker compose up dashboard -d wait
+nvim .env
+docker compose up dashboard -d wait
+x
+ssh rachzucco
+64;30;8Mq[<0;38;39M0;38;39m
+ssh rachzucco
+./vsconf.sh push
+exit
+act
+-j say-hello
+act -j say-hello
+git init .
+git add .git/w
+git add .github/workflows/hello.yaml
+git commit -m "first version"
+act -j say-hello
+ssh nuc
+ssh -i ~/.ssh/id_rsa M4rwpyFwrtdNLm2C5nYKmRdQj@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa e8agmWhPASeTh7yqRTHTyu66y@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa e8agmWhPASeTh7yqRTHTyu66y@sfo2.tmate.io
+docker ps
+ssh -i ~/.ssh/id_rsa e8agmWhPASeTh7yqRTHTyu66y@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa e8agmWhPASeTh7yqRTHTyu66y@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa zd6ECTfCbcUGV5BdAybxqqZhX@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa zd6ECTfCbcUGV5BdAybxqqZhX@sfo2.tmate.io
+exit
+exit
+exit
+exit
+exit
+tmux
+ssh -i ~/.ssh/id_rsa BEPLn9RDtFtWhQaZQkZzR3WEf@sfo2.tmate.io
+ssh imac
+ssh -i ~/.ssh/id_rsa 6S5ASsGUtUPfXuLLDuraqrkDg@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa 6S5ASsGUtUPfXuLLDuraqrkDg@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa 6S5ASsGUtUPfXuLLDuraqrkDg@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa WSJD3rr4ye4DuS5XKhdghaqSh@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa ERY8NX8r7442FKPAeVgfNd9VZ@sfo2.tmate.io\
+
+ssh -i ~/.ssh/id_rsa BEPLn9RDtFtWhQaZQkZzR3WEf@sfo2.tmate.io
+docker compose build
+docker compose build
+docker compose build
+nnn examples/v1/rest
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp mocker apply mocks/echo.yaml --namespace worker
+skyramp cluster register ~/.kube/config
+nnn ~/.skyramp
+skyramp cluster register ~/.kube/config
+skyramp mocker apply mocks/echo.yaml --namespace worker
+skyramp tester start test-load --namespace worker
+skyramp tester start test-echo --namespace worker
+skyramp tester start test-echo --namespace worker
+skyramp mocker apply mocks/echo.yaml --namespace test-coverage
+skyramp tester start test-load --namespace test-coverage
+skyramp mocker apply mocks/echo.yaml --address localhost:45555
+skyramp mocker apply mocks/echo.yaml --address localhost:45555
+skyramp tester start test-load --address localhost:45555
+skyramp mocker apply mocks/echo.yaml --address localhost:45555
+skyramp mocker apply mocks/echo.yaml --address localhost:45555
+skyramp tester start test-load --address localhost:45555
+skyramp mocker apply mocks/echo.yaml --address localhost:45555
+skyramp tester start test-load --address localhost:45555
+skyramp tester start test-load --address localhost:45555
+skyramp mocker apply mocks/echo.yaml --address localhost:45555
+skyramp tester start test-load --address localhost:45555
+skyramp tester start test-load --address localhost:45555
+docker ps
+docker compose
+docker compose ps
+pwd
+ls
+rg realease_publish
+rg golib_publish
+rg pre_prod_npm_publish.yml
+make all
+make build-worker
+cd scripts/daily
+ls
+./test_all_daily.sh
+docker rmi $(docker images -q ) --force
+docker rmi $(docker images -q ) --force
+./test_all_daily.sh
+pushd ../..
+make all
+popd
+./test_all_daily.sh
+cd ../..
+./scripts/daily/test_all_daily.sh
+docker images
+act -j
+act -l
+act build-so
+act -j login-to-ecs
+act -j login-to-ecr
+act -j part_build_so
+act -l
+act -j build-so
+make all
+make build-worker
+./scripts/daily/test_all_daily.sh
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ssh rachzucco
+docker compose ps
+ls
+ssh rachzucco
+docker ps
+docker compose ps
+docker compose ps
+ls
+docker ps
+docker inspect 53aa66ff1cf2
+docker event
+docker event
+docker --help
+docker events
+docker events--help
+docker events --help
+docker events
+docker ps
+docker --help
+docker stats
+docker --help
+docker compose ps
+ls
+ssh rachzucco
+q[<35;38;30M35;35;30M35;34;31M35;33;31M35;32;31M35;31;32M35;30;32M35;29;32M35;28;32M35;27;32M35;26;32M35;25;31M35;24;31M35;23;31M35;22;30M35;22;29M35;21;29M35;21;28M35;21;27M35;22;27M35;22;26M35;22;25M35;22;24M35;23;24M35;23;22M35;24;22M35;24;21M35;25;20M35;26;19M35;27;18M35;27;17M35;28;16M35;29;16M35;29;15M35;30;15M35;30;14M0;30;14M0;30;14m
+ssh -i ~/.ssh/id_rsa BEPLn9RDtFtWhQaZQkZzR3WEf@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa BEPLn9RDtFtWhQaZQkZzR3WEf@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa YKGzp5nTUMYjNfUWXApFt6rgj@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa YKGzp5nTUMYjNfUWXApFt6rgj@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa S5f8TXjpNraeYRtEaKjqVScf8@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa G7YmH9yzRn6wv8FwXHxxXfa2h@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa Fqt6Qa8WSWcFMaXwT5Skz2yrv@sfo2.tmate.io
+ssh -i ~/.ssh/id_rsa CjPmySEFsSh3pCMEdJfNsUjDC@sfo2.tmate.io
+./make-frontend.sh
+exit
+ls
+cd .vscode/scripts/moby
+docker compose up -d
+docker compose down
+cd ../../..
+./.vscode/scripts/setup-debug-worker.sh
+./.vscode/scripts/setup-debug-worker.sh
+ssh rachzucco
+cd
+vi ~/.ssh/config
+rsync -avh ~/ssh mini:~
+ssh mini
+rsync -avh ~/.ssh mini:/Users/pedro
+ssh mini
+http://localhost:3000/api/testresults
+curl http://localhost:3000/api/testresults
+x
+go get github.com/gin-gonic/gin
+go get github.com/gin-gonic/gin
+netstat -al
+pwd
+cd ../skyramp-demo
+git remote add cequoi git@github.com:cequoi-ca/api-insights.git
+git push -u cequoi main 
+pip freeze > requirements.txt
+vi requirements.txt
+pwd
+brew install gh
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+python /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+act -j build_and_test
+act -j build_and_test
+x
+docker compose build
+docker compose up 
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+go mod init dashboard-proxy
+nvim go.mod
+mkdir cmd
+mkdir cmd/proxy
+touch cmd/proxy/main.go
+exit
+docker compose up dashboard -d wait
+docker compose up dashboard -d
+nnn
+docker ps
+docker logs bedbc1e80039
+nnn
+ls
+docker compose down
+exit
+docker compose up -d
+docker compose up -d
+cd utils/proxy
+go mod tidy
+nnn
+cat <<EOF > ${USER}/bib/gh-delete\
+#!/bin/bash\
+\
+set -e  # Exit on error\
+\
+# Check if gh is installed\
+if ! command -v gh &> /dev/null; then\
+    echo "GitHub CLI (gh) is not installed. Please install it and try again."\
+    exit 1\
+fi\
+\
+# Check if fzf is installed\
+if ! command -v fzf &> /dev/null; then\
+    echo "fzf is not installed. Please install it and try again."\
+    exit 1\
+fi\
+\
+# Fetch the list of repositories\
+echo "Fetching your repositories..."\
+repos=$(gh repo list --limit 1000 --json nameWithOwner --jq '.[].nameWithOwner')\
+\
+if [[ -z "$repos" ]]; then\
+    echo "No repositories found."\
+    exit 0\
+fi\
+\
+# Use fzf to select a repository\
+selected_repo=$(echo "$repos" | fzf --prompt="Select a repository to delete: ")\
+\
+if [[ -z "$selected_repo" ]]; then\
+    echo "No repository selected. Exiting."\
+    exit 0\
+fi\
+\
+# Confirm deletion\
+echo "You selected: $selected_repo"\
+read -p "Are you sure you want to delete this repository? This action cannot be undone! (y/N): " confirm\
+\
+if [[ "$confirm" =~ ^[yY]$ ]]; then\
+    # Attempt to delete the repository\
+    echo "Deleting repository $selected_repo..."\
+    gh repo delete "$selected_repo" --confirm\
+    echo "Repository $selected_repo deleted successfully."\
+else\
+    echo "Deletion cancelled."\
+fi\
+EOF\
+\
+chmod +x gh-delete
+cat <<EOF > ${USER}/bin/gh-delete\
+#!/bin/bash\
+\
+set -e  # Exit on error\
+\
+# Check if gh is installed\
+if ! command -v gh &> /dev/null; then\
+    echo "GitHub CLI (gh) is not installed. Please install it and try again."\
+    exit 1\
+fi\
+\
+# Check if fzf is installed\
+if ! command -v fzf &> /dev/null; then\
+    echo "fzf is not installed. Please install it and try again."\
+    exit 1\
+fi\
+\
+# Fetch the list of repositories\
+echo "Fetching your repositories..."\
+repos=$(gh repo list --limit 1000 --json nameWithOwner --jq '.[].nameWithOwner')\
+\
+if [[ -z "$repos" ]]; then\
+    echo "No repositories found."\
+    exit 0\
+fi\
+\
+# Use fzf to select a repository\
+selected_repo=$(echo "$repos" | fzf --prompt="Select a repository to delete: ")\
+\
+if [[ -z "$selected_repo" ]]; then\
+    echo "No repository selected. Exiting."\
+    exit 0\
+fi\
+\
+# Confirm deletion\
+echo "You selected: $selected_repo"\
+read -p "Are you sure you want to delete this repository? This action cannot be undone! (y/N): " confirm\
+\
+if [[ "$confirm" =~ ^[yY]$ ]]; then\
+    # Attempt to delete the repository\
+    echo "Deleting repository $selected_repo..."\
+    gh repo delete "$selected_repo" --confirm\
+    echo "Repository $selected_repo deleted successfully."\
+else\
+    echo "Deletion cancelled."\
+fi\
+EOF\
+\
+chmod +x gh-delete
+vi ~/bin/gh-delete
+chmod +x ~/bin/gh-delete
+gh-delete
+export GH_TOKEN=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
+gh-delete
+export GH_TOKEN=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
+gh-delete
+gh-delete
+gh-delete
+gh-delete
+gh-delete
+gh-delete
+gh-delete
+gh-delete
+gh-delete
+gh-delete
+gh-delete
+gh-delete
+exit
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+git add .
+exit
+make all
+z sky
+make all
+./scripts/daily/test_hubspot_contacts.sh
+nnn
+exit
+ls
+echo "# compose-debug" >> README.md\
+git init\
+git add README.md\
+git commit -m "first commit"\
+git branch -M main\
+git remote add origin git@github.com:PellePedro/compose-debug.git\
+git push -u origin main
+g
+ls
+git add k8s moby setup-debug-worker.sh
+g
+exit
+killall skyramp
+killall skyramp
+curl -X POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb.local.com:4242",\
+      "type": "opentsdb"\
+    }\
+  }'
+curl -X POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb.local.com:4242",\
+      "type": "opentsdb"\
+    }\
+  }'
+curl -sX POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb.local.com:4242",\
+      "type": "opentsdb"\
+    }\
+  }' | jq .
+curl -X GET http://localhost:35142/skyramp/skyramp/test/test/metric
+curl -X GET http://localhost:35142/skyramp/test/test/metric
+curl -X GET http://localhost:35142/skyramp/test/test/metrics
+killall skyramp
+killall skyramp
+curl -X GET http://localhost:35142/skyramp/test/test/metrics
+curl -X GET http://localhost:35142/skyramp/test/3f1ac0af-9358-49bc-885a-6a358e31bbfe/metrics
+nnn
+exit
+make all
+ skyramp
+make all
+cd ../../
+make all
+ps aux | grep golangci | grep -v grep | awk '{print $2}' | xargs kill -9
+make all
+make test
+g
+nnn
+g
+exit
+cp hubspot-contacts.json hubspot-search.json
+exit
+cp test_hubspot_contacts.sh test_hubspot_search.sh
+exit
+mkdir debug
+cd debug
+git clone git@github.com:PellePedro/compose-debug.git
+cd  compose-debug
+ls
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+nnn
+z skyramp
+make all
+g
+staticcheck ./...
+g
+make all
+make build-worker
+g
+g
+nnn
+exit
+./test_hubspot_search.sh
+./test_hubspot_search.sh
+nnn
+g
+exit
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+x
+nnn
+\:!
+killall skyramp
+curl -X GET http://localhost:35142/skyramp/test/test/metrics
+killall skyramp
+z sky
+cd examples/v1/rest
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp mocker apply mocks/echo.yaml --address localhost:35142
+skyramp mocker apply mocks/echo.yaml --address localhost:35142
+skyramp mocker apply mocks/echo.yaml --address localhost:35142
+skyramp mocker apply echo --address localhost:35142
+skyramp tester start test-load --address localhost:35142
+skyramp mocker apply echo --address localhost:35142
+skyramp tester start test-load --address localhost:35142
+skyramp tester start test-load --address localhost:35142
+skyramp tester start test-load --address localhost:35142
+curl -X POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb.local.com:4242",\
+      "type": "opentsdb"\
+    }\
+  }'
+skyramp tester start test-load --address localhost:35142
+skyramp mocker apply echo --address localhost:35142
+skyramp tester start test-load --address localhost:35142
+skyramp mocker apply echo --address localhost:35142
+skyramp mocker apply echo --address localhost:35142
+skyramp tester start test-load --address localhost:35142
+skyramp mocker apply echo --address localhost:35142
+skyramp mocker apply echo --address localhost:35142
+skyramp tester start test-load --address localhost:35142
+g
+ls -l
+pwd
+./setup-debug-worker.sh
+nnn
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+g
+g
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+nnn
+ls
+cd examples/v1/rest
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp mocker apply echo --address localhost:35142
+skyramp mocker apply echo --address localhost:35142
+skyramp tester start test-load --address localhost:35142
+skyramp tester start test-load --address localhost:35142
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+nnn
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+nnn
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+nnn
+./setup-debug-worker.sh
+nvim
+nnn
+./setup-debug-worker.sh
+nnn
+./setup-debug-worker.sh
+nnn
+./setup-debug-worker.sh
+nnn
+./setup-debug-worker.sh
+nnn
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+ls /Users/pedro/git/letsramp/skyramp/scripts/skyramp-init.py
+./setup-debug-worker.sh
+nnn
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+zellij attach mbp
+z skyramp
+act -l
+act
+act -l
+pwd
+nnn
+zellij attach mbp
+nnn
+ssh 
+ssh mini
+g
+nnn
+ssh rachzucco
+act -l
+act deploy_via_pr
+act build-so
+curl -X POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb:4242",\
+      "type": "opentsdb"\
+    }\
+  }'
+nnn
+./test_hubspot_contacts.sh
+ls openapi
+ls openapi/hubspot-contacts.json
+./test_hubspot_contacts.sh
+nnn
+nnn
+./test_hubspot_contacts.sh
+nnn
+cd ../..
+make all
+nvim cmd/proxy/main.go +70
+make all
+ps aux | grep golangci | grep -v grep | awk '{print $2}' | xargs kill -9
+make all
+ls
+./scripts/daily/test_hubspot_contacts.sh
+nnn
+ls
+./scripts/daily/test_hubspot_contacts.sh
+./scripts/daily/test_hubspot_contacts.sh
+nnn
+g
+git clean -fd examples
+./.vscode/scripts/setup-debug-worker.sh
+./.vscode/scripts/setup-debug-worker.sh
+curl -X POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb:4242",\
+      "type": "opentsdb"\
+    }\
+  }'
+curl -X POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb:4242",\
+      "type": "opentsdb"\
+    }\
+  }'
+nnn
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+docker compose down opentsdb
+cd moby
+docker compose down opentsdb
+curl -X POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb:4242",\
+      "type": "opentsdb"\
+    }\
+  }'
+curl -X POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb:4242",\
+      "type": "opentsdb"\
+    }\
+  }'
+curl -X POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb:4242",\
+      "type": "opentsdb"\
+    }\
+  }'
+curl -X POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb.local.com:4242",\
+      "type": "opentsdb"\
+    }\
+  }'
+curl -X POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb.local.com:4242",\
+      "type": "opentsdb"\
+    }\
+  }'
+cd ../.
+g
+cd ../../..
+cd skyramp
+g
+g
+cd .vscode/scripts/moby
+cd ../
+ls
+./setup-debug-worker.sh
+nnn
+g
+docker compose up -d
+cat docker-compose.yaml
+nnn
+z skyramp
+make all
+pwd
+cd ../git/letsramp/skyramp
+make all
+nnn
+g
+nnn
+./setup-debug-worker.sh
+curl -X POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb-svc:4242",\
+      "type": "opentsdb"\
+    }\
+  }'
+curl -X POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb-svc:4242",\
+      "type": "opentsdb"\
+    }\
+  }'
+g
+curl -X POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb-svc:4242",\
+      "type": "opentsdb"\
+    }\
+  }'
+cd ../..
+g
+curl -X POST \\
+  http://localhost:35142/skyramp/deploy/config/metrics \\
+  -H "Content-Type: application/json" \\
+  -d '{\
+      "pushGatewayUrl": "http://opentsdb-svc:4242",\
+      "type": "opentsdb"\
+    }\
+  }'
+g
+nnn
+ls -l
+rm -rf node_modules
+npm install\
+npm install --save-dev typescript ts-node
+nnn
+g
+nnn
+g
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+g
+nnn
+g
+docker compose rm
+docker compose up
+pwd
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+g
+nnn
+ls
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+nnn
+docker compose build
+docker compose up -d
+docker compose down 
+g
+nnn
+cd ..
+ls
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+cd ../..
+g
+make all
+make build-worker
+nnn
+killall gopls
+killall gopls
+killall sudo gopls
+sudo killall cursor
+sudo killall cursor
+killall gopls
+git add .
+exit
+git add .
+g
+exit
+docker compose down
+exit
+ls
+./setup-debug-worker.sh
+exit
+./setup-debug-worker.sh
+exit
+cp test_hubspot_contacts.sh test_hubspot_association.sh
+exit
+./test_hubspot_association.sh
+exit
+./test_all_daily.sh
+exit
+make all
+cd scripts/daily
+nnn
+exit
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ssh mini
+35;113;46M35;113;45M35;112;45M35;111;44M35;110;44M35;109;44M35;109;43M35;108;43M35;107;42M35;106;42M35;105;41M35;104;41M35;102;40M35;101;40M35;100;39M35;99;39M35;97;38M35;96;38M35;94;37M35;92;37M35;91;36M35;89;35M35;87;34M35;82;32M35;78;30M35;77;29M35;73;28M35;71;27M35;68;25M35;67;25M35;64;23M35;60;22M35;57;21M35;56;20M35;53;19M35;50;18M35;48;17M35;46;16M35;43;16M35;42;15M35;40;15M35;39;14M35;38;14M35;37;14M35;36;13M35;35;13M35;34;13M64;34;13M35;34;14M35;32;14M35;31;14M35;30;14M35;29;14M35;28;14M35;28;13M64;28;13M35;27;13M64;27;13M64;27;13M64;27;13M35;27;12M35;27;11M35;27;10M35;26;10M35;26;9M35;25;9M35;25;8M35;24;7M35;23;6M35;22;5M35;22;4M64;22;4M35;21;4M64;21;4M64;21;4M35;22;4M
+uv venv
+ls -al
+ls .venv
+rm -rf .venv
+uv python install 3.11 3.12
+uv python list
+uv venv --python 3.12
+source .venv/bin/activate
+cursor .
+ssh mini
+nvim ~/.ssh/config
+ssh mini
+nvim ~/.ssh/config
+pwd
+exit
+npm install -g degit\
+
+curl -fsSL https://bun.sh/install | bash
+export BUN_INSTALL="$HOME/.bun"                                                                        \
+export PATH="$BUN_INSTALL/bin:$PATH"                                                               
+bunx degit solidjs/templates/ts-tailwindcss store
+cd store
+bun dev
+bun install
+bun dev
+bun dev
+bun dev --port 4000
+exit
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+cd openapi
+wget http://localhost:8000/openapi.json
+rm openapi.json
+wget http://localhost:8000/openapi.json
+uv
+python  api-sample_test.py --address localhost:35142
+cd ..
+python  api-sample_test.py --address localhost:35142
+exit
+source ~/git/letsramp/skyramp/venv/bin/activate
+python  api-sample_test.py --address localhost:35142
+pwd
+cd ..
+python  api-sample_test.py --address localhost:35142
+nnn /Users/pedro/git/letsramp/api-insight/tests/products_test.py
+exit
+nnn /Users/pedro/git/letsramp/api-insight/tests/products_test.py
+exit
+uv list
+uv list --python
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+fastapi dev src/main.py
+uv venv --python 3.12
+source ~/git/letsramp/skyramp/venv/bin/activate
+uv pip install -r requirements.txt
+fastapi dev src/main.py
+ssh rachzucco
+ssh rachzucco
+35;24;1M35;25;1M35;26;1M35;27;2M35;28;2M35;29;3M35;30;3M35;31;4M35;32;5M35;33;6M35;34;6M35;34;7M35;35;7M35;36;7M35;37;7M35;38;7M35;39;7M35;40;7M35;41;7M35;41;6M35;41;5M35;41;4M35;41;3M35;41;2M35;41;1M35;40;1M35;40;2M35;39;2M35;39;3M35;39;4M35;39;5M35;38;5M35;38;6M35;38;7M35;37;8M35;37;9M35;37;10M0;37;10M0;37;10m35;37;9M
+ssh mini
+deno
+/Users/pedro/.deno/bin/deno
+exit
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp cluster create -l
+kubectl get ne
+cp ~/.skyramp/kind-cluster.kubeconfig ~/.kube/config
+kubectl get ne
+kubectl get ns
+skyramp cluster remove -l
+skyramp cluster create -l
+cp ~/.skyramp/kind-cluster.kubeconfig ~/.kube/config
+kubectl get ns
+ls
+cat justfile
+just create-namespace
+just install-opentsdb
+kubectl get pods -n skyramp
+nvim README.md
+g
+curl -fsSL https://deno.land/install.sh | sh
+zsh
+exit
+deno task dev
+ /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 54488 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374/test.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 54657 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374/load.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 54933 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374/load.py 
+uv install yaml
+cp ../../libs/test/pip/requirements.txt
+cp ../../libs/test/pip/requirements.txt .
+uv pip install -r requirements.txt
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 56143 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374/load.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 52428 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374/load.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 61622 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2374/load.py 
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+uv venv --python 3.12\
+
+source .venv/bin/activate
+ls
+pwd
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ssh mini
+ssh mini
+ssh mini
+ssh mini
+ssh mini
+ssh rachzucco
+zellij attach mbp
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+source .venv/bin/activate
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 63220 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/load.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 63360 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 63391 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 63493 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 63729 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py 
+python dev.py
+python dev.py
+python dev.py
+./bin/skyramp dashboard --help
+./bin/skyramp dashboard up --help
+./bin/skyramp dashboard down --help
+./bin/skyramp dashboard up --help
+make release-so
+cd tasks
+../bin/skyramp dashboard up --docker
+ls
+ls -l
+ls /tmp
+ls /tmp/
+../bin/skyramp dashboard up --docker
+ls
+ls dashboard
+docker ps
+docker inspect b60979f76349
+docker ps
+docker ps
+g
+docker ps
+docker rm $(docker ps -q -a) --force
+docker ps
+make all
+cd ..
+make all
+make all
+g
+make all
+make test
+make test
+g
+make release-so
+nnn
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp tester start folder-test --address localhost:35142
+g
+nnn
+./setup-debug-worker.sh
+cd ..
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+killall skyramp
+killall skyramp
+killall skyramp
+killall skyramp
+ toronto
+eva monaco toronto
+nnn
+deactivate
+ls -al
+rm -f .venv
+rm -rf .venv
+source ~/git/letsramp/skyramp/venv/bin/activate
+python  api-sample_test.py --address localhost:35142
+nnn /Users/pedro/git/letsramp/api-insight/tests/products_test.py
+nvim do-test.sh
+nnn
+./do-test.sh
+python  api-sample_test.py --address localhost:35142
+nnn
+python  api-sample_test.py --address localhost:35142
+python  api-sample_test.py --address localhost:35142
+nnn
+python  api-sample_test.py --address localhost:35142
+nnn
+./setup-debug-worker.sh
+nnn
+git clone git@github.com:letsramp/api-insight.git
+cd api-insight
+docker compose build
+docker compose build
+docker compose up
+g
+docker compose build
+docker compose up
+docker compose build
+docker compose up
+docker compose build
+docker compose up
+docker compose build
+docker compose up
+docker compose build
+docker compose up
+docker compose build
+docker compose up
+docker compose build
+docker compose up
+g
+uv venv --python 3.12
+source .venv/bin/activate
+uv insrall requirements.txt
+uv install requirements.txt
+uv pip install requirements.txt
+fastapi dev src/main.py
+docker compose build
+docker compose up
+docker logout docker logout public.ecr.aws
+docker logout public.ecr.aws
+docker compose up
+nnn
+./do-test.sh
+nnn
+./do-test.sh
+uv venv --python 3.12
+source .venv/bin/activate
+uv pip install skyramp
+ls
+python version
+vi  api-sample_test.py
+python  api-sample_test.py --address localhost:35142
+nnn
+./do-test.sh
+nnn
+make all
+make build-worker
+cd scripts/daily
+./test_all_daily.sh
+docker rm $(docker ps -q -a) --force
+./test_all_daily.sh
+docker rm $(docker ps -q -a) --force
+popd
+cd ../../
+make release-so
+make pip-package-and-install
+cd scripts/daily
+docker rm $(docker ps -q -a) --force
+./test_all_daily.sh
+docker rm $(docker ps -q -a) --force
+source ../../venv/bin/activate
+./test_all_daily.sh
+nvim /Users/pedro/.skyramp/error-log-2024-11-26::10:21:01.log
+ls
+nvim test_all_daily.sh
+ls
+./test_platform.sh
+nnn
+ls
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp mocker generate rest --alias contacts --api-schema openapi/hubspot-contacts.json --port 8080
+nnn
+skyramp mocker generate rest --alias contacts --api-schema openapi/hubspot-contacts.json --port 8080 --language python 
+nnn
+ls
+./test_hubspot_association.sh
+./test_hubspot_association.sh
+./test_hubspot_association.sh
+nnn
+skyramp mocker ganerate --help
+skyramp mocker generate --help
+skyramp mocker generate rest --help
+nnn
+skyramp tester start test --address localhost:35142
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp tester start test --address localhost:35142
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp tester start test --address localhost:35142
+skyramp tester start test --address localhost:35142
+skyramp tester start test --address localhost:35142
+helm repo add skyramp https://letsramp.github.io/helm/
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv
+nnn
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp mocker apply catalog-service --address localhost:35142
+skyramp mocker apply catalog-service --address localhost:35142
+skyramp tester start test --address localhost:35142
+nnn
+./test_hubspot_association.sh
+./test_hubspot_search.sh
+./test_hubspot_contacts.sh
+nnn
+g
+nnn
+g
+ls
+./test_platform.sh
+nvim /Users/pedro/.skyramp/error-log-2024-11-26::11:04:40.log
+nnn
+pushd ../../..
+make all
+make build-worker
+popd
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp mocker apply echo --address localhost:35142
+skyramp mocker apply echo --address localhost:35142
+skyramp tester start test --address localhost:35142
+skyramp tester start test --address localhost:35142
+skyramp mocker apply echo --address localhost:35142
+skyramp tester start test --address localhost:35142
+nnn
+PATH=~/.deno/bin:$PATH\
+deno run -A npm:create-solid
+cd solid-store
+PATH=~/.deno/bin:$PATH\
+deno install\
+deno task dev --address 0.0.0.0
+ls
+cursor .
+git init .
+g
+nnn
+z skyramp
+make all
+make build-worker
+make release-so
+g
+nnn
+skyramp tester start test --address localhost:35142
+skyramp tester start test --address localhost:35142
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp tester start test --address localhost:35142
+nnn
+git clone git@github.com:letsramp/dashboard-debug-config.git
+nnn
+cd dashboard-debug-config
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+nnn
+g
+nnn
+exit
+export PYTHONPATH=~/git/letsramp/skyramp/libs/pip/src
+python dev.py
+python dev.py
+python dev.py
+python k8s_dev.py
+python k8s_dev.py
+killall python3
+killall python
+python k8s_dev.py
+python k8s_dev.py
+ /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 49527 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 49574 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py 
+docker images | grep worker | head -n 1 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 51246 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 51490 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 51669 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 54986 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 55313 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 62676 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 62780 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 61493 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 60222 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/k8s_dev.py 
+python k8s_dev.py
+python k8s_dev.py
+python k8s_dev.py
+python k8s_dev.py
+SKYRAMPDIR=$HOME/git/letsramp/skyramp\
+SKYRAMP=$SKYRAMPDIR/bin/skyramp\
+\
+$SKYRAMP mocker apply echo -n worker
+SKYRAMPDIR=$HOME/git/letsramp/skyramp\
+SKYRAMP=$SKYRAMPDIR/bin/skyramp\
+$SKYRAMP tester start test
+python dev.py
+python dev.py
+python dev.py
+docker rm mongo --force 
+python dev.py
+export PYTHONPATH=~/git/letsramp/skyramp/libs/pip/src
+python dev.py
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py
+ls
+source .venv/bin/activate
+/Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py
+/Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/dev.py
+export PYTHONPATH=../../pip/src
+python dev.py
+python dev.py
+python dev.py
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+pwd
+make all
+make build-worker
+make release-so
+docker imager | grep worker
+docker image | grep worker
+docker image ls | grep worker
+cd tasks/skyr-2370
+source .venv/bin/activate
+export PYTHONPATH=~/git/letsramp/skyramp/libs/pip/src
+SKYRAMP_DEBUG=true python test.py
+SKYRAMP_DEBUG=true python test.py
+killall python3
+killall python
+SKYRAMP_DEBUG=true python test.py
+killall python3
+killall python
+btop
+SKYRAMP_DEBUG=true python test.py
+SKYRAMP_DEBUG=true python test.py
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+z skyramp
+g
+nnn
+g
+make release-so
+pwd
+cd ../git/letsramp/skyramp
+make release-so
+killall python
+killall python3
+killall python
+ps
+ps -a
+ls libs/pip/src/skyramp/lib
+git clean -fd  libs/pip/src/skyramp/lib/*.*
+ls libs/pip/src/skyramp/lib
+pushd libs/pip/src/skyramp/lib
+ls
+rm *.*
+ls
+popd
+make release-so
+killall python
+killall python3
+killall python
+g
+docker ps
+docker exec -it worker ping mongo
+docker exec -it /worker ping mongo
+docker ps
+docker ps --filter "name=skyramp_" --format "{{.ID}} {{.Names}}"
+cnt=$(docker ps --filter "name=skyramp_" --format "{{.ID}}")\
+docker exec -it $cnt ping mongo
+pwd
+pushd tasks
+ls
+scp skyr-2370 mini:~/git/letsramp/skyramp/task
+scp skyr-2370 mini:~/git/letsramp/skyramp/tasks
+scp -r skyr-2370 mini:~/git/letsramp/skyramp/tasks
+cd skyr-2370
+ls
+scp -r dev.py mini:~/git/letsramp/skyramp/tasks/skyr-2370
+export PYTHONPATH=~/git/letsramp/skyramp/libs/pip/src
+python dev.py
+ls venv
+ls .venv
+ls .venv/lib
+g
+make all
+cd ../..
+make all
+make all
+make all
+make build-worker
+kind get clusters
+./bin/skyramp cluster create -l
+cp ~/.skyramp/kind-cluster.kubeconfig ~/.kube/config
+kubectl get nodes
+./bin/skyramp dashboard up --help
+kubectl get ns
+kubectl delete ns skyramp 
+kubectl get pods -n skyramp
+kubectl get pods -n skyramp
+kubectl delete ns skyramp 
+kubectl get ns
+kubectl get ns
+kubectl get pods -n skyramp
+kubectl get pods -n skyramp
+kubectl get pods -n skyramp
+kubectl get pods -n skyramp
+kubectl get pods -n skyramp
+kubectl get pods -n skyramp
+kubectl get pods -n skyramp
+kubectl get pods -n skyramp
+kubectl delete ns skyramp 
+g
+make all
+rm cmd/dashboard/my_network.go
+make lint
+make lint
+make all
+g
+make all
+make build-worker
+make release-so
+killall python
+killall python3
+./bin/skyramp cluster create -l
+./bin/skyramp cluster remove -l
+./bin/skyramp cluster create -l
+cp ~/.skyramp/kind-cluster.kubeconfig ~/.kube/config
+nnn libs/test/pip
+killall python
+killall python3
+make release-so
+cd bin/github.com/letsramp
+ls
+nm dev-darwin-arm64.dylib
+nm dev-darwin-arm64.dylib | grep deployK8sDashboardWrapper
+nm dev-darwin-arm64.dylib | grep deployDockerDashboardWrapper
+ls
+rm *.*
+ls
+cd ../..
+cd ..
+make release-so
+nm bin/github.com/letsramp/dev-darwin-arm64.dylib
+nm bin/github.com/letsramp/dev-darwin-arm64.dylib | grep deployK8sDashboardWrapper
+nm bin/github.com/letsramp/dev-darwin-arm64.dylib | grep K8sDashboardWrapper
+nm bin/github.com/letsramp/dev-darwin-arm64.dylib | grep K8SDashboardWrapper
+make release-so
+nm bin/github.com/letsramp/dev-darwin-arm64.dylib | grep K8sDashboardWrapper
+killall python
+killall python3
+rm ./libs/pip/src/skyramp/lib/*.dylib
+rm ./libs/pip/src/skyramp/lib/*.so
+rm ./libs/pip/src/skyramp/lib/*.*
+ls ./libs/pip/src/skyramp/lib/*.*
+killall python3
+btop
+brew install btop
+btop
+make release-so
+k9s
+g
+ststiccheck
+staticcheck ./...
+golangci-lint --version
+kubectl get pods -n skyramp
+kubectl get pods -n "$NAMESPACE" -o jsonpath='{.items[?(@.metadata.name~="dashboard-client-")].metadata.name}'
+NAMESPACE="skyramp"
+kubectl get pods -n "$NAMESPACE" -o jsonpath='{.items[?(@.metadata.name~="dashboard-client-")].metadata.name}'
+kubectl get pods -n skyramp -o jsonpath='{.items[?(@.metadata.name~="dashboard-client-")].metadata.name}'a
+kubectl get pods -n skyramp -o jsonpath='{.items[?(@.metadata.name~="dashboard-client-")].metadata.name}' 
+kubectl get pods -n skyramp
+kubectl get pods -n skyramp -o jsonpath='{.items[?(@.metadata.name~="dashboard-client-")]}' 
+kubectl get pods -n skyramp -o jsonpath='{.items[0]}' 
+kubectl get pods -n skyramp | grep dashboard-client | awk '{print $1}'
+zellij attach mbp
+ssh rachzucco
+ssh rachzucco
+ssh mini
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+nnn
+./setup-debug-worker.sh
+g
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+nnn
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+nnn moby
+./setup-debug-worker.sh
+./setup-debug-worker.sh
+k9s
+z skyramp
+docker os
+docker ps
+nnn
+kubectl get ns
+k9s
+kubectl delete ns worker
+nnn
+ssh mini
+ssh mini
+ssh nuc
+ssh nuc
+nvim ~/.ssh/config
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp cluster remove -l
+skyramp cluster remove -l
+g
+skyramp cluster remove -l
+g
+nnn bin/github.com
+ssh mini
+skyramp cluster remove -l
+pwd
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp cluster remove -l
+nnn
+ssh mini
+nvim
+kind get clusters
+z skyramp
+./bin/skyramp cluster remove -l
+kind get clusters
+ls
+nnn
+./bin/skyramp cluster remove -l
+zellij attach mbp
+nvim
+pwd
+rm libs/pip/src/skyramp/*.*
+killall python3
+killall python
+make release-so
+nm bin/github.com/letsramp/dev-darwin-arm64.dylib | grep K8sDashboardWrapper
+nm bin/github.com/letsramp/dev-darwin-arm64.dylib | grep K8SClient
+nm bin/github.com/letsramp/dev-darwin-arm64.dylib | grep K8SClient
+g
+./bin/skyramp cluster remove -l
+	nnn
+ssh mini
+nnn
+rg kubeConfig
+rg kube_config
+rg kube
+nvim src/skyramp/k8s_client.py +187
+ssh rachzucco
+ssh mini
+0;51;15M0;51;15m
+ssh mini
+ssh mini
+ls
+g
+which lazygit
+brew update formula laygit
+brew update laygit
+brew upgrade laygit
+brew upgrade lazygit
+g
+lazygit --version
+nnn
+ssh mini
+ssh mini
+ssh mini
+65;4;6;18;22cq\
+
+ssh35;56;19M35;57;19M35;60;19M35;65;19M35;69;18M35;73;18M35;82;17M35;84;17M35;89;16M35;93;16M35;98;15M35;102;14M
+35;102;9M35;101;8M35;99;7M35;98;5M35;96;4M35;95;2M35;93;1M35;91;1M35;90;1M35;89;1M35;88;1M35;87;1M35;86;1M35;85;1M35;84;1M35;83;1M35;82;1M35;81;1M35;79;1M35;78;1M35;77;1M35;76;1M35;75;1M35;74;1M35;73;1M35;72;1M35;71;1M35;70;1M35;68;1M35;65;1M35;64;1M35;62;1M35;60;1M35;59;1M35;57;1M35;56;1M35;55;1M35;54;1M35;53;1M35;52;1M35;51;1M35;50;1M35;48;1M35;47;1M35;45;1M35;43;1M35;41;1M35;40;1M35;39;1M35;38;1M35;37;1M35;36;1M35;35;1M35;34;1M35;33;1M35;32;1M35;31;1M35;30;1M35;29;1M35;28;1M35;27;1M35;26;1M35;25;1M35;24;1M35;23;1M35;22;1M35;21;1M35;20;1M35;19;1M35;18;1M35;17;1M35;16;1M35;15;1M35;14;1M35;13;1M
+ssh mini
+env
+nnn
+sudo ngrep -d any -q -W byline 'httpbin.com' tcp port 80
+sudo ngrep -d any -q -W byline 'httpbin.org' tcp port 80
+sudo ngrep -d any -W byline "host: httpbin.com" port 80
+sudo ngrep -d any -W byline "host: httpbin.org" port 80
+docker ps
+docker exec -it /worker ping infra
+docker exec -it eaa9da83ef52 ping infra
+nnn
+ssh mini
+nnn
+make pip-package-and-install
+nnn
+pip install jsonschema pyyaml
+source .venv/bin/activate
+nnn
+pwd
+make venv
+ls venv
+source .venv/bin/activate
+source venv/bin/activate
+pip install -r libs/test/pip/requirements.txt
+nvim
+pip install -r libs/test/pip/requirements.txt
+make pip-package-and-install
+nnn
+docker compose up 
+export SHA=$(docker images | grep worker | head -n 1 | awk '{print $2}')
+docker compose up 
+source .../../../venv/bin/activate
+source ../../../venv/bin/activate
+nnn
+ssh mini
+pwd
+g
+docker ps
+g
+vi demo.sh
+./demo.sh
+zellij attach mbp
+pwd
+source .venv/bin/activate
+export PYTHONPATH=~/git/letsramp/skyramp/libs/pip/src
+python test.py
+python test.py
+rm ../../libs/pip/src/skyramp/lib/*
+rm ../../libs/pip/src/skyramp/lib/*
+python test.py
+python test.py
+python test.py
+python test.py
+python test.py
+z skyramp
+./bin/skyramp cluster remove -l
+docker rm $(docker ps -q -a) --force
+killall pytest
+killall python
+killall python3
+killall python3
+./bin/skyramp cluster remove -l
+kilall python3
+killall python3
+killall python
+killall python
+killall python3
+./bin/skyramp cluster remove -l
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+export SHA=$(docker images | grep worker | head -n 1 | awk '{print $2}')
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+pwd
+rm  test_skyramp*
+cd libs/test/pip
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+export PYTHONPATH=~/git/letsramp/skyramp/libs/pip/src
+pwd
+cd ../../..
+./bin/skyramp cluster remove -l
+./bin/skyramp cluster remove -l
+./bin/skyramp cluster remove -l
+./bin/skyramp cluster remove -l
+pwd
+source ../../../venv/bin/activate
+docker ps
+python dashboard-demo.py
+killall python
+killall python3
+python dashboard-demo.py
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+deactivate
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 53966 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/test.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 54081 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/test.py 
+ cd /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370 ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 54167 -- /Users/pedro/git/letsramp/skyramp/tasks/skyr-2370/test.py 
+ cd /Users/pedro/git/letsramp/skyramp/libs/test/pip ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/libs/test/pip/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 64186 -- -m pytest /Users/pedro/git/letsramp/skyramp/libs/test/pip/test_me.py 
+ls ../../pip/src
+ cd /Users/pedro/git/letsramp/skyramp/libs/test/pip ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/libs/test/pip/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 64377 -- -m pytest /Users/pedro/git/letsramp/skyramp/libs/test/pip/test_me.py 
+ cd /Users/pedro/git/letsramp/skyramp/libs/test/pip ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/libs/test/pip/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 64438 -- -m pytest /Users/pedro/git/letsramp/skyramp/libs/test/pip/test_me.py 
+ cd /Users/pedro/git/letsramp/skyramp/libs/test/pip ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/libs/test/pip/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 64662 -- -m pytest -s /Users/pedro/git/letsramp/skyramp/libs/test/pip/test_me.py 
+ cd /Users/pedro/git/letsramp/skyramp/libs/test/pip ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/libs/test/pip/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 65002 -- -m pytest -s /Users/pedro/git/letsramp/skyramp/libs/test/pip/test_me.py 
+ cd /Users/pedro/git/letsramp/skyramp/libs/test/pip ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/libs/test/pip/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 65250 -- -m pytest -s /Users/pedro/git/letsramp/skyramp/libs/test/pip/test_me.py 
+ cd /Users/pedro/git/letsramp/skyramp/libs/test/pip ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/libs/test/pip/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 49487 -- -m pytest -s /Users/pedro/git/letsramp/skyramp/libs/test/pip/test_me.py 
+ cd /Users/pedro/git/letsramp/skyramp/libs/test/pip ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/libs/test/pip/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 49802 -- -m pytest -s /Users/pedro/git/letsramp/skyramp/libs/test/pip/test_me.py 
+ cd /Users/pedro/git/letsramp/skyramp/libs/test/pip ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/libs/test/pip/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 50089 -- -m pytest -s /Users/pedro/git/letsramp/skyramp/libs/test/pip/test_me.py 
+ cd /Users/pedro/git/letsramp/skyramp/libs/test/pip ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/libs/test/pip/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 51757 -- -m pytest /Users/pedro/git/letsramp/skyramp/libs/test/pip/test_skyramp.py --maxfail=1 --disable-warnings -v -s 
+ cd /Users/pedro/git/letsramp/skyramp/libs/test/pip ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/libs/test/pip/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 51840 -- -m pytest /Users/pedro/git/letsramp/skyramp/libs/test/pip/test_skyramp.py --maxfail=1 --disable-warnings -v -s 
+ cd /Users/pedro/git/letsramp/skyramp/libs/test/pip ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/libs/test/pip/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 52022 -- -m pytest /Users/pedro/git/letsramp/skyramp/libs/test/pip/test_skyramp.py --maxfail=1 --disable-warnings -v -s 
+ cd /Users/pedro/git/letsramp/skyramp/libs/test/pip ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/libs/test/pip/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 52369 -- -m pytest /Users/pedro/git/letsramp/skyramp/libs/test/pip/test_skyramp.py --maxfail=1 --disable-warnings -v -s 
+ cd /Users/pedro/git/letsramp/skyramp/libs/test/pip ; /usr/bin/env /Users/pedro/git/letsramp/skyramp/libs/test/pip/.venv/bin/python /Users/pedro/.cursor/extensions/ms-python.debugpy-2024.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher 52450 -- -m pytest /Users/pedro/git/letsramp/skyramp/libs/test/pip/test_skyramp.py --maxfail=1 --disable-warnings -v -s 
+export PYTHONPATH=~/git/letsramp/skyramp/libs/pip/src
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+export SHA=$(docker images | grep worker | head -n 1 | awk '{print $2}')
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+pwd
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+export SHA=$(docker images | grep worker | head -n 1 | awk '{print $2}')
+export PYTHONPATH=~/git/letsramp/skyramp/libs/pip/src
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+nm bin/github.com/letsramp/dev-darwin-arm64.dylib | grep K8sDashboardWrapper
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+source ..
+source ../../../venv/bin/activate
+pwd
+uv venv --python 3.12
+source .venv/bin/activate
+uv pip install -r requirements.txt
+ls
+deactivate
+rm -rf .venv
+cd pip
+uv venv --python 3.12
+source .venv/bin/activate
+uv pip install -r requirements.txt
+export PYTHONPATH=~/git/letsramp/skyramp/libs/pip/src
+python test_skyramp.py
+export SHA=$(docker images | grep worker | head -n 1 | awk '{print $2}')
+python test_skyramp.py
+python test_skyramp.py
+python test_skyramp.py -vvv
+python3 test_skyramp.py -vvvv
+killall python
+killall python3
+python3 test_skyramp.py -vvvv
+pytest test_skyramp.py
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+pwd
+rm -rf ../../../venv
+source .venv/bin/activate
+export PYTHONPATH=~/git/letsramp/skyramp/libs/pip/src
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+killall python
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+g
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+SKYRAMP_DEBUG=true pytest test_skyramp.py
+SKYRAMP_DEBUG=true pytest test_skyramp.py  -vvvv
+SKYRAMP_DEBUG=true pytest test_skyramp.py  -S  -vvvv
+SKYRAMP_DEBUG=true pytest test_skyramp.py  -s  -vvvv
+SKYRAMP_DEBUG=true pytest test_skyramp.py  -s  -vvvv
+SKYRAMP_DEBUG=true pytest test_skyramp.py  -s  -vvvv
+SKYRAMP_DEBUG=true pytest test_skyramp.py  -s  -vvvv
+SKYRAMP_DEBUG=true pytest test_skyramp.py  -s  -vvvv
+SKYRAMP_DEBUG=true pytest test_skyramp.py  -s  -vvvv
+SKYRAMP_DEBUG=true pytest test_skyramp.py  -s  -vvvv
+SKYRAMP_DEBUG=true pytest test_skyramp.py  -s  -vvvv
+SKYRAMP_DEBUG=true pytest test_skyramp.py 
+SKYRAMP_DEBUG=true pytest test_skyramp.py 
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+export SHA=$(docker images | grep worker | head -n 1 | awk '{print $2}')
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+uv pip install pytest-dependency
+uv pip install pytest-depends 
+SKYRAMP_DEBUG=true pytest test_skyramp.py 
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py 
+pwd
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+g
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+./bin/skyramp cluster remove -l
+./bin/skyramp cluster remove -l
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+uv pip install --upgrade robotframework
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+./bin/skyramp cluster remove -l
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s
+cp test_skyramp.py test_docker_skyramp.py
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_k8s_skyramp.py -s
+uv pip freeze
+\:q!
+ls
+SKYRAMP_DEBUG=true pytest test_k8s_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s
+export SHA=$(docker images | grep worker | head -n 1 | awk '{print $2}')
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s
+pwd
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s -vvv
+touch test_skyramp.py
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+=================================================================
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+pytest test_docker_skyramp.py -s -vvv
+pytest test_docker_skyramp.py -s -vvv
+pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+pytest test_docker_skyramp.py -s -vvv
+pytest test_docker_skyramp.py -s -vvv
+docker networks --help
+docker network --help
+docker volume prune --help
+pytest test_docker_skyramp.py -s -vvv
+pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+export SHA=$(docker images | grep worker | head -n 1 | awk '{print $2}')
+echo $SHA
+export PYTHONPATH=~/git/letsramp/skyramp/libs/pip/src
+python dashboard-demo.py
+touch demo-test.py
+python dashboard-demo.py
+python /Users/pedro/.vscode/extensions/ms-python.python-2024.2.1/pythonFiles/printEnvVariablesToFile.py /Users/pedro/.vscode/extensions/ms-python.python-2024.2.1/pythonFiles/deactivate/zsh/envVars.txtçç
+python demo-test.py
+python demo-test.py
+python demo-test.py -s
+python demo-test.py -s
+killall python3
+killall python
+python demo-test.py -s
+pytest demo-test.py -s
+pytest dashboard-demo.py
+python dashboard-demo.py
+pytest demo-test.py -s
+SKYRAMP_DEBUg=true pytest demo-test.py -s
+deactivate
+cd ../..
+deactivate
+ls
+cd ..
+cd ..
+source venv/bin/activate
+ls
+ls -al
+cd skyramp
+ls -al
+source venv/bin/activate
+mkdir demo
+cd demo
+nnn
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ssh mini
+ssh mini
+35;101;28M35;102;28M35;102;27M35;91;28M35;89;28M35;87;28M35;86;28M35;85;28M35;84;28M35;85;28M35;86;28M35;87;28M35;89;28M35;90;28M35;93;28M35;94;28M35;98;28M35;101;28M35;36;4M35;37;4M35;39;4M35;40;4M35;41;4M35;43;4M35;45;4M35;46;4M35;48;4M35;49;5M35;51;5M35;52;5M35;53;5M35;54;5M35;54;6M35;54;7M35;54;8M35;55;9M35;56;10M35;57;11M35;58;11M35;59;11M35;59;12M35;60;12M35;61;12M35;62;12M35;63;12M35;64;12M35;65;12M35;66;12M35;67;12M35;68;12M35;69;12M35;71;12M35;72;12M35;73;12M35;74;11M35;75;11M35;75;10M35;75;9M35;74;9M35;72;9M35;71;8M35;65;7M35;61;6M35;58;6M35;59;6M35;60;6M35;62;6M35;65;7M35;69;7M35;75;9M35;80;10M35;86;11M35;93;13M35;99;14M35;102;11M35;98;11M35;96;11M35;95;11M35;94;11M35;93;11M35;92;11M35;91;11M35;90;11M35;89;10M35;88;10M35;87;10M35;86;10M35;85;10M35;84;10M35;83;10M35;81;10M35;80;10M35;79;10M35;78;10M35;76;10M35;75;10M35;74;10M35;73;10M35;72;10M35;71;10M35;70;10M35;69;10M35;68;10M35;67;10M35;66;10M35;65;10M35;64;10M35;63;10M35;62;10M35;61;10M35;60;10M35;59;9M35;57;9M35;56;9M35;55;9M35;54;9M35;52;9M35;51;9M35;50;9M35;49;9M35;47;9M35;46;9M35;45;9M35;44;9M35;42;9M35;41;9M35;40;9M35;39;9M35;38;9M35;37;9M35;36;9M35;35;9M35;34;9M35;33;9M35;32;9M35;31;9M35;29;9M35;28;9M35;27;9M35;25;9M35;24;9M35;23;8M35;22;8M35;21;8M35;20;8M35;19;8M35;18;8M35;19;8M35;20;8M35;21;8M35;22;8M35;22;7M35;23;7M35;24;7M35;25;7M35;26;7M35;27;7M35;28;7M35;29;7M35;30;7M35;31;7M35;33;7M35;35;7M35;36;7M35;37;7M35;38;7M35;40;7M35;41;7M35;42;8M35;43;8M35;44;8M35;45;8M35;46;8M35;47;8M35;48;8M35;49;8M35;50;8M35;51;8M35;52;8M35;53;8M35;54;8M35;55;8M35;56;8M35;56;9M35;57;9M35;58;9M35;59;9M35;60;9M35;61;9M35;62;10M35;63;10M35;64;10M35;65;10M35;66;10M35;67;11M35;68;11M35;69;11M35;70;11M35;71;12M35;72;12M35;73;12M35;74;13M35;75;13M35;76;13M35;77;13M35;77;14M35;78;14M35;79;14M35;79;15M35;80;15M35;81;15M35;82;15M35;83;15M35;84;15M35;85;15M35;86;15M35;87;14M35;88;14M35;90;14M35;99;11M35;99;10M35;98;9M35;96;9M35;95;9M35;95;8M35;93;8M35;92;8M35;91;8M35;90;8M35;89;7M35;87;7M35;86;7M35;85;7M35;84;7M35;83;7M35;82;7M35;81;7M35;80;7M35;79;7M35;78;7M35;77;7M35;76;7M35;75;7M35;73;8M35;72;8M35;71;8M35;70;8M35;69;9M35;67;9M35;66;9M35;65;10M35;64;10M35;63;11M35;62;11M35;63;11M35;63;12M35;64;12M35;65;12M35;66;13M35;67;13M35;69;13M35;70;14M35;72;14M35;74;15M35;75;15M35;79;15M35;80;16M35;84;16M35;85;16M35;88;16M35;90;16M35;92;17M35;93;17M35;96;17M35;97;17M35;99;17M35;100;17M35;101;17M35;102;17M35;37;17M35;36;17M35;35;17M35;34;17M35;33;17M35;31;17M35;30;17M35;28;17M35;27;16M35;26;16M35;25;16M35;24;16M35;23;16M35;22;15M35;21;15M35;20;15M35;19;15M35;18;15M35;17;15M35;16;14M35;15;14M35;14;14M35;13;14M35;12;14M35;11;14M35;10;14M35;9;14M35;8;14M35;7;14M35;5;14M35;4;14M35;2;14M35;1;14M35;1;26M35;1;27M35;1;28M35;2;28M35;3;28M35;4;28M35;3;28M35;2;28M35;1;28M35;1;27M35;1;26M35;4;28M35;7;28M35;11;28M35;15;28M35;18;28M35;20;28M35;23;28M35;25;28M35;26;28M35;28;28M35;30;28M35;32;28M35;33;28M35;35;28M35;36;28M35;39;28M35;41;28M35;42;28M35;45;28M35;47;28M35;49;28M35;50;28M35;52;28M35;55;28M35;57;28M35;58;28M35;60;28M35;62;28M35;63;28M35;64;28M35;66;28M35;67;27M35;68;27M35;70;27M35;71;26M35;72;26M35;73;26M35;74;26M35;75;26M35;76;26M35;76;25M35;77;25M35;78;25M35;79;25M35;80;25M35;81;25M35;81;24M35;83;24M35;84;24M35;85;24M35;86;24M35;86;23M35;87;23M35;88;23M35;88;22M35;89;22M35;90;22M0;90;22M0;90;22m35;89;21M35;88;21M35;87;21M35;86;20M35;85;20M35;83;19M35;81;19M35;80;18M35;79;18M35;78;18M35;77;17M35;76;17M35;75;17M35;74;17M35;73;17M35;72;17M35;71;17M35;70;17M35;69;17M35;68;17M35;67;17M35;66;17M35;65;17M35;64;17M35;63;17M35;62;16M35;61;16M35;60;16M35;59;16M35;58;16M35;59;15M35;61;15M35;62;15M35;65;15M35;68;15M35;72;14M35;78;14M35;83;14M35;90;14M35;96;13M35;102;13M35;21;10M35;22;10M35;23;10M35;24;10M35;25;10M35;26;10M35;27;10M35;29;10M35;30;10M35;31;10M35;32;10M35;33;10M35;34;10M35;35;10M35;36;10M35;37;10M35;38;10M35;39;10M35;40;11M35;41;11M35;42;11M35;43;11M35;44;11M35;45;11M35;46;11M35;47;11M35;48;11M35;49;11M35;50;11M35;51;11M35;52;12M35;53;12M35;55;12M35;56;12M35;57;12M35;59;12M35;60;12M35;62;13M35;63;13M35;64;13M35;66;13M35;67;13M35;69;13M35;70;13M35;71;13M35;71;14M35;72;14M35;73;14M35;72;14M35;71;14M35;70;14M35;68;14M35;66;14M35;64;14M35;62;14M35;60;14M35;58;14M35;57;13M35;56;13M35;56;14M35;55;14M35;54;14M35;53;14M35;52;14M35;50;14M35;49;13M35;48;13M35;44;13M35;42;13M35;40;12M35;39;12M35;37;12M35;36;12M35;35;12M35;34;12M35;33;12M35;32;12M35;31;12M35;30;12M35;29;12M35;27;12M35;26;12M35;24;12M35;22;12M35;18;12M35;16;12M35;13;11M35;10;11M35;9;11M35;7;11M35;6;11M35;5;10M35;3;10M35;2;10M35;1;10M35;1;11M35;8;11M35;16;12M35;24;12M35;32;12M35;39;13M35;45;13M35;51;13M35;55;13M35;60;13M35;63;13M35;65;13M35;67;13M35;69;13M35;70;13M35;71;13M35;72;13M35;74;13M35;75;13M35;76;13M35;77;13M35;78;13M35;79;13M35;80;13M35;81;13M35;82;13M35;83;13M35;85;13M35;87;13M35;88;13M35;89;13M35;90;13M35;91;13M35;93;13M35;94;13M35;95;14M35;97;14M35;98;14M35;100;14M35;102;14M35;47;23M35;48;23M35;49;23M35;50;23M35;51;23M35;52;23M35;53;23M35;54;23M35;55;23M35;56;23M35;57;23M35;58;23M35;59;24M35;60;24M35;61;24M35;62;24M35;63;24M35;64;24M35;65;24M35;65;25M35;64;25M35;63;25M35;62;24M35;60;24M35;58;24M35;57;24M35;58;24M35;59;24M35;60;24M35;63;24M35;65;24M35;68;24M35;73;25M35;78;25M35;83;26M35;87;26M35;93;27M35;96;27M35;99;28M35;102;28M35;55;21M35;55;20M
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ /usr/bin/env SHA=8a288b43 PYTHONPATH=../../pip/src SKYRAMP_DEBUG=true NODE_PATH=/Users/pedro/git/letsramp/skyramp/libs/test/npm/node_modules:/Users/pedro/git/letsramp/skyramp/libs/test/npm/../../npm/ 'NODE_OPTIONS= --require /Applications/Cursor.app/Contents/Resources/app/extensions/ms-vscode.js-debug/src/bootloader.js  --inspect-publish-uid=http' 'VSCODE_INSPECTOR_OPTIONS=:::{"inspectorIpc":"/var/folders/vz/6k69dv2j0fx9kmtq6wqgyc200000gn/T/node-cdp.68663-03059bcb-1.sock","deferredMode":false,"waitForDebugger":"","execPath":"/opt/homebrew/bin/node","onlyEntrypoint":false,"autoAttachMode":"always","fileCallback":"/var/folders/vz/6k69dv2j0fx9kmtq6wqgyc200000gn/T/node-debug-callback-88a06c36949e86b7"}' /opt/homebrew/bin/node ./node_modules/mocha/bin/_mocha --timeout 999999 --colors /Users/pedro/git/letsramp/skyramp/libs/test/npm/docker.spec.js 
+ls
+vi package.json
+npm link @skyramp/skyramp
+npm install
+ cd /Users/pedro/git/letsramp/skyramp/libs/test/npm ; /usr/bin/env SHA=8a288b43 PYTHONPATH=../../pip/src SKYRAMP_DEBUG=true NODE_PATH=/Users/pedro/git/letsramp/skyramp/libs/test/npm/node_modules:/Users/pedro/git/letsramp/skyramp/libs/test/npm/../../npm/ 'NODE_OPTIONS= --require /Applications/Cursor.app/Contents/Resources/app/extensions/ms-vscode.js-debug/src/bootloader.js  --inspect-publish-uid=http' 'VSCODE_INSPECTOR_OPTIONS=:::{"inspectorIpc":"/var/folders/vz/6k69dv2j0fx9kmtq6wqgyc200000gn/T/node-cdp.68663-73f8aae2-4.sock","deferredMode":false,"waitForDebugger":"","execPath":"/opt/homebrew/bin/node","onlyEntrypoint":false,"autoAttachMode":"always","fileCallback":"/var/folders/vz/6k69dv2j0fx9kmtq6wqgyc200000gn/T/node-debug-callback-204479d797db32ea"}' /opt/homebrew/bin/node ./node_modules/mocha/bin/_mocha --timeout 999999 --colors /Users/pedro/git/letsramp/skyramp/libs/test/npm/docker.spec.js 
+cat package.json
+npm install
+SKYRAMP_DEBUg=true node dashboar.js
+ls
+SKYRAMP_DEBUg=true node dashboar.js
+ls dashboar.js
+SKYRAMP_DEBUg=true node dashboar.js
+ls node_modules/@skyramp
+npm link @skyramp/skyramp
+ls -l node_modules/@skyramp
+SKYRAMP_DEBUg=true node dashboar.js
+npm install koffi
+SKYRAMP_DEBUg=true node dashboar.js
+npm link @skyramp/skyramp
+SKYRAMP_DEBUg=true node dashboar.js
+npm install
+ls -l node_modules/@skyramp
+npm install
+cat node_modules
+ls node_modules
+ls node_modules/koffi
+g
+npm install
+SKYRAMP_DEBUg=true node dashboar.js
+ssh mini
+z skyramp
+g
+pwd
+cd ~/git/letsramp/skyramp
+g
+make all
+make build-worker
+make release-so
+docker images
+g
+./bin/skyramp cluster remove -l
+g
+nnn .github/workflows
+g
+g
+./bin/skyramp cluster remove -l
+make all
+make build-worker
+kubectl get ns
+g
+./bin/skyramp cluster remove -l
+docker rm $(docker ps -q -a) --force
+make all
+nvim cmd/libs/client.go +461
+g
+nnn
+./bin/skyramp cluster remove -l
+./bin/skyramp cluster remove -l
+kind get clusters
+./bin/skyramp cluster remove -l
+./bin/skyramp cluster remove -l
+./bin/skyramp cluster remove -l
+./bin/skyramp cluster remove -l
+./bin/skyramp cluster remove -l
+g
+g
+nnn
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp cluster remove -l
+skyramp cluster remove -l
+g
+ifconf
+nnn
+!
+nnn
+!
+pwd
+./bin/skyramp cluster remove -l
+ppwd
+pwd
+nvim
+nnn
+nvim
+rm libs/pip/src/skyramp/lib/*.*
+killall python
+killall python3
+make release-so
+g
+rm libs/pip/src/skyramp/lib/*.*
+make release-so
+g
+nvim 
+rm libs/pip/src/skyramp/lib/*.*
+rm libs/pip/src/skyramp/lib/*.*
+g
+killall python3
+killall python
+make release-so
+zellij attach mbp
+ls ~/.aws
+scp -r ~/.aws mini:~/.aws
+ssh mini
+ssh mini
+go version
+brew upgrade go
+g
+g
+nnn
+ssh mini
+g
+rg deploy_dashboard
+g
+nnn
+g
+make release-so
+whereis aws-mfa
+aws-mfa
+z npm
+l
+pwd
+cd ../../npm
+npm link
+brew search mfa
+brew search aws-mfa
+which aws-mfa
+brew info aws-vault
+brew info aws-amplify
+aws-mfa --help
+ls -l
+pwd
+npm pack
+g
+make all
+z skyramp
+make all
+ssh mini
+nnn
+cp demo.sh test_pip.sh
+nvim test_pip.sh
+./test_pip.sh
+nvim test_pip.sh
+./test_pip.sh
+nvim test_pip.sh
+./test_pip.sh
+./test_pip.sh
+nvim test_pip.sh
+nvim test_pip.sh
+./test_pip.sh
+./command.sh
+nnn
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp version
+pwd
+ls
+touch rsync-mini.sh
+pwd
+nvim rsync-mini.sh
+chmod +x./rsync-mini.sh
+chmod +x ./rsync-mini.sh
+./rsync-mini.sh
+nnn
+source ../venv/bin/activate
+ls
+python deploy.py
+export SHA=$(docker images | grep worker | head -n 1 | awk '{print $2}')
+python deploy.py
+python deploy.py
+cat pytest.py
+nvim deploy.py
+go test
+ls
+vi generated_test.go
+rm generated_test.go
+nvim 
+nnn
+pwd
+cd ../../..
+cd skyramp
+g
+make all
+make build-worker
+rm libs/pip/src/skyramp/lib/*.*
+make release-so
+make pip-package-and-install
+g
+g
+lazygit --version
+delta
+nnn
+g
+g
+g
+nvim
+g
+g
+git checkout main
+g
+make all
+nnn
+nvim
+nnn
+source .venv/bin/activate
+export PYTHONPATH=~/git/letsramp/skyramp/libs/pip/src
+export SHA=$(docker images | grep worker | head -n 1 | awk '{print $2}')
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+ls
+nvim test_docker_skyramp.py
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+SKYRAMP_DEBUG=true pytest test_k8s_skyramp.py -s -vvv
+./bin/skyramp cluster remove -l
+SKYRAMP_DEBUG=true pytest test_k8s_skyramp.py -s -vvv
+g
+SKYRAMP_DEBUG=true pytest test_docker_skyramp.py -s -vvv
+g
+make all
+g
+rm libs/pip/src/skyramp/lib/*.*
+killall python
+killall python3
+rm libs/pip/src/skyramp/lib/*.*
+g
+make all
+g
+git status
+nnn
+cd ../../..
+make test
+nnn
+make lint
+make test
+nnn .github/workflows
+ls
+ls dist
+ls
+nnn
+cp test_skyramp.py test_docker_skyramp.py
+nvim test_docker_skyramp.py
+	nnn
+nnn ~/.skyramp
+cp ~/.skyramp/kind-cluster.kubeconfig ~/.kube/config
+kubectl get ns
+cd ../../..
+nvim
+nnn
+exit
+exit
+nvim 
+exit
+nnn
+rm -rf .sdkman
+$ curl -s https://get.sdkman.io | bash
+curl -s https://get.sdkman.io | bash
+ls -l /Users/pedro/.zshrc
+sudo chown pedrp:pedrp /Users/pedro/.zshrc:
+sudo chown pedrp:staff /Users/pedro/.zshrc:
+`openssl verify -CAfile ca.pem -verbose cert.pem`
+sudo chown pedro:staff /Users/pedro/.zshrc:
+sudo chown pedro:staff /Users/pedro/.zshrc
+ls -l
+curl -s https://get.sdkman.io | bash
+rm -rf .sdkman
+curl -s https://get.sdkman.io | bash
+    source "/Users/pedro/.sdkman/bin/sdkman-init.sh"
+sdk list
+sdk list java
+sdk list java
+sdk install 21.0.5-tem
+sdk list java
+sdk list java
+sdk list java
+sdk install 21.0.5-tem
+sdk install 21.0.5-jbr
+sdk install java 21.0.5-tem
+curl -s https://get.sdkman.io | bash
+ls /Users/pedro/.sdkman
+ls /Users/pedro/.sdkman/bin
+/Users/pedro/.sdkman/bin/sdkman-init.sh 
+ls -l /Users/pedro/.sdkman/bin/sdkman-init.sh 
+chmod +x  /Users/pedro/.sdkman/bin/sdkman-init.sh 
+/Users/pedro/.sdkman/bin/sdkman-init.sh 
+ls /Users/pedro/.sdkman/bin
+nnn ~/.sdkman
+cd
+ skyramp
+ skyramp
+z skyramp
+g
+g
+pwd
+ls
+cd ..
+ls
+ls skyramp
+rm -rf ./skyramp
+z skyramp
+g
+make all
+make lint
+make test
+g
+cd /Users/pedro/src/Documents/Skyramp/API/bedrock
+cd ../../..
+rg gitea
+nvim Notes/homelab/Gitea\ Git\ Server.md
+z skyramp
+g
+ssh mini
+ssh rachzucco
+nnn
+ssh mini
+nvim ~/.ssh/config
+ssh uvm
+nvim ~/.ssh/config
+ssh uvm
+ssh rachzucco
+z skyramp
+make build-worker
+make build-worker
+cd ..
+make build-worker
+killall _mocha
+killall node
+ssh mini
+ssh mini
+sudo cp /Applications/Docker.app//Contents/Library/LaunchServices/com.docker.vmnetd /Library/PrivilegedHelperTools/\
+
+sudo cp /Applications/Docker.app/Contents/Library/LaunchServices/com.docker.vmnetd /Library/PrivilegedHelperTools/\
+sudo cp /Applications/Docker.app/Contents/MacOS/com.docker.socket /Library/PrivilegedHelperTools/\
+
+nnn
+sudo hdiutil attach Docker.dmg\
+sudo /Volumes/Docker/Docker.app/Contents/MacOS/install\
+sudo hdiutil detach /Volumes/Docker
+z skyramp
+g
+g
+make all
+brew upgrade golangci-liint
+brew upgrade golangci-lint
+make all
+g
+make all
+ps -a
+ps
+killall golangci-lint
+make all
+make release-o
+make release-so
+zellij attach mbp
+z skyramp
+make release-so
+g
+nvim
+make worker
+make all
+make release-so
+nnn
+cd libs/npm
+npm install
+pwd
+nvim package.json
+ls node_modules
+ls node_modules/@skyramp
+rm -rf node_modules
+sudo rm -rf node_modules
+npm install
+npm link @skyramp/skyramp
+exit
+exit
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ssh mini
+z skyramp
+nnn
+z skyramp
+ls -a
+scp .cursorrules mini:/~/git/letsramp/skyramp
+scp .cursorrules mini:~/git/letsramp/skyramp
+exit
+ssh mini
+ssh mini
+ssh mini
+z skyramp
+g
+ssh mini
+ssh mini
+z skyramp
+g
+exit
+ssh mini
+cd bin
+ls
+nnn
+ssh mini
+ssh mini
+q
+nnn
+rg TestDescription
+nvim pkg/types/types.go +822
+nnn
+pwd
+mkdir ../skyramp.worktrees
+git worktree add ../skyramp.worktrees/main main
+nnn
+./test_all_java.sh
+nvim
+./test_all_java.sh
+nvim
+./test_all_java.sh
+exit
+ls -l
+pwd
+ls
+ls
+pwd
+exit
+ls
+scp test_all_java.sh mini:~/git/letsramp/skyramp/libs/java
+scp -r api mini:~/git/letsramp/skyramp/libs/java
+exit
+./testest_all_java.sh
+ls
+./test_all_java.sh
+ls ../../..
+nnn
+pwd
+./test_all_java.sh
+nnn
+exit
+z skyramp
+g
+make all
+make release-so
+nnn
+exit
+z skyramp
+nnn
+source ~/.sdkman/bin/sdkman-init.sh;
+sdk list java
+sdk --help
+sdk use java 21
+sdk show java
+sdk list java
+sdk use java 21.0.6-tem
+sdk list maven
+nnn
+nnn
+./install_java.sh
+nvim
+./install_java.sh
+nvim
+./install_java.sh
+nnn
+z skyramp
+pwd
+git fetch mini
+g 
+git status
+git restore libs/java/gradle/wrapper/gradle-wrapper.properties
+git status
+g
+nnn
+make bundle-so
+ls libs/java/src/main/resources
+nvim Makefile
+make bundle-so
+ls libs/java/src/main/resources
+cd libs/java
+mvn package
+nnn
+zellij attach mbp
+source ~/.sdkman/bin/sdkman-init.sh
+mvn
+java --version
+sdk install mavan
+sdk install mvn
+nnn
+ssh mini
+ls
+z cisco
+nnn
+mvn
+sdk list maven
+sdk install maven 3.9.9
+sdk list java
+pwd
+z skyramp
+g
+nnn
+pwd
+nnn
+make all
+killall golangci-lint
+make all
+nnn
+nvim Makefile
+make release-so
+nnn
+nnn
+java version
+source ~/.sdkman/bin/sdkman-init.sh
+java version
+java --version
+sdk list java
+nnn
+make all
+g
+make all
+nnn
+make release-so
+make release-so
+nnn
+git wo
+git worktree show
+git worktree ps
+git worktree list
+git worktree remove /Users/pedro/git/letsramp/skyramp.worktrees/main 
+g
+nnn
+nnn
+g
+make all
+docker ps
+nnn
+make release-so
+nnn
+g
+z examples/v1/cisco
+ls
+nnn
+zsh mini
+SSH mini
+\
+
+\
+
+g
+make all
+docker ps
+nnn
+make release-so
+nnn
+g
+z examples/v1/cisco
+ls
+nnn
+zsh mini
+SSH mini
+\
+
+\
+
+gits status
+git status
+git add src 
+g
+ls
+curl -s "https://get.sdkman.io" | bash
+source "${HOME}/.sdkman/bin/sdkman-init.sh"\
+sdk install java 21.0.6-tem\
+sdk install maven 3.9.9
+pwd
+git ststus
+git status
+g
+pwd
+cursor .
+ls
+./sync-to-mini.sh
+g
+pwd
+nnn
+./sync-from-mini.sh
+	ls
+nnn
+rm -rf java
+nnn
+./sync-from-mini.sh
+touch .gitignore
+cat "java/target/" >> .gitignore
+ls
+nnn
+git init .
+./sync-from-mini.sh
+nnn
+cp sync-to-mini.sh sync-from-mini.sh
+nnn
+nnn sync.sh
+nnn
+ssh mini
+ping mini
+fzf
+exit
+nnn ~/bin
+exit
+ssh mini
+exit
+ssh mini
+nnn
+nnn
+ssh mini
+brew install --cask ghostty\
+
+ssh mini
+ssh rachzucco
+ssh mini
+0;50;5M0;50;5m
+nnn
+ssh mini
+35;39;9M35;39;8M35;40;8M35;41;7M35;42;7M35;42;6M35;43;6M35;44;5M35;45;5Mq
+35;46;5M35;47;5M35;48;6M35;49;6M35;50;6M35;50;7M35;51;7M35;52;7M35;53;8M35;54;8M35;55;8M35;55;9M35;56;9M35;57;9M35;58;9M35;59;9M35;59;10M35;60;10M35;61;10M35;62;10M35;62;11M35;63;11M35;64;11M35;65;11M35;66;11M35;67;11M35;68;12M35;69;12M35;70;12M35;71;12M35;72;12M35;73;13M35;74;13M35;75;13M35;76;13M35;75;13M35;74;13M35;73;13M35;73;12M35;72;12M
+ssh rachzucco
+/opt/homebrew/bin/python3 /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/pedro/.cursor/extensions/ms-python.python-2024.12.3-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+exit
+co
+exit
+./rsync-codegen.sh mini mbp
+hostname
+exit
+rsync-codegen.sh mini mbp
+exit
+make all
+alias skyramp=~/git/letsramp/skyramp/bin/skyramp
+skyramp generate integration rest --help
+staticcheck ./...
+g
+make all
+killall golangci-lint
+make all
+g
+nnn
+./generate.sh
+ls
+cd examples/v1/cisco
+./generate.sh
+cp generate.sh generate1.sh
+nnn
+./generate.s
+./generate1.sh
+nvim
+./generate1.sh
+g
+exit
+ skyramp
+z skyramp
+pwd
+nnn
+make all
+nnn examples/v1/mongo-demo
+./scripts/uc-part3.sh
+nnn
+./scripts/uc-part3.sh
+./scripts/uc-part4.sh
+nnn
+./scripts/uc-part3.sh
+nvim ArticlesIntegrationTest.java
+cd ../../..
+nnn
+make all
+nnn examples/v1/mongo-demo
+./scripts/uc-part4.sh
+nnn
