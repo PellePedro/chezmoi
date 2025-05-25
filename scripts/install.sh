@@ -37,7 +37,7 @@ get_os() {
   if [[ "$OSTYPE" =~ "darwin"* ]]; then
     OS="darwin"
     log "Running on Darwin"
-  elif [[ "$OSTYPE" =~ "linux" ]]; then
+  elif [[ "$OSTYPE" =~ "linux" || "$OSTYPE" == "linux-gnu" ]]; then
     OS="linux"
     log "Running on Linux"
   fi
