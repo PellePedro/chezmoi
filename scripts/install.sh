@@ -81,6 +81,7 @@ get_gopass() {
 install_uv() {
   log "Installing uv"
   curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="$HOME/.local/bin" sh
+  mkdir -p $HOME/.local/share
   uv venv --python 3.12 $HOME/.local/share/venv
   source $HOME/.local/share/venv/bin/activate
   uv pip install pyvim
