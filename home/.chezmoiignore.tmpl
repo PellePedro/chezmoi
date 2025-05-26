@@ -4,8 +4,12 @@
 {{ end }}
 
 {{ if ne .chezmoi.os "linux" }}
-.chezmoiscripts/linux/**
+.chezmoiscripts/ubuntu/**
 .hushlogin
 .local/bin/nvim
 .local/share/fonts
+{{ end }}
+
+{{ if eq .chezmoi.osRelease.ID "ubuntu" }}
+.chezmoiscripts/ubuntu/**
 {{ end }}

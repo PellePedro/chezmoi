@@ -1,0 +1,76 @@
+#!/bin/bash
+
+set -eufo pipefail
+
+{{ $taps := list
+  "nikitabobko/tap"
+-}}
+
+
+{{ $brews := list
+     "atuin"
+     "bat"
+     "cmake"
+     "dust"
+     "eza"
+     "fd"
+     "fzf"
+     "gcc"
+     "gh"
+     "git-delta"
+     "git"
+     "gnupg"
+     "gpgme"
+     "jq"
+     "just"
+     "k9s"
+     "kind"
+     "lazygit"
+     "libtool"
+     "luarocks"
+     "neovim"
+     "ngrep"
+     "nnn"
+     "pkg-config"
+     "pkgconf"
+     "protobuf"
+     "pspg"
+     "ripgrep"
+     "shellcheck"
+     "shfmt"
+     "socat"
+     "staticcheck"
+     "tree"
+     "watch"
+     "wget"
+     "yq"
+     "zellij"
+     "zoxide"
+     "zsh"
+-}}
+{{ $casks := list
+     "font-hack-nerd-font"
+-}}
+
+
+if ((! $+commands[brew] )); then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    {{ if eq .chezmoi.arch "arm64" -}}
+        export HOMEBREW_PREFIX="/opt/homebrew"
+    {{ else }}
+        export HOMEBREW_PREFIX="/usr/local"
+    {{ end -}}
+    export PATH="${HOMEBREW_PREFIX}/bin:${PATH}"
+fi
+
+brew bundle --file=/dev/stdin <<EOF
+{{ range ($taps | sortAlpha | uniq) -}}
+tap "{{ . }}"
+{{ end }}
+{{ range ($brews | sortAlpha | uniq) -}}
+brew "{{ . }}"
+{{ end -}}
+{{ range ($casks | sortAlpha | uniq) -}}
+cask "{{ . }}"
+{{ end -}}
+EOF
