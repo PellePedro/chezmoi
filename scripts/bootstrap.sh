@@ -6,6 +6,15 @@ packages=(
   "age"
 )
 
+install_uv() {
+  log "Installing uv"
+  curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="$HOME/.local/bin" sh
+  mkdir -p $HOME/.local/share
+  uv venv --python 3.12 $HOME/.local/share/venv
+  source $HOME/.local/share/venv/bin/activate
+  uv pip install pyvim
+}
+
 # Check if Homebrew is installed
 if ! command -v brew &> /dev/null; then
     echo "Installing Homebrew..."
@@ -21,3 +30,5 @@ for package in "${packages[@]}"; do
         echo "$package is already installed"
     fi
 done
+
+install_uv
