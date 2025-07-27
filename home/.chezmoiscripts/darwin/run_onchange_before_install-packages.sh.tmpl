@@ -69,14 +69,23 @@ if ((! $+commands[brew] )); then
     export PATH="${HOMEBREW_PREFIX}/bin:${PATH}"
 fi
 
-brew bundle --file=/dev/stdin <<EOF
+# First add the taps
 {{ range ($taps | sortAlpha | uniq) -}}
-tap "{{ . }}"
+brew tap "{{ . }}"
 {{ end }}
+
+# Install brews with fallback to --build-from-source
 {{ range ($brews | sortAlpha | uniq) -}}
-brew "{{ . }}"
+if ! brew list --formula "{{ . }}" &>/dev/null; then
+    echo "Installing {{ . }}..."
+    if ! brew install "{{ . }}"; then
+        echo "Failed to install {{ . }} from bottle, trying to build from source..."
+        brew install --build-from-source "{{ . }}" || echo "Warning: Failed to install {{ . }}"
+    fi
+fi
 {{ end -}}
+
+# Install casks (no build-from-source option for casks)
 {{ range ($casks | sortAlpha | uniq) -}}
-cask "{{ . }}"
+brew install --cask "{{ . }}" || echo "Warning: Failed to install cask {{ . }}"
 {{ end -}}
-EOF

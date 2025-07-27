@@ -53,7 +53,7 @@ set -eufo pipefail
 -}}
 
 
-if ((! $+commands[brew] )); then
+if ! command -v brew &> /dev/null; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     {{ if eq .chezmoi.arch "arm64" -}}
         export HOMEBREW_PREFIX="/opt/homebrew"
@@ -63,14 +63,23 @@ if ((! $+commands[brew] )); then
     export PATH="${HOMEBREW_PREFIX}/bin:${PATH}"
 fi
 
-brew bundle --file=/dev/stdin <<EOF
+# First add the taps
 {{ range ($taps | sortAlpha | uniq) -}}
-tap "{{ . }}"
+brew tap "{{ . }}"
 {{ end }}
+
+# Install brews with fallback to --build-from-source
 {{ range ($brews | sortAlpha | uniq) -}}
-brew "{{ . }}"
+if ! brew list --formula "{{ . }}" &>/dev/null; then
+    echo "Installing {{ . }}..."
+    if ! brew install "{{ . }}"; then
+        echo "Failed to install {{ . }} from bottle, trying to build from source..."
+        brew install --build-from-source "{{ . }}" || echo "Warning: Failed to install {{ . }}"
+    fi
+fi
 {{ end -}}
+
+# Install casks (no build-from-source option for casks)
 {{ range ($casks | sortAlpha | uniq) -}}
-cask "{{ . }}"
+brew install --cask "{{ . }}" || echo "Warning: Failed to install cask {{ . }}"
 {{ end -}}
-EOF

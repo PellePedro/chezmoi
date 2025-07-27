@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -eufo pipefail
+
+# Run the common Go tools installation script
+{{ template "common/run_onchange_after_install-go-tools.sh.tmpl" . }}

@@ -1,0 +1,59 @@
+#!/bin/bash
+
+set -eufo pipefail
+
+# Go tools to install
+{{ $gotools := list
+    "github.com/golangci/golangci-lint/cmd/golangci-lint@v1.63.3"
+    "golang.org/x/tools/gopls@latest"
+    "github.com/go-delve/delve/cmd/dlv@latest"
+    "github.com/fatih/gomodifytags@latest"
+    "golang.org/x/tools/cmd/goimports@latest"
+    "golang.org/x/tools/cmd/gorename@latest"
+    "golang.org/x/tools/cmd/godoc@latest"
+    "github.com/mgechev/revive@latest"
+    "github.com/fullstorydev/grpcurl/cmd/grpcurl@latest"
+    "google.golang.org/protobuf/cmd/protoc-gen-go@latest"
+    "google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest"
+-}}
+
+# Check if go is installed
+if ! command -v go &> /dev/null; then
+    echo "Go is not installed. Please install Go first."
+    exit 1
+fi
+
+echo "Installing Go tools..."
+
+# Create Go bin directory if it doesn't exist
+mkdir -p "$HOME/go/bin"
+
+# Ensure Go bin is in PATH
+export PATH="${PATH}:${HOME}/go/bin"
+
+# Install each tool
+{{ range ($gotools | sortAlpha | uniq) -}}
+echo "Installing {{ . }}..."
+go install {{ . }} || echo "Failed to install {{ . }}"
+{{ end -}}
+
+echo "Go tools installation completed!"
+
+# Verify installations
+echo -e "\nVerifying installed tools:"
+echo "========================="
+
+# Extract just the binary name from each tool for verification
+{{ range ($gotools | sortAlpha | uniq) -}}
+{{ $parts := splitList "/" . -}}
+{{ $lastPart := last $parts -}}
+{{ $binary := splitList "@" $lastPart | first -}}
+{{ if eq $binary "cmd" -}}
+  {{ $binary = index $parts (sub (len $parts) 2) -}}
+{{ end -}}
+if command -v {{ $binary }} &> /dev/null; then
+    echo "✓ {{ $binary }} installed"
+else
+    echo "✗ {{ $binary }} not found in PATH"
+fi
+{{ end -}}
