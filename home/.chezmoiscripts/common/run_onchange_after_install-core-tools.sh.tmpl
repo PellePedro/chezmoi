@@ -1,0 +1,71 @@
+#!/bin/bash
+
+set -eufo pipefail
+
+# This script installs core tools that are platform-agnostic
+# These tools are installed the same way across all platforms
+
+log() {
+  printf "[CHEZMOI] %s\n" "$@"
+}
+
+# Install Rust if not present
+if ! command -v rustc &> /dev/null; then
+  log "Installing Rust..."
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path
+  source "$HOME/.cargo/env"
+else
+  log "Rust already installed"
+fi
+
+# Install common Rust tools
+if command -v cargo &> /dev/null; then
+  log "Installing Rust tools..."
+  cargo install --locked bat eza ripgrep fd-find zoxide starship tokei || true
+fi
+
+# Install Atuin
+if ! command -v atuin &> /dev/null; then
+  log "Installing Atuin..."
+  bash <(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)
+else
+  log "Atuin already installed"
+fi
+
+# Install fnm (Fast Node Manager)
+if ! command -v fnm &> /dev/null; then
+  log "Installing fnm..."
+  curl -fsSL https://fnm.vercel.app/install | bash
+  export PATH="$HOME/.local/share/fnm:$PATH"
+  eval "$(fnm env --use-on-cd)"
+else
+  log "fnm already installed"
+fi
+
+# Install Node.js via fnm
+if command -v fnm &> /dev/null; then
+  log "Installing Node.js..."
+  fnm install v24.4.0
+  fnm use v24.4.0
+  fnm default v24.4.0
+fi
+
+# Install global npm packages
+if command -v npm &> /dev/null; then
+  log "Installing global npm packages..."
+  npm install -g @anthropic-ai/claude-code typescript tsx prettier eslint npm-check-updates yarn pnpm || true
+fi
+
+# Install uv (Python package manager)
+if ! command -v uv &> /dev/null; then
+  log "Installing uv..."
+  curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="$HOME/.local/bin" sh
+fi
+
+# Install SDKMAN
+if [ ! -d "$HOME/.sdkman" ]; then
+  log "Installing SDKMAN..."
+  curl -s "https://get.sdkman.io?rcupdate=false" | bash
+fi
+
+log "Core tools installation completed!"

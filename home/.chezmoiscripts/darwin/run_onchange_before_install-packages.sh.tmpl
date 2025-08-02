@@ -2,15 +2,32 @@
 
 set -eufo pipefail
 
+log() {
+  printf "[CHEZMOI] %s\n" "$@"
+}
+
+# Check for Xcode Command Line Tools
+if ! xcode-select -p >/dev/null 2>&1; then
+  log "Installing Xcode Command Line Tools..."
+  xcode-select --install
+  # Wait for installation
+  echo "Press any key when Xcode Command Line Tools installation is complete..."
+  read -n 1 -s
+fi
+
 {{ $taps := list
   "FelixKratz/formulae"
   "nikitabobko/tap"
+  "homebrew/cask-fonts"
 -}}
 
-
 {{ $brews := list
+     "age"
+     "autoconf"
+     "automake"
      "bat"
      "cmake"
+     "curl"
      "dust"
      "eza"
      "fd"
@@ -21,7 +38,9 @@ set -eufo pipefail
      "git-delta"
      "git"
      "gnupg"
+     "gopass"
      "gpgme"
+     "htop"
      "jq"
      "just"
      "k9s"
@@ -29,8 +48,9 @@ set -eufo pipefail
      "lazygit"
      "libtool"
      "luarocks"
-     "neovim"
+     "netcat"
      "ngrep"
+     "nmap"
      "nnn"
      "pkg-config"
      "pkgconf"
@@ -40,12 +60,16 @@ set -eufo pipefail
      "shellcheck"
      "shfmt"
      "socat"
+     "sqlite"
+     "starship"
      "staticcheck"
+     "tmux"
      "tree"
      "watch"
      "wget"
      "yq"
      "zellij"
+     "zoxide"
      "zsh"
 -}}
 {{ $casks := list
@@ -56,8 +80,9 @@ set -eufo pipefail
      "raycast"
 -}}
 
-
-if ((! $+commands[brew] )); then
+# Install Homebrew if not present
+if ! command -v brew &> /dev/null; then
+    log "Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     {{ if eq .chezmoi.arch "arm64" -}}
         export HOMEBREW_PREFIX="/opt/homebrew"
@@ -68,22 +93,44 @@ if ((! $+commands[brew] )); then
 fi
 
 # First add the taps
+log "Adding Homebrew taps..."
 {{ range ($taps | sortAlpha | uniq) -}}
-brew tap "{{ . }}"
+brew tap "{{ . }}" || true
 {{ end }}
 
-# Install brews with fallback to --build-from-source
+# Install brews
+log "Installing Homebrew packages..."
 {{ range ($brews | sortAlpha | uniq) -}}
 if ! brew list --formula "{{ . }}" &>/dev/null; then
-    echo "Installing {{ . }}..."
-    if ! brew install "{{ . }}"; then
-        echo "Failed to install {{ . }} from bottle, trying to build from source..."
-        brew install --build-from-source "{{ . }}" || echo "Warning: Failed to install {{ . }}"
-    fi
+    log "Installing {{ . }}..."
+    brew install "{{ . }}" || echo "Warning: Failed to install {{ . }}"
 fi
 {{ end -}}
 
-# Install casks (no build-from-source option for casks)
+# Install casks
+log "Installing Homebrew casks..."
 {{ range ($casks | sortAlpha | uniq) -}}
-brew install --cask "{{ . }}" || echo "Warning: Failed to install cask {{ . }}"
+if ! brew list --cask "{{ . }}" &>/dev/null 2>&1; then
+    log "Installing {{ . }}..."
+    brew install --cask "{{ . }}" || echo "Warning: Failed to install cask {{ . }}"
+fi
 {{ end -}}
+
+# Install Go if not present
+if ! command -v go &> /dev/null; then
+  log "Installing Go..."
+  GO_VERSION="1.23.4"
+  {{ if eq .chezmoi.arch "arm64" -}}
+  GO_ARCH="darwin-arm64"
+  {{ else }}
+  GO_ARCH="darwin-amd64"
+  {{ end -}}
+  curl -fsSL "https://dl.google.com/go/go${GO_VERSION}.${GO_ARCH}.tar.gz" -o /tmp/golang.tar.gz
+  sudo rm -rf /usr/local/go
+  sudo tar -C /usr/local -xzf /tmp/golang.tar.gz
+  rm /tmp/golang.tar.gz
+  sudo ln -sf /usr/local/go/bin/go /usr/local/bin/go
+  sudo ln -sf /usr/local/go/bin/gofmt /usr/local/bin/gofmt
+fi
+
+log "Darwin package installation completed!"
