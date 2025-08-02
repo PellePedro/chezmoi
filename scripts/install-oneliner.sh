@@ -1,11 +1,11 @@
 #!/bin/bash
 # Single-file installer for chezmoi dotfiles
-# Usage: curl -fsSL https://raw.githubusercontent.com/PellPedro/chezmoi/main/scripts/install-oneliner.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/pellpedro/chezmoi/main/scripts/install-oneliner.sh | bash
 
 set -euo pipefail
 
 # Configuration
-CHEZMOI_REPO="https://github.com/PellPedro/chezmoi.git"
+CHEZMOI_REPO="git@github.com:pellpedro/chezmoi.git"
 CHEZMOI_VERSION="v2.63.1"
 GO_VERSION="1.23.4"
 NODE_VERSION="v24.4.0"
@@ -153,8 +153,26 @@ install_essential_tools() {
 setup_chezmoi() {
     log "Setting up chezmoi..."
     
+    # Try SSH first (works with ssh-agent), fall back to HTTPS
+    log "Testing repository access..."
+    INIT_REPO="$CHEZMOI_REPO"
+    
+    # Use chezmoi's ability to test the repo
+    if ! "$HOME/.local/bin/chezmoi" init --dry-run "$INIT_REPO" >/dev/null 2>&1; then
+        log "SSH access failed, trying HTTPS..."
+        INIT_REPO="https://github.com/pellpedro/chezmoi.git"
+    else
+        log "SSH access confirmed"
+    fi
+    
     # Initialize chezmoi with your repo
-    "$HOME/.local/bin/chezmoi" init --apply "$CHEZMOI_REPO"
+    "$HOME/.local/bin/chezmoi" init --apply "$INIT_REPO" || {
+        error "Failed to initialize chezmoi"
+        error "If this is a private repository, you need to:"
+        error "1. Set up SSH keys: ssh-keygen -t ed25519 -C 'your-email@example.com'"
+        error "2. Add the key to GitHub: https://github.com/settings/keys"
+        exit 1
+    }
 }
 
 # Main installation
