@@ -1,3 +1,4 @@
+{{- if or (eq .chezmoi.osRelease.id "ubuntu") (eq .chezmoi.osRelease.id "debian") -}}
 #!/bin/bash
 
 set -eufo pipefail
@@ -26,3 +27,4 @@ if command -v zsh &> /dev/null && [ "$SHELL" != "$(which zsh)" ]; then
 fi
 
 log "Ubuntu configuration completed!"
+{{- end -}}

@@ -1,3 +1,4 @@
+{{- if eq .chezmoi.osRelease.id "arch" -}}
 #!/bin/bash
 
 set -eufo pipefail
@@ -127,3 +128,4 @@ fi
 {{ end -}}
 
 log "Arch Linux package installation completed!"
+{{- end -}}

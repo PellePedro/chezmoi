@@ -1,3 +1,4 @@
+{{- if or (eq .chezmoi.osRelease.id "ubuntu") (eq .chezmoi.osRelease.id "debian") -}}
 #!/bin/bash
 
 set -eufo pipefail
@@ -123,3 +124,4 @@ fi
 {{ end -}}
 
 log "Ubuntu package installation completed!"
+{{- end -}}
