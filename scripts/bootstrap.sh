@@ -105,6 +105,7 @@ verify_scripts() {
     "install-node.sh"
     "install-sdkman.sh"
     "install-neovim.sh"
+    "install-nerdfonts.sh"
   )
   
   for script in "${required_scripts[@]}"; do
@@ -131,6 +132,7 @@ select_components() {
     "node:Node.js via fnm and npm packages"
     "java:Java via SDKMAN with Maven and Gradle"
     "neovim:Neovim (build from source)"
+    "nerdfonts:JetBrains Mono Nerd Font"
   )
   
   local selected=()
@@ -182,6 +184,11 @@ run_installations() {
         log "Building Neovim from source..."
         "$SCRIPT_DIR/install-neovim.sh" || warn "Neovim build had issues"
         success "Neovim build completed"
+        ;;
+      nerdfonts)
+        log "Installing Nerd Fonts..."
+        "$SCRIPT_DIR/install-nerdfonts.sh" || warn "Nerd Fonts installation had issues"
+        success "Nerd Fonts installation completed"
         ;;
     esac
     echo ""
