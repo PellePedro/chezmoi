@@ -198,6 +198,7 @@ install_brew_packages() {
   if [[ "$(detect_distro)" == "darwin" ]]; then
     brew tap homebrew/cask-fonts || true
     brew install --cask font-hack-nerd-font || true
+    brew install --cask wezterm || true
   fi
 }
 
