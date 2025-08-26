@@ -3,8 +3,7 @@ alias vi='nvim'
 alias x='exit'
 alias f='zi'
 alias g='lazygit'
-alias r=$HOME/git/letsramp/skyramp/.vscode/scripts/run-action.sh
-
+alias oc='opencode --port 15015'
 alias ze="zellij -l ~/.config/zellij/layout.kdl attach dev --create"
 alias zek="zellij kill-all-sessions"
 alias zr="zellij run --"
