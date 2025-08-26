@@ -46,3 +46,6 @@ eval "$(zoxide init zsh)"
 
 
 source "$HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/go/bin:$HOME/go/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
