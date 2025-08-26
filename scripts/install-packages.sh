@@ -188,6 +188,11 @@ install_brew_packages() {
     "ngrep"
   )
 
+  # Add build tools for macOS
+  if [[ "$(detect_distro)" == "darwin" ]]; then
+    brew_packages+=("gcc" "make")
+  fi
+
   for pkg in "${brew_packages[@]}"; do
     if ! brew list "$pkg" &>/dev/null; then
       log "Installing $pkg via Homebrew"

@@ -122,8 +122,8 @@ verify_scripts() {
 
 # Interactive mode to select components
 select_components() {
-  log "Select components to install:"
-  echo ""
+  log "Select components to install:" >&2
+  echo "" >&2
   
   local components=(
     "core:Core tools (chezmoi, age, gopass, homebrew, uv, atuin, rust, zoxide)"
@@ -139,14 +139,19 @@ select_components() {
   
   for component in "${components[@]}"; do
     IFS=':' read -r key desc <<< "$component"
-    read -p "Install $desc? [Y/n] " -n 1 -r
-    echo
+    echo "" >&2
+    echo "Install $desc? [Y/n]" >&2
+    read -r REPLY
     if [[ $REPLY =~ ^[Yy]$ ]] || [[ -z $REPLY ]]; then
       selected+=("$key")
     fi
   done
   
-  echo "${selected[@]}"
+  if [ ${#selected[@]} -gt 0 ]; then
+    echo "${selected[@]}"
+  else
+    echo ""
+  fi
 }
 
 # Run installation scripts
@@ -264,7 +269,10 @@ print_summary() {
 
 # Main function
 main() {
-  clear
+  # Only clear if running interactively
+  if [ -t 0 ]; then
+    clear
+  fi
   echo "========================================"
   echo "Chezmoi Dotfiles Bootstrap"
   echo "========================================"
@@ -284,7 +292,12 @@ main() {
   # Select components
   if [ $# -eq 0 ]; then
     # Interactive mode
-    components=($(select_components))
+    selected_output=$(select_components)
+    if [ -z "$selected_output" ]; then
+      components=()
+    else
+      read -ra components <<< "$selected_output"
+    fi
   else
     # Use command line arguments
     components=("$@")
