@@ -2,13 +2,11 @@
 
 set -euo pipefail
 
+# chezmoi url
+chezmoi_url="git@github.com:pellpedro/chezmoi.git"
+
 # Add $HOME/.local/bin to PATH at the beginning
 export PATH="$HOME/.local/bin:$PATH"
-
-# Dotfiles installation script
-# References:
-# - https://github.com/Allaman/dots
-# - https://github.com/kwanpham2195/dots
 
 # Configuration
 readonly SCRIPT_NAME="$(basename "$0")"
@@ -61,13 +59,13 @@ command_exists() {
 check_required_tools() {
   local missing_tools=()
   local required_tools=(curl gunzip tar chmod rm printf mv mkdir)
-  
+
   for tool in "${required_tools[@]}"; do
     if ! command_exists "$tool"; then
       missing_tools+=("$tool")
     fi
   done
-  
+
   if [[ ${#missing_tools[@]} -gt 0 ]]; then
     abort "Missing required tools: ${missing_tools[*]}"
   fi
@@ -78,18 +76,18 @@ get_arch() {
   local arch
   arch=$(uname -m)
   case "$arch" in
-    x86_64|amd64)
-      ARCH="amd64"
-      ;;
-    arm64|aarch64)
-      ARCH="arm64"
-      ;;
-    armv7l)
-      ARCH="armv7"
-      ;;
-    *)
-      abort "Unsupported architecture: $arch"
-      ;;
+  x86_64 | amd64)
+    ARCH="amd64"
+    ;;
+  arm64 | aarch64)
+    ARCH="arm64"
+    ;;
+  armv7l)
+    ARCH="armv7"
+    ;;
+  *)
+    abort "Unsupported architecture: $arch"
+    ;;
   esac
   info "Detected architecture: $ARCH"
 }
@@ -114,7 +112,7 @@ get_os() {
 setup_directories() {
   info "Setting up directories"
   mkdir -p "$USER_BIN" "$TEMP_DIR"
-  
+
   # Add USER_BIN to PATH if not already there
   if [[ ":$PATH:" != *":$USER_BIN:"* ]]; then
     export PATH="$USER_BIN:$PATH"
@@ -128,15 +126,15 @@ install_chezmoi() {
     info "chezmoi already installed, skipping"
     return 0
   fi
-  
+
   log "Installing chezmoi $CHEZMOI_VERSION"
   local url="https://github.com/twpayne/chezmoi/releases/download/${CHEZMOI_VERSION}/chezmoi-${OS}-${ARCH}"
   local target="$USER_BIN/chezmoi"
-  
+
   if ! curl -fsSL "$url" -o "$target"; then
     abort "Failed to download chezmoi from $url"
   fi
-  
+
   chmod +x "$target"
   info "chezmoi installed successfully"
 }
@@ -146,12 +144,12 @@ install_homebrew() {
   if [[ "$OS" != "darwin" ]]; then
     return 0
   fi
-  
+
   if command_exists brew; then
     info "Homebrew already installed, skipping"
     return 0
   fi
-  
+
   log "Installing Homebrew"
   if ! /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; then
     abort "Failed to install Homebrew"
@@ -159,26 +157,21 @@ install_homebrew() {
   info "Homebrew installed successfully"
 }
 
-
-
-
-
 # Initialize chezmoi with dotfiles repository
 init_chezmoi() {
   log "Initializing chezmoi with dotfiles repository"
-  
+
   local chezmoi_bin="$USER_BIN/chezmoi"
   if [[ ! -x "$chezmoi_bin" ]]; then
     abort "chezmoi not found at $chezmoi_bin"
   fi
-  
-  local repo_url="git@github.com:pellpedro/chezmoi.git"
-  if ! "$chezmoi_bin" init "$repo_url"; then
-    abort "Failed to initialize chezmoi with $repo_url"
+
+  if ! "$chezmoi_bin" init "$chezmoi_url"; then
+    abort "Failed to initialize chezmoi with $chezmoi_url"
   fi
-  
+
   info "chezmoi initialized successfully"
-  
+
   # Run bootstrap script
   local bootstrap_script="$HOME/.local/share/chezmoi/scripts/bootstrap.sh"
   if [[ -x "$bootstrap_script" ]]; then
@@ -190,7 +183,7 @@ init_chezmoi() {
   else
     error "Bootstrap script not found or not executable: $bootstrap_script"
   fi
-  
+
   # Apply dotfiles with force
   log "Applying dotfiles"
   if ! "$chezmoi_bin" apply --force; then
@@ -201,7 +194,7 @@ init_chezmoi() {
 
 # Print usage information
 usage() {
-  cat << EOF
+  cat <<EOF
 Usage: $SCRIPT_NAME [OPTIONS]
 
 Install dotfiles and required tools.
@@ -223,37 +216,37 @@ EOF
 # Main installation function
 main() {
   local verbose=false
-  
+
   # Parse command line arguments
   while [[ $# -gt 0 ]]; do
     case $1 in
-      -h|--help)
-        usage
-        exit 0
-        ;;
-      -v|--verbose)
-        verbose=true
-        set -x
-        shift
-        ;;
-      *)
-        abort "Unknown option: $1. Use --help for usage information."
-        ;;
+    -h | --help)
+      usage
+      exit 0
+      ;;
+    -v | --verbose)
+      verbose=true
+      set -x
+      shift
+      ;;
+    *)
+      abort "Unknown option: $1. Use --help for usage information."
+      ;;
     esac
   done
-  
+
   log "Starting dotfiles installation"
-  
+
   check_required_tools
   get_arch
   get_os
   setup_directories
-  
+
   install_chezmoi
   install_homebrew
-  
+
   init_chezmoi
-  
+
   log "Dotfiles installation completed successfully!"
   info "Tools installed in: $USER_BIN"
   info "Make sure $USER_BIN is in your PATH"
