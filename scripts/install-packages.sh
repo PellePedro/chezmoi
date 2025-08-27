@@ -209,15 +209,15 @@ install_brew_packages() {
   fi
 }
 
+install_common_packages() {
+  # opencode
+  curl -fsSL https://opencode.ai/install | bash
+  # direnv
+  curl -sfL https://direnv.net/install.sh | bash
+}
+
 setup_shell() {
   log "Setting up shell configuration"
-
-  # Install Oh My Zsh if not present
-  if [ ! -d "$HOME/.oh-my-zsh" ] && command -v zsh &>/dev/null; then
-    log "Installing Oh My Zsh"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended || true
-  fi
-
   # Change default shell to zsh if available
   if command -v zsh &>/dev/null && [ "$SHELL" != "$(which zsh)" ]; then
     log "Changing default shell to zsh"
@@ -227,6 +227,8 @@ setup_shell() {
 
 main() {
   local distro=$(detect_distro)
+
+  install_common_packages
 
   log "Detected distribution: $distro"
 
