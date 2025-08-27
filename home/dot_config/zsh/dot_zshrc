@@ -38,12 +38,20 @@ case "$OS" in
     ;;
 esac
 
+# direnv
+if command -v direnv >/dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
+
 # autin
-eval "$(atuin init zsh)"
+if command -v autin >/dev/null 2>&1; then
+  eval "$(atuin init zsh)"
+fi
+
 # zoxide
-
-eval "$(zoxide init zsh)"
-
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+fi
 
 source "$HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 export PATH="$HOME/.local/bin:$PATH"
