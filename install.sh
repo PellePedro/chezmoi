@@ -3,7 +3,7 @@
 set -euo pipefail
 
 # chezmoi url
-chezmoi_url="git@github.com:pellpedro/chezmoi.git"
+chezmoi_url="git@github.com:pellepedro/chezmoi.git"
 
 # Add $HOME/.local/bin to PATH at the beginning
 export PATH="$HOME/.local/bin:$PATH"
@@ -253,6 +253,6 @@ main() {
 }
 
 # Only run main if script is executed directly
-if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+if [[ "${BASH_SOURCE[0]:-$0}" == "${0}" ]]; then
   main "$@"
 fi
