@@ -14,7 +14,7 @@ readonly USER_BIN="$HOME/.local/bin"
 readonly TEMP_DIR="/tmp/dotfiles-install-$$"
 
 # Tool versions
-readonly CHEZMOI_VERSION="v2.24.0"
+readonly CHEZMOI_VERSION="v2.65.0"
 
 # Global variables
 OS=""
@@ -128,11 +128,34 @@ install_chezmoi() {
   fi
 
   log "Installing chezmoi $CHEZMOI_VERSION"
-  local url="https://github.com/twpayne/chezmoi/releases/download/${CHEZMOI_VERSION}/chezmoi-${OS}-${ARCH}"
   local target="$USER_BIN/chezmoi"
-
-  if ! curl -fsSL "$url" -o "$target"; then
-    abort "Failed to download chezmoi from $url"
+  local url=""
+  
+  # Set URL based on OS
+  if [[ "$OS" == "darwin" ]]; then
+    url="https://github.com/twpayne/chezmoi/releases/download/${CHEZMOI_VERSION}/chezmoi-${OS}-${ARCH}"
+    
+    if ! curl -fsSL "$url" -o "$target"; then
+      abort "Failed to download chezmoi from $url"
+    fi
+  else
+    # Linux uses tar.gz format
+    url="https://github.com/twpayne/chezmoi/releases/download/${CHEZMOI_VERSION}/chezmoi_${CHEZMOI_VERSION#v}_${OS}_${ARCH/amd64/amd}.tar.gz"
+    local temp_archive="$TEMP_DIR/chezmoi.tar.gz"
+    
+    if ! curl -fsSL "$url" -o "$temp_archive"; then
+      abort "Failed to download chezmoi from $url"
+    fi
+    
+    # Extract the binary
+    if ! tar -xzf "$temp_archive" -C "$TEMP_DIR" chezmoi; then
+      abort "Failed to extract chezmoi archive"
+    fi
+    
+    # Move to target location
+    if ! mv "$TEMP_DIR/chezmoi" "$target"; then
+      abort "Failed to move chezmoi to $target"
+    fi
   fi
 
   chmod +x "$target"
