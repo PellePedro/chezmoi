@@ -1,14 +1,11 @@
 #!/bin/zsh
 alias vi='nvim'
 alias x='exit'
-alias f='zi'
 alias g='lazygit'
 alias oc='opencode --port 15015'
-alias ze="zellij -l ~/.config/zellij/layout.kdl attach dev --create"
+alias cl='claude --dangerously-skip-permissions'
 alias zek="zellij kill-all-sessions"
 alias zr="zellij run --"
-alias nz="nnn ~/.config/zellij"
-alias nc="nnn ~/.config/zsh"
 
 
 # Colorize grep output (good for log files)
