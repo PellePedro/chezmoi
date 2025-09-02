@@ -94,9 +94,10 @@ get_chezmoi() {
 get_homebrew() {
   log "Installing Homebrew"
   if ! command -v brew >/dev/null 2>&1; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    # Install Homebrew using the official installer
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     
-    # Set up Homebrew in PATH
+    # Set up Homebrew in PATH for current session
     case "$OS" in
       darwin)
         if [[ "$ARCH" == "arm64" ]]; then
@@ -106,11 +107,32 @@ get_homebrew() {
         fi
         ;;
       linux)
-        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+        # Homebrew on Linux is installed at /home/linuxbrew/.linuxbrew
+        if [ -d "/home/linuxbrew/.linuxbrew" ]; then
+          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+        fi
+        
+        # Add Homebrew to PATH for future sessions
+        if [ -n "$BASH_VERSION" ]; then
+          echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+        fi
+        if [ -n "$ZSH_VERSION" ] || [ -f ~/.zshrc ]; then
+          echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
+        fi
         ;;
     esac
+    
+    # Verify installation
+    if command -v brew >/dev/null 2>&1; then
+      log "Homebrew installed successfully"
+      brew --version
+    else
+      log "Homebrew installation completed but 'brew' command not found in PATH"
+      log "You may need to restart your shell or run: eval \"\$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)\""
+    fi
   else
     log "Homebrew already installed"
+    brew --version
   fi
 }
 
@@ -200,13 +222,17 @@ install_base_dependencies() {
   case "$DISTRO" in
     ubuntu)
       sudo apt-get update
-      sudo apt-get install -y curl wget gunzip tar git build-essential
+      # Install base dependencies including Homebrew prerequisites for Linux
+      sudo apt-get install -y curl wget gunzip tar git build-essential \
+        procps file
       ;;
     fedora)
-      sudo dnf install -y curl wget gzip tar git gcc gcc-c++ make
+      sudo dnf install -y curl wget gzip tar git gcc gcc-c++ make \
+        procps-ng file
       ;;
     arch)
-      sudo pacman -Sy --needed --noconfirm curl wget gzip tar git base-devel
+      sudo pacman -Sy --needed --noconfirm curl wget gzip tar git base-devel \
+        procps-ng file
       ;;
     darwin)
       # macOS has most tools pre-installed

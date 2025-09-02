@@ -84,6 +84,7 @@ install_apt_packages() {
   packages+=("nnn")
   packages+=("fd-find")
   packages+=("bat")
+  packages+=("zsh")
 
   # Add Ubuntu/Debian specific packages
   for pkg_set in "${DEV_PACKAGES[@]}" "${NET_PACKAGES[@]}"; do
@@ -161,6 +162,17 @@ install_pacman_packages() {
 install_brew_packages() {
   log "Installing additional packages with Homebrew"
 
+  # Try to find Homebrew in standard locations if not in PATH
+  if ! command -v brew &>/dev/null; then
+    if [ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
+      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    elif [ -f "/opt/homebrew/bin/brew" ]; then
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+    elif [ -f "/usr/local/bin/brew" ]; then
+      eval "$(/usr/local/bin/brew shellenv)"
+    fi
+  fi
+
   # Ensure Homebrew is installed
   if ! command -v brew &>/dev/null; then
     log "Homebrew not found. Please install it first using install-core.sh"
@@ -169,6 +181,7 @@ install_brew_packages() {
 
   # Homebrew packages for better cross-platform tools
   local brew_packages=(
+    "nnn"
     "fzf"
     "eza"
     "dust"
@@ -216,6 +229,28 @@ install_common_packages() {
   curl -sfL https://direnv.net/install.sh | bash
 }
 
+install_docker() {
+  log "Installing Docker"
+
+  # Check if Docker is already installed
+  if command -v docker &>/dev/null; then
+    log "Docker is already installed"
+    docker --version
+    return
+  fi
+
+  # Run the Docker installation script
+  local script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+  if [ -f "$script_dir/install-docker.sh" ]; then
+    log "Running Docker installation script"
+    bash "$script_dir/install-docker.sh" || {
+      log "Docker installation failed, continuing..."
+    }
+  else
+    log "Docker installation script not found at $script_dir/install-docker.sh"
+  fi
+}
+
 setup_shell() {
   log "Setting up shell configuration"
   # Change default shell to zsh if available
@@ -254,6 +289,9 @@ main() {
   # Install Homebrew packages (cross-platform tools)
   install_brew_packages
 
+  # Install Docker
+  install_docker
+
   # Setup shell
   setup_shell
 
@@ -264,7 +302,7 @@ main() {
   echo "Installed tools summary:"
   echo "========================"
 
-  local tools=("git" "curl" "wget" "jq" "ripgrep" "fd" "bat" "fzf" "eza" "zsh")
+  local tools=("git" "curl" "wget" "jq" "ripgrep" "fd" "bat" "fzf" "eza" "zsh" "docker" "nnn")
   for tool in "${tools[@]}"; do
     if command -v "$tool" &>/dev/null; then
       echo "✓ $tool"

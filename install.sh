@@ -162,9 +162,11 @@ install_chezmoi() {
   info "chezmoi installed successfully"
 }
 
-# Install Homebrew (macOS only)
+# Install Homebrew (macOS and Linux)
 install_homebrew() {
-  if [[ "$OS" != "darwin" ]]; then
+  # Check if OS is supported (darwin or linux)
+  if [[ "$OS" != "darwin" && "$OS" != "linux" ]]; then
+    info "Homebrew not supported on $OS, skipping"
     return 0
   fi
 
@@ -174,9 +176,64 @@ install_homebrew() {
   fi
 
   log "Installing Homebrew"
+  
+  # Install dependencies for Linux
+  if [[ "$OS" == "linux" ]]; then
+    info "Installing Homebrew dependencies for Linux"
+    # Check if we have apt-get (Ubuntu/Debian)
+    if command_exists apt-get; then
+      sudo apt-get update
+      sudo apt-get install -y build-essential procps curl file git
+    # Check if we have yum (RHEL/CentOS/Fedora)
+    elif command_exists yum; then
+      sudo yum groupinstall -y 'Development Tools'
+      sudo yum install -y procps-ng curl file git
+    # Check if we have dnf (newer Fedora)
+    elif command_exists dnf; then
+      sudo dnf groupinstall -y 'Development Tools'
+      sudo dnf install -y procps-ng curl file git
+    else
+      error "Could not find a supported package manager for Linux dependencies"
+      error "Please install build tools, curl, file, and git manually"
+    fi
+  fi
+  
+  # Install Homebrew
   if ! /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; then
     abort "Failed to install Homebrew"
   fi
+  
+  # Add Homebrew to PATH for Linux
+  if [[ "$OS" == "linux" ]]; then
+    info "Configuring Homebrew for Linux"
+    # Homebrew on Linux installs to /home/linuxbrew/.linuxbrew or $HOME/.linuxbrew
+    if [[ -d "/home/linuxbrew/.linuxbrew" ]]; then
+      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    elif [[ -d "$HOME/.linuxbrew" ]]; then
+      eval "$($HOME/.linuxbrew/bin/brew shellenv)"
+    fi
+    
+    # Add to shell profile for future sessions
+    local brew_shellenv=""
+    if [[ -d "/home/linuxbrew/.linuxbrew" ]]; then
+      brew_shellenv='eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
+    elif [[ -d "$HOME/.linuxbrew" ]]; then
+      brew_shellenv='eval "$($HOME/.linuxbrew/bin/brew shellenv)"'
+    fi
+    
+    if [[ -n "$brew_shellenv" ]]; then
+      # Check which shell profile to update
+      if [[ -f "$HOME/.bashrc" ]]; then
+        echo "$brew_shellenv" >> "$HOME/.bashrc"
+        info "Added Homebrew to ~/.bashrc"
+      fi
+      if [[ -f "$HOME/.zshrc" ]]; then
+        echo "$brew_shellenv" >> "$HOME/.zshrc"
+        info "Added Homebrew to ~/.zshrc"
+      fi
+    fi
+  fi
+  
   info "Homebrew installed successfully"
 }
 
@@ -229,7 +286,7 @@ OPTIONS:
 DESCRIPTION:
   This script installs the following tools:
   - chezmoi (dotfiles manager)
-  - Homebrew (macOS package manager, macOS only)
+  - Homebrew (package manager for macOS and Linux)
 
   After installation, it initializes chezmoi with the dotfiles repository.
 

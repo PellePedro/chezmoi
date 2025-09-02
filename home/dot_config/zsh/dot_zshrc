@@ -27,12 +27,36 @@ if command -v fzf &> /dev/null; then
 fi
 
 
+# Homebrew PATH setup
+# Detect OS and architecture for proper Homebrew installation path
 OS=$(uname -s)
+ARCH=$(uname -m)
+
+# Set up Homebrew based on OS and architecture
 case "$OS" in
   Linux)
-      ;;
+    # Linux Homebrew is typically installed at /home/linuxbrew/.linuxbrew
+    if [ -d "/home/linuxbrew/.linuxbrew" ]; then
+      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    fi
+    ;;
   Darwin)
-      ;;
+    # macOS Homebrew location depends on architecture
+    case "$ARCH" in
+      arm64)
+        # Apple Silicon Macs (M1/M2/M3)
+        if [ -d "/opt/homebrew" ]; then
+          eval "$(/opt/homebrew/bin/brew shellenv)"
+        fi
+        ;;
+      x86_64)
+        # Intel Macs
+        if [ -d "/usr/local" ]; then
+          eval "$(/usr/local/bin/brew shellenv 2>/dev/null)" || true
+        fi
+        ;;
+    esac
+    ;;
   *)
     echo "Unknown OS: $OS"
     ;;
@@ -57,3 +81,10 @@ source "$HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlightin
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/go/bin:$HOME/go/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# fnm (Fast Node Manager)
+FNM_PATH="$HOME/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env 2>/dev/null)" || true
+fi
