@@ -128,28 +128,28 @@ install_chezmoi() {
   log "Installing chezmoi $CHEZMOI_VERSION"
   local target="$USER_BIN/chezmoi"
   local url=""
-  
+
   # Set URL based on OS
   if [[ "$OS" == "darwin" ]]; then
     url="https://github.com/twpayne/chezmoi/releases/download/${CHEZMOI_VERSION}/chezmoi-${OS}-${ARCH}"
-    
+
     if ! curl -fsSL "$url" -o "$target"; then
       abort "Failed to download chezmoi from $url"
     fi
   else
     # Linux uses tar.gz format
-    url="https://github.com/twpayne/chezmoi/releases/download/${CHEZMOI_VERSION}/chezmoi_${CHEZMOI_VERSION#v}_${OS}_${ARCH/amd64/amd}.tar.gz"
+    url="https://github.com/twpayne/chezmoi/releases/download/${CHEZMOI_VERSION}/chezmoi_${CHEZMOI_VERSION#v}_${OS}_${ARCH}.tar.gz"
     local temp_archive="$TEMP_DIR/chezmoi.tar.gz"
-    
+
     if ! curl -fsSL "$url" -o "$temp_archive"; then
       abort "Failed to download chezmoi from $url"
     fi
-    
+
     # Extract the binary
     if ! tar -xzf "$temp_archive" -C "$TEMP_DIR" chezmoi; then
       abort "Failed to extract chezmoi archive"
     fi
-    
+
     # Move to target location
     if ! mv "$TEMP_DIR/chezmoi" "$target"; then
       abort "Failed to move chezmoi to $target"
@@ -174,7 +174,7 @@ install_homebrew() {
   fi
 
   log "Installing Homebrew"
-  
+
   # Install dependencies for Linux
   if [[ "$OS" == "linux" ]]; then
     info "Installing Homebrew dependencies for Linux"
@@ -195,12 +195,12 @@ install_homebrew() {
       error "Please install build tools, curl, file, and git manually"
     fi
   fi
-  
+
   # Install Homebrew
   if ! /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; then
     abort "Failed to install Homebrew"
   fi
-  
+
   # Add Homebrew to PATH for Linux
   if [[ "$OS" == "linux" ]]; then
     info "Configuring Homebrew for Linux"
@@ -210,7 +210,7 @@ install_homebrew() {
     elif [[ -d "$HOME/.linuxbrew" ]]; then
       eval "$($HOME/.linuxbrew/bin/brew shellenv)"
     fi
-    
+
     # Add to shell profile for future sessions
     local brew_shellenv=""
     if [[ -d "/home/linuxbrew/.linuxbrew" ]]; then
@@ -218,20 +218,20 @@ install_homebrew() {
     elif [[ -d "$HOME/.linuxbrew" ]]; then
       brew_shellenv='eval "$($HOME/.linuxbrew/bin/brew shellenv)"'
     fi
-    
+
     if [[ -n "$brew_shellenv" ]]; then
       # Check which shell profile to update
       if [[ -f "$HOME/.bashrc" ]]; then
-        echo "$brew_shellenv" >> "$HOME/.bashrc"
+        echo "$brew_shellenv" >>"$HOME/.bashrc"
         info "Added Homebrew to ~/.bashrc"
       fi
       if [[ -f "$HOME/.zshrc" ]]; then
-        echo "$brew_shellenv" >> "$HOME/.zshrc"
+        echo "$brew_shellenv" >>"$HOME/.zshrc"
         info "Added Homebrew to ~/.zshrc"
       fi
     fi
   fi
-  
+
   info "Homebrew installed successfully"
 }
 
