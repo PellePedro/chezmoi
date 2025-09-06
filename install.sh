@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
-
 # chezmoi url
 chezmoi_url="git@github.com:pellepedro/chezmoi.git"
 
