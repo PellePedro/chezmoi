@@ -227,6 +227,8 @@ install_common_packages() {
   curl -fsSL https://opencode.ai/install | bash
   # direnv
   curl -sfL https://direnv.net/install.sh | bash
+  # tailscale
+  # curl -fsSL https://tailscale.com/install.sh | sh
 }
 
 install_docker() {
