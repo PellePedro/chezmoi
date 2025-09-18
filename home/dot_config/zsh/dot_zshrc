@@ -1,5 +1,6 @@
 ZDOTDIR=$HOME/.config/zsh
 source "$ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$ZDOTDIR/plugins/conda-zsh-completion/conda-zsh-completion.plugin.zsh"
 
 source "$ZDOTDIR/aliases.zsh"
@@ -62,13 +63,14 @@ case "$OS" in
     ;;
 esac
 
+
 # direnv
 if command -v direnv >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"
 fi
 
 # autin
-if command -v autin >/dev/null 2>&1; then
+if command -v atuin >/dev/null 2>&1; then
   eval "$(atuin init zsh)"
 fi
 
@@ -76,11 +78,6 @@ fi
 if command -v zoxide >/dev/null 2>&1; then
   eval "$(zoxide init zsh)"
 fi
-
-source "$HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="/usr/local/go/bin:$HOME/go/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
 
 # fnm (Fast Node Manager)
 FNM_PATH="$HOME/.local/share/fnm"

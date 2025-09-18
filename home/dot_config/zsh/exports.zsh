@@ -7,7 +7,9 @@ export PATH=$HOME/bin:$USER/.local/bin:/usr/local/bin:$PATH
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 export PATH=$HOME/.cargo/bin:$PATH
-export PATH=$HOME/go/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=/usr/local/go/bin:$HOME/go/bin:$PATH
+
 export GOPATH=$HOME/go
 export PKG_CONFIG_PATH=/usr/local/opt/sqlite/lib/pkgconfig
 export CLICOLOR=1
