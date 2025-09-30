@@ -3,14 +3,16 @@
 HISTSIZE=1000000
 SAVEHIST=1000000
 export EDITOR=nvim
-export PATH=$HOME/bin:$USER/.local/bin:/usr/local/bin:$PATH
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
-export PATH=/usr/local/go/bin:$HOME/go/bin:$PATH
+export PATH=$GOBIN:$PATH
+export PATH=$HOME/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 
-export GOPATH=$HOME/go
 export PKG_CONFIG_PATH=/usr/local/opt/sqlite/lib/pkgconfig
 export CLICOLOR=1
 
