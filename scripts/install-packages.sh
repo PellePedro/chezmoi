@@ -222,13 +222,48 @@ install_brew_packages() {
   fi
 }
 
-install_common_packages() {
+install_utils_package() {
+  # cursor-agent
+  if ! command -v cursor-agent &>/dev/null; then
+    log "Installing cursor-agent"
+    curl https://cursor.com/install -fsSL | bash
+  else
+    log "cursor-agent already installed, skipping"
+  fi
+
+  # claude
+  if ! command -v claude &>/dev/null; then
+    log "Installing claude"
+    curl -fsSL https://claude.ai/install.sh | bash -s latest
+  else
+    log "claude already installed, skipping"
+  fi
+
   # opencode
-  curl -fsSL https://opencode.ai/install | bash
+  if ! command -v opencode &>/dev/null; then
+    log "Installing opencode"
+    curl -fsSL https://opencode.ai/install | bash
+  else
+    log "opencode already installed, skipping"
+  fi
+
   # direnv
-  curl -sfL https://direnv.net/install.sh | bash
+  if ! command -v direnv &>/dev/null; then
+    log "Installing direnv"
+    curl -sfL https://direnv.net/install.sh | bash
+  else
+    log "direnv already installed, skipping"
+  fi
+
   # tailscale
-  # curl -fsSL https://tailscale.com/install.sh | sh
+  if [[ "$(detect_distro)" == "darwin" ]]; then
+    log "On macOS: Please install Tailscale from the App Store"
+  elif ! command -v tailscale &>/dev/null; then
+    log "Installing tailscale"
+    curl -fsSL https://tailscale.com/install.sh | sh
+  else
+    log "tailscale already installed, skipping"
+  fi
 }
 
 install_docker() {
@@ -265,7 +300,7 @@ setup_shell() {
 main() {
   local distro=$(detect_distro)
 
-  install_common_packages
+  install_utils_package
 
   log "Detected distribution: $distro"
 
@@ -281,7 +316,13 @@ main() {
     install_pacman_packages
     ;;
   darwin)
-    log "macOS detected, skipping native package installation"
+    # aerospace
+    if ! brew list --cask nikitabobko/tap/aerospace &>/dev/null; then
+      log "Installing aerospace"
+      brew install --cask nikitabobko/tap/aerospace
+    else
+      log "aerospace already installed, skipping"
+    fi
     ;;
   *)
     abort "Unsupported distribution: $distro"

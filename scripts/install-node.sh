@@ -89,7 +89,6 @@ install_global_packages() {
 
   # Essential development tools
   local packages=(
-    "@anthropic-ai/claude-code"
     "typescript"
     "tsx"
     "prettier"
@@ -169,4 +168,3 @@ main() {
 }
 
 main "$@"
-
