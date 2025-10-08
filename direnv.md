@@ -14,8 +14,8 @@ Create a `.envrc` file in your project directory with environment variables and 
 
 ```bash
 # Using DIRENV_DIR
-export PATH=${DIRENV_DIR}/bin:$PATH
-export SKYRAMPDIR=${DIRENV_DIR}
+export PATH=$(PWD)/bin:$PATH
+export SKYRAMPDIR=$(PWD)
 
 ```
 
@@ -24,7 +24,7 @@ export SKYRAMPDIR=${DIRENV_DIR}
 ```bash
 # Or using direnv's helper function (cleaner)
 PATH_add bin
-export SKYRAMPDIR=${DIRENV_DIR}
+export SKYRAMPDIR=$(PWD)
 
 ```
 
