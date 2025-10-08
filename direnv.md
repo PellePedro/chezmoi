@@ -15,6 +15,8 @@ Create a `.envrc` file in your project directory with environment variables and 
 ```bash
 # Using DIRENV_DIR
 export PATH=${DIRENV_DIR}/bin:$PATH
+export SKYRAMPDIR=${DIRENV_DIR}
+
 ```
 
 ### Using direnv's Helper Function (Recommended)
@@ -22,6 +24,8 @@ export PATH=${DIRENV_DIR}/bin:$PATH
 ```bash
 # Or using direnv's helper function (cleaner)
 PATH_add bin
+export SKYRAMPDIR=${DIRENV_DIR}
+
 ```
 
 The `PATH_add` function is cleaner and automatically expands relative paths based on the current directory.
@@ -40,6 +44,7 @@ The `PATH_add` function is cleaner and automatically expands relative paths base
 PATH_add bin
 
 # Set environment variables
+export SKYRAMPDIR=${DIRENV_DIR}
 export NODE_ENV=development
 export API_KEY=your_key_here
 
