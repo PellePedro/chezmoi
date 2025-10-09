@@ -1,0 +1,75 @@
+# Homebrew PATH setup
+# Detect OS and architecture for proper Homebrew installation path
+OS=$(uname -s)
+ARCH=$(uname -m)
+
+# Set up Homebrew based on OS and architecture
+case "$OS" in
+  Linux)
+    # Linux Homebrew is typically installed at /home/linuxbrew/.linuxbrew
+    if [ -d "/home/linuxbrew/.linuxbrew" ]; then
+      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    fi
+    ;;
+  Darwin)
+    # macOS Homebrew location depends on architecture
+    case "$ARCH" in
+      arm64)
+        # Apple Silicon Macs (M1/M2/M3)
+        if [ -d "/opt/homebrew" ]; then
+          eval "$(/opt/homebrew/bin/brew shellenv)"
+        fi
+        ;;
+      x86_64)
+        # Intel Macs
+        if [ -d "/usr/local" ]; then
+          eval "$(/usr/local/bin/brew shellenv 2>/dev/null)" || true
+        fi
+        ;;
+    esac
+    ;;
+  *)
+    echo "Unknown OS: $OS"
+    ;;
+esac
+
+# fzf
+if command -v fzf &> /dev/null; then
+    [ -f /usr/share/fzf/shell/key-bindings.bash ] && source /usr/share/fzf/shell/key-bindings.bash
+    [ -f /usr/share/fzf/completion.bash ] && source /usr/share/fzf/completion.bash
+    [ -f /usr/share/doc/fzf/examples/completion.bash ] && source /usr/share/doc/fzf/examples/completion.bash
+    [ -f /usr/share/doc/fzf/examples/key-bindings.bash ] && source /usr/share/doc/fzf/examples/key-bindings.bash
+    [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+    if [[ "$(uname -s)" == "Darwin" && "$(command -v brew)" != "" ]] ; then
+        FZF_HOME=$(brew --prefix)/opt/fzf
+        [ -f $FZF_HOME/shell/completion.bash ] && source $FZF_HOME/shell/completion.bash
+        [ -f $FZF_HOME/shell/key-bindings.bash ] && source $FZF_HOME/shell/key-bindings.bash
+    fi
+fi
+
+# direnv
+if command -v direnv >/dev/null 2>&1; then
+  eval "$(direnv hook bash)"
+fi
+
+# atuin
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+if command -v atuin >/dev/null 2>&1; then
+  eval "$(atuin init bash)"
+fi
+
+# zoxide
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init bash)"
+fi
+
+# fnm (Fast Node Manager)
+FNM_PATH="$HOME/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --use-on-cd)"
+fi
+
+# opencode
+export PATH=/Users/pedro/.opencode/bin:$PATH
