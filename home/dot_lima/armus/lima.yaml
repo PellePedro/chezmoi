@@ -1,0 +1,93 @@
+# ~/.lima/ubuntu-arm64-noble/lima.yaml
+# Native Ubuntu 24.04 (arm64) on Apple Silicon
+
+arch: aarch64
+vmType: vz # Apple’s Virtualization.framework (native, headless)
+
+images:
+  - location: "https://cloud-images.ubuntu.com/noble/current/noble-server-cloudimg-arm64.img"
+    arch: "aarch64"
+
+cpus: 6
+memory: "16GiB"
+disk: "256GiB"
+
+vz:
+  rosetta:
+    enabled: false
+  entropy:
+    enabled: true
+
+mounts: []
+networks: []
+
+ssh:
+  localPort: 0
+
+# Cloud-init provisioning
+provision:
+  - mode: system
+    script: |
+      #!/bin/bash
+      set -eux
+      apt-get update -y
+      apt-get install -y sudo curl zsh nnn build-essential git btop
+
+      curl -fsSL https://tailscale.com/install.sh | sh
+
+      # Enable Tailscale service (systemd)
+      systemctl enable tailscaled
+      systemctl start tailscaled
+
+      # Create user 'pedro' with passwordless sudo
+      if ! id -u pedro >/dev/null 2>&1; then
+        useradd -m -s /bin/bash pedro
+        usermod -aG sudo pedro
+        mkdir -p /home/pedro/.ssh
+        chmod 700 /home/pedro/.ssh
+        echo "pedro ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/pedro
+        chmod 440 /etc/sudoers.d/pedro
+      fi
+
+  - mode: user
+    script: |
+      #!/bin/bash
+      set -eux
+
+      # Run as pedro
+      if [ "$(whoami)" != "pedro" ]; then
+        exec sudo -u pedro bash "$0"
+      fi
+
+      # Install Homebrew non-interactively
+      export NONINTERACTIVE=1
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+      # Determine brew prefix (usually /home/linuxbrew/.linuxbrew)
+      BREW_PREFIX="/home/linuxbrew/.linuxbrew"
+
+      # Ensure the brew path exists and append to .bashrc
+      if [ -d "$BREW_PREFIX/bin" ]; then
+        echo "" >> /home/pedro/.bashrc
+        echo '# Added by Lima provision script' >> /home/pedro/.bashrc
+        echo "eval \"\$(${BREW_PREFIX}/bin/brew shellenv)\"" >> /home/pedro/.bashrc
+        chown pedro:pedro /home/pedro/.bashrc
+      fi
+
+      # Activate immediately
+      PATH="${BREW_PREFIX"/bin:${PATH}"
+      eval "$(${BREW_PREFIX}/bin/brew shellenv)"
+
+      # Verify brew installation
+      brew --version
+
+      # Install formulas
+      brew install syncthis chezmoi age gopass
+
+# Optional: set default user
+user: pedro
+
+# Optional: metadata for reference
+metadata:
+  name: "ubuntu-arm64-noble"
+  description: "Ubuntu 24.04 ARM64"
