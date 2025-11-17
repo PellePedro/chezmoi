@@ -143,9 +143,9 @@ run = "move-node-to-workspace T"
 if.app-name-regex-substring = 'araxis'
 run = "move-node-to-workspace T"
 
-# =============== W - windsurf ====================
+# =============== W - ScreenSharing ====================
 [[on-window-detected]]
-if.app-name-regex-substring = 'windsurf'
+if app-id = 'com.apple.ScreenSharing'
 run = "move-node-to-workspace W"
 
 # =============== A - AI workspace ====================
