@@ -36,3 +36,13 @@ function zocat() {
 function prune() {
     sudo docker system prune -a
 }
+
+function gwt() {
+    if [ -z "$1" ]; then
+        echo "Usage: gwt <remote-branch>"
+        echo "Example: gwt pellepedro/SKYR-5512"
+        return 1
+    fi
+    git fetch origin "$1" && git worktree add -b "$1" "$1" FETCH_HEAD
+}
+
