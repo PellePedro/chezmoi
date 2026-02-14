@@ -86,6 +86,11 @@ install_apt_packages() {
   packages+=("bat")
   packages+=("zsh")
 
+  # Python packages
+  packages+=("python3-full")
+  packages+=("python3-venv")
+  packages+=("python3-pip")
+
   # Add Ubuntu/Debian specific packages
   for pkg_set in "${DEV_PACKAGES[@]}" "${NET_PACKAGES[@]}"; do
     IFS='|' read -ra VARIANTS <<<"$pkg_set"
@@ -117,6 +122,11 @@ install_dnf_packages() {
   packages+=("bat")
   packages+=("util-linux-user") # for chsh
 
+  # Python packages
+  packages+=("python3")
+  packages+=("python3-pip")
+  packages+=("python3-virtualenv")
+
   # Add Fedora specific packages
   for pkg_set in "${DEV_PACKAGES[@]}" "${NET_PACKAGES[@]}"; do
     IFS='|' read -ra VARIANTS <<<"$pkg_set"
@@ -146,6 +156,11 @@ install_pacman_packages() {
   packages+=("nnn")
   packages+=("fd")
   packages+=("bat")
+
+  # Python packages
+  packages+=("python")
+  packages+=("python-pip")
+  packages+=("python-virtualenv")
 
   # Add Arch specific packages
   for pkg_set in "${DEV_PACKAGES[@]}" "${NET_PACKAGES[@]}"; do
@@ -201,9 +216,9 @@ install_brew_packages() {
     "ngrep"
   )
 
-  # Add build tools for macOS
+  # Add build tools and Python for macOS
   if [[ "$(detect_distro)" == "darwin" ]]; then
-    brew_packages+=("gcc" "make")
+    brew_packages+=("gcc" "make" "python@3")
   fi
 
   for pkg in "${brew_packages[@]}"; do
@@ -345,7 +360,7 @@ main() {
   echo "Installed tools summary:"
   echo "========================"
 
-  local tools=("git" "curl" "wget" "jq" "ripgrep" "fd" "bat" "fzf" "eza" "zsh" "docker" "nnn")
+  local tools=("git" "curl" "wget" "jq" "ripgrep" "fd" "bat" "fzf" "eza" "zsh" "docker" "nnn" "python3")
   for tool in "${tools[@]}"; do
     if command -v "$tool" &>/dev/null; then
       echo "✓ $tool"
