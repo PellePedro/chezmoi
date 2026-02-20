@@ -214,6 +214,9 @@ install_brew_packages() {
     "pspg"
     "zellij"
     "ngrep"
+    "ripgrep"
+    "direnv"
+    "fnm"
   )
 
   # Add build tools and Python for macOS
