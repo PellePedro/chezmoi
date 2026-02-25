@@ -36,7 +36,9 @@ git fetch origin
 
 The `remote.origin.fetch` config is needed because bare clones don't set up tracking by default.
 
-### 4. Detect the default branch
+### 4. Detect the default branch and clean up local branches
+
+`git clone --bare` copies all remote branches as local `refs/heads/*`. After fetching the remote tracking refs, delete all local branches except the default branch so that only worktree-created branches exist locally.
 
 Determine the default branch (usually `main` or `master`):
 
@@ -49,6 +51,14 @@ If that fails, check if `main` or `master` exists:
 ```bash
 git show-ref --verify --quiet refs/heads/main && echo main || echo master
 ```
+
+Then delete all local branches except the default branch:
+
+```bash
+git for-each-ref --format='%(refname:short)' refs/heads/ | grep -v "^<default-branch>$" | xargs -r git branch -D
+```
+
+This ensures only the default branch exists locally. Additional local branches will be created on-demand by `git worktree add`.
 
 ### 5. Create the main worktree
 
