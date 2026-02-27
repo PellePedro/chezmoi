@@ -8,6 +8,11 @@ Clone a remote repository as a bare repo and set it up for a worktree-based deve
 
 ## Instructions
 
+**IMPORTANT**: The Bash tool may reset the shell working directory between calls. To prevent operations from running in the wrong directory, you MUST:
+1. Determine the **absolute path** of the current working directory at the start (referred to as `<base-dir>` below).
+2. Use **absolute paths** for ALL subsequent Bash commands — never rely on relative `cd` between separate Bash tool calls.
+3. All paths below use `<base-dir>/<repo-name>` as the root of the new bare repo.
+
 Perform the following steps:
 
 ### 1. Parse the repo name from the URL
@@ -20,18 +25,14 @@ Extract the repository name from `$ARGUMENTS` (strip `.git` suffix and path comp
 ### 2. Create the directory and clone as bare
 
 ```bash
-mkdir <repo-name>
-cd <repo-name>
-git clone --bare $ARGUMENTS .git
+mkdir <base-dir>/<repo-name>
+git clone --bare $ARGUMENTS <base-dir>/<repo-name>/.git
 ```
 
 ### 3. Configure the bare repo
 
 ```bash
-cd <repo-name>
-git config core.bare true
-git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
-git fetch origin
+cd <base-dir>/<repo-name> && git config core.bare true && git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*" && git fetch origin
 ```
 
 The `remote.origin.fetch` config is needed because bare clones don't set up tracking by default.
@@ -43,19 +44,19 @@ The `remote.origin.fetch` config is needed because bare clones don't set up trac
 Determine the default branch (usually `main` or `master`):
 
 ```bash
-git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
+cd <base-dir>/<repo-name> && git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
 ```
 
 If that fails, check if `main` or `master` exists:
 
 ```bash
-git show-ref --verify --quiet refs/heads/main && echo main || echo master
+cd <base-dir>/<repo-name> && git show-ref --verify --quiet refs/heads/main && echo main || echo master
 ```
 
 Then delete all local branches except the default branch:
 
 ```bash
-git for-each-ref --format='%(refname:short)' refs/heads/ | grep -v "^<default-branch>$" | xargs -r git branch -D
+cd <base-dir>/<repo-name> && git for-each-ref --format='%(refname:short)' refs/heads/ | grep -v "^<default-branch>$" | xargs -r git branch -D
 ```
 
 This ensures only the default branch exists locally. Additional local branches will be created on-demand by `git worktree add`.
@@ -65,23 +66,21 @@ This ensures only the default branch exists locally. Additional local branches w
 Create a worktree for the default branch as a subdirectory and configure it to track the upstream remote branch:
 
 ```bash
-git worktree add <default-branch> <default-branch>
-git config branch.<default-branch>.remote origin
-git config branch.<default-branch>.merge refs/heads/<default-branch>
+cd <base-dir>/<repo-name> && git worktree add <default-branch> <default-branch>
+cd <base-dir>/<repo-name> && git config branch.<default-branch>.remote origin && git config branch.<default-branch>.merge refs/heads/<default-branch>
 ```
 
 For example, if the default branch is `main`:
 ```bash
-git worktree add main main
-git config branch.main.remote origin
-git config branch.main.merge refs/heads/main
+cd <base-dir>/<repo-name> && git worktree add main main
+cd <base-dir>/<repo-name> && git config branch.main.remote origin && git config branch.main.merge refs/heads/main
 ```
 
 This ensures `git pull`, `git push`, and `git status` (ahead/behind) work correctly inside the worktree.
 
 ### 6. Create CLAUDE.md
 
-Create a `CLAUDE.md` file in the **root** of the bare repo directory (next to `.git/` and the worktree directories) with the following content. Replace `<repo-name>`, `<remote-url>`, and `<default-branch>` with the actual values:
+Create a `CLAUDE.md` file at `<base-dir>/<repo-name>/CLAUDE.md` (next to `.git/` and the worktree directories) with the following content. Replace `<repo-name>`, `<remote-url>`, and `<default-branch>` with the actual values:
 
 ```markdown
 # <repo-name>
@@ -166,7 +165,7 @@ cd <branch-directory>    # Just cd into the worktree directory
 
 ### 7. Create envrc and symlink it into the worktree
 
-Create a file called `envrc` (no leading dot) in the **root** of the bare repo directory (next to `.git/` and `CLAUDE.md`) with the following content:
+Create a file called `envrc` (no leading dot) at `<base-dir>/<repo-name>/envrc` (next to `.git/` and `CLAUDE.md`) with the following content:
 
 ```bash
 export SKYRAMPDIR=$PWD
@@ -181,18 +180,17 @@ export JAVA_BUILD_ARTIFACT="$SKYRAMPDIR/libs/java/target/skyramp-library-0.0.1.j
 Then create a symlink inside the default branch worktree pointing back to this file:
 
 ```bash
-ln -s ../envrc <default-branch>/.envrc
+ln -s ../envrc <base-dir>/<repo-name>/<default-branch>/.envrc
 ```
 
-This `envrc` file is intended to be used with [direnv](https://direnv.net/). Each worktree will symlink to it as `.envrc` so that environment variables are set correctly when entering any worktree directory. When creating additional worktrees in the future, the same symlink pattern should be used: `ln -s ../envrc <worktree-dir>/.envrc`.
+This `envrc` file is intended to be used with [direnv](https://direnv.net/). Each worktree will symlink to it as `.envrc` so that environment variables are set correctly when entering any worktree directory. When creating additional worktrees in the future, the same symlink pattern should be used: `ln -s ../envrc <base-dir>/<repo-name>/<worktree-dir>/.envrc`.
 
 ### 8. Verify the setup
 
 Run the following to verify everything is correct:
 
 ```bash
-cd <repo-name>
-git worktree list
+cd <base-dir>/<repo-name> && git worktree list
 ```
 
 Expected output should show the bare repo and the default branch worktree.
