@@ -60,18 +60,24 @@ git for-each-ref --format='%(refname:short)' refs/heads/ | grep -v "^<default-br
 
 This ensures only the default branch exists locally. Additional local branches will be created on-demand by `git worktree add`.
 
-### 5. Create the main worktree
+### 5. Create the main worktree and set up tracking
 
-Create a worktree for the default branch as a subdirectory:
+Create a worktree for the default branch as a subdirectory and configure it to track the upstream remote branch:
 
 ```bash
 git worktree add <default-branch> <default-branch>
+git config branch.<default-branch>.remote origin
+git config branch.<default-branch>.merge refs/heads/<default-branch>
 ```
 
 For example, if the default branch is `main`:
 ```bash
 git worktree add main main
+git config branch.main.remote origin
+git config branch.main.merge refs/heads/main
 ```
+
+This ensures `git pull`, `git push`, and `git status` (ahead/behind) work correctly inside the worktree.
 
 ### 6. Create CLAUDE.md
 
@@ -158,7 +164,29 @@ cd <branch-directory>    # Just cd into the worktree directory
 3. **Create worktrees for feature branches** as subdirectories of this root
 ```
 
-### 7. Verify the setup
+### 7. Create envrc and symlink it into the worktree
+
+Create a file called `envrc` (no leading dot) in the **root** of the bare repo directory (next to `.git/` and `CLAUDE.md`) with the following content:
+
+```bash
+export SKYRAMPDIR=$PWD
+export PATH=$PWD/bin:$PATH
+export GOFLAGS="-buildvcs=false"
+export PIPDIR=$SKYRAMPDIR/libs/pip/dist
+export NPM_BUILD_ARTIFACT="$SKYRAMPDIR/libs/npm/skyramp-skyramp-1.0.0.tgz"
+export PIP_BUILD_ARTIFACT="$SKYRAMPDIR/libs/pip/dist/skyramp-1.0.tar.gz"
+export JAVA_BUILD_ARTIFACT="$SKYRAMPDIR/libs/java/target/skyramp-library-0.0.1.jar"
+```
+
+Then create a symlink inside the default branch worktree pointing back to this file:
+
+```bash
+ln -s ../envrc <default-branch>/.envrc
+```
+
+This `envrc` file is intended to be used with [direnv](https://direnv.net/). Each worktree will symlink to it as `.envrc` so that environment variables are set correctly when entering any worktree directory. When creating additional worktrees in the future, the same symlink pattern should be used: `ln -s ../envrc <worktree-dir>/.envrc`.
+
+### 8. Verify the setup
 
 Run the following to verify everything is correct:
 
@@ -169,10 +197,12 @@ git worktree list
 
 Expected output should show the bare repo and the default branch worktree.
 
-### 8. Report to the user
+### 9. Report to the user
 
 Print a summary:
 - Repository cloned as bare repo at `./<repo-name>/.git`
 - Default branch worktree created at `./<repo-name>/<default-branch>/`
 - `CLAUDE.md` created at `./<repo-name>/CLAUDE.md`
+- `envrc` created at `./<repo-name>/envrc` and symlinked as `./<repo-name>/<default-branch>/.envrc`
 - Remind the user to `cd <repo-name>/<default-branch>` to start working
+- Remind the user to run `direnv allow` inside the worktree if direnv doesn't auto-allow
