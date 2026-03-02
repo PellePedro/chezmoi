@@ -1,0 +1,59 @@
+# ============================
+#  Worker Base Image
+#  Contains all runtime dependencies but NOT the worker binary.
+#  Rebuild only when runtime deps change (Go version, Python, protoc, etc.)
+#
+#  Usage:
+#    docker buildx build . -f Dockerfile.worker-base \
+#      -t skyramp/worker-base:latest --platform=linux/amd64 --load
+# ============================
+FROM registry.access.redhat.com/ubi8/ubi-minimal
+
+# Build arguments for multi-arch support
+ARG TARGETARCH
+
+# Install only minimal runtime dependencies
+RUN microdnf install -y \
+  curl \
+  tar \
+  gcc \
+  gcc-c++ \
+  glibc-devel \
+  libtool \
+  python3.12 \
+  python3.12-pip \
+  gzip \
+  unzip \
+  && microdnf clean all
+
+# Set Go version
+ENV GOLANG_VERSION=1.24.7
+
+# Download and install Go for the target architecture
+RUN GOARCH_DOWNLOAD=$(echo ${TARGETARCH} | sed 's/amd64/amd64/;s/arm64/arm64/') && \
+  curl -LO https://golang.org/dl/go${GOLANG_VERSION}.linux-${GOARCH_DOWNLOAD}.tar.gz && \
+  tar -C /usr/local -xzf go${GOLANG_VERSION}.linux-${GOARCH_DOWNLOAD}.tar.gz && \
+  rm go${GOLANG_VERSION}.linux-${GOARCH_DOWNLOAD}.tar.gz
+
+RUN python3 -m pip install --upgrade pip
+RUN pip3 install setuptools --upgrade
+
+# Set Go environment variables
+ENV PATH="/usr/local/go/bin:/root/go/bin:$PATH"
+
+# Install Protobuf Compiler (protoc) for the target architecture
+RUN PROTOC_ARCH=$(echo ${TARGETARCH} | sed 's/amd64/x86_64/;s/arm64/aarch_64/') && \
+  curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v21.9/protoc-21.9-linux-${PROTOC_ARCH}.zip && \
+  unzip protoc-21.9-linux-${PROTOC_ARCH}.zip -d /usr/local && \
+  rm protoc-21.9-linux-${PROTOC_ARCH}.zip
+
+# Install Go tools required at runtime (gRPC & Protobuf plugins)
+RUN go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1
+RUN go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.27.1
+
+# Precompile Go plugins for performance
+WORKDIR /usr/local/lib/skyramp/idl/grpc
+COPY scripts/_go_cache/grpc/go.* /usr/local/lib/skyramp/idl/grpc
+COPY scripts/_go_cache/grpc/main.go /usr/local/lib/skyramp/idl/grpc
+RUN go build -v -o /dev/null -buildmode=plugin .
+

@@ -1,0 +1,25 @@
+# ============================
+#  Fast Worker Image
+#  Layers a locally cross-compiled worker binary onto the base image.
+#  Requires: skyramp/worker-base:latest (build with Dockerfile.worker-base)
+#
+#  Usage:
+#    GOOS=linux GOARCH=amd64 go build -o bin/worker -ldflags '...' ./cmd/worker
+#    docker build . -f Dockerfile.worker-fast -t <image>
+# ============================
+FROM skyramp/worker-base:latest
+COPY bin/worker /root/worker
+
+# Copy runtime files (everything except the worker binary)
+WORKDIR /root
+COPY web/templates/ ./tmpl/
+COPY scripts/skyramp-init.py /
+
+# Ensure correct permissions
+RUN chmod +rw ./tmpl/*
+
+# Healthcheck for container readiness
+HEALTHCHECK --interval=3s --timeout=1s CMD curl -f http://localhost:35142/readyz || exit 1
+
+# Start the application
+ENTRYPOINT ["./worker"]

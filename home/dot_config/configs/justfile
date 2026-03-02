@@ -1,0 +1,127 @@
+# Build skyramp CLI
+build-skyramp:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    direnv allow
+    make skyramp-quick
+
+# Build skyramp CLI for Linux AMD64
+build-skyramp-linux-amd64:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    direnv allow
+    GOOS=linux GOARCH=amd64 go build -o bin/skyramp-linux-amd64 ./cmd/skyramp
+
+# Build worker
+build-worker:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    direnv allow
+    make build-worker
+
+# Build shared library
+build-shared-library:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    make release-so
+
+# Build npm library
+build-sdk: build-shared-library
+    #!/usr/bin/env bash
+    set -euo pipefail
+    make package-npm
+    make package-pip-nolint
+    just build-java-library
+
+# Run integration tests
+test-integration:
+    go test -tags integration -v -count=1 ./test/integration/
+
+# Run OpenAPI mock integration tests only
+test-integration-openapi:
+    go test -tags integration -v -run TestOpenAPI -count=1 ./test/integration/
+
+# Build java library
+build-java-library:
+    #!/bin/bash
+    set -x
+    # use sdkman
+    source ~/.sdkman/bin/sdkman-init.sh
+    # TODO: check that java exist in the path
+    # TODO: check that mvn exist in the path
+    # build shared library
+    # make release-so
+    pushd libs/java
+    # build library
+    mvn clean package -Dmaven.test.skip=true
+    popd
+
+# Build worker base image (rebuild when runtime deps change)
+build-worker-base:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    case "$(uname -m)" in
+        x86_64)  ARCH=amd64 ;;
+        aarch64|arm64) ARCH=arm64 ;;
+        *) echo "Unsupported architecture: $(uname -m)" >&2; exit 1 ;;
+    esac
+    echo "Building worker-base for linux/${ARCH}"
+    # Resolve Dockerfile.worker-base if it's a symlink; docker buildx
+    # fails with "too many links" when -f points to a symlink outside
+    # the build context (e.g. in bare-repo worktree setups).
+    DOCKERFILE="$(readlink -f Dockerfile.worker-base)"
+    docker buildx build . -f "${DOCKERFILE}" \
+        -t skyramp/worker-base:latest \
+        --platform="linux/${ARCH}" --load
+
+# Build fast worker image (detects host arch, compiles worker, builds image)
+build-worker-fast:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    case "$(uname -m)" in
+        x86_64)  ARCH=amd64 ;;
+        aarch64|arm64) ARCH=arm64 ;;
+        *) echo "Unsupported architecture: $(uname -m)" >&2; exit 1 ;;
+    esac
+    echo "Building worker binary for linux/${ARCH}"
+    GOOS=linux GOARCH="${ARCH}" go build -buildvcs=false -o bin/worker ./cmd/worker
+    TAG=$(git rev-parse --short HEAD)
+    echo "Building worker image tagged ${TAG}"
+    # Resolve symlink; docker buildx fails with "too many links" when
+    # -f points to a symlink outside the build context (bare-repo worktrees).
+    DOCKERFILE="$(readlink -f Dockerfile.worker-fast)"
+    docker build . -f "${DOCKERFILE}" \
+        -t 296613639307.dkr.ecr.us-west-2.amazonaws.com/dev/worker:"${TAG}"
+
+# Run Java CLI tests
+test-java-cli:
+    #!/usr/bin/env bash
+    set -eo pipefail
+    source ~/.sdkman/bin/sdkman-init.sh
+    set -u
+
+    # Download JUnit jars
+    mkdir -p scripts/cli-param-tests/lib
+    wget -q "https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.11.4/junit-platform-console-standalone-1.11.4.jar" -P "scripts/cli-param-tests/lib"
+    wget -q "https://repo1.maven.org/maven2/org/junit/jupiter/junit-jupiter-api/5.11.4/junit-jupiter-api-5.11.4.jar" -P "scripts/cli-param-tests/lib"
+
+    # Copy Skyramp jar
+    cp libs/java/target/skyramp-library-0.0.1.jar scripts/cli-param-tests/lib/
+
+    # Execute CLI test
+    cd scripts/cli-param-tests
+    chmod +x run_tests.sh
+    export SKYRAMP=$(which skyramp)
+    export JAVA_LIB_PATH="$(pwd)/lib"
+    export SKYRAMP_DISABLE_TELEMETRY=true
+    export SKYRAMP_TEST_TOKEN=skyramp-test-token
+    unset CI
+    ./run_tests.sh java
+
+# Run incremental mock test
+test-incremental-mock:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    rm -rf examples/v1/mockV2/node_modules
+    scripts/v1/incremental_mock_test.sh
+    rm -rf examples/v1/mockV2/node_modules
