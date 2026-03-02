@@ -22,7 +22,7 @@ export CLICOLOR=1
 # NNN Configuration
 # NNN Bookmarks
 NNN_BMS="b:~/.config/nnn/bookmarks"
-NNN_BMS="c:~/.config;$NNN_BMS"
+NNN_BMS="c:~/.local/share/chezmoi;$NNN_BMS"
 NNN_BMS="n:~/.config/nvim;$NNN_BMS"
 NNN_BMS="z:~/.config/zsh;$NNN_BMS"
 NNN_BMS="g:~/git;$NNN_BMS"
