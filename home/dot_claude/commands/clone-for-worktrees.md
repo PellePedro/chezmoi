@@ -168,8 +168,8 @@ cd <branch-directory>    # Just cd into the worktree directory
 Create a file called `envrc` (no leading dot) at `<base-dir>/<repo-name>/envrc` (next to `.git/` and `CLAUDE.md`) with the following content:
 
 ```bash
+PATH_add bin
 export SKYRAMPDIR=$PWD
-export PATH=$PWD/bin:$PATH
 export GOFLAGS="-buildvcs=false"
 export PIPDIR=$SKYRAMPDIR/libs/pip/dist
 export NPM_BUILD_ARTIFACT="$SKYRAMPDIR/libs/npm/skyramp-skyramp-1.0.0.tgz"
