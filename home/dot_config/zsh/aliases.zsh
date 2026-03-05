@@ -4,6 +4,7 @@ alias x='exit'
 alias g='lazygit'
 alias oc='opencode --port 15015'
 alias cl='claude --dangerously-skip-permissions'
+alias tdev="tmux new-session -A -s devops"
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
