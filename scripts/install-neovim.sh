@@ -5,7 +5,7 @@ set -euo pipefail
 # Neovim build configuration
 NVIM_RELEASE="${NVIM_RELEASE:-master}"
 BUILD_DIR="${BUILD_DIR:-/tmp/neovim-build}"
-INSTALL_PREFIX="${INSTALL_PREFIX:-/usr/local}"
+INSTALL_PREFIX="${INSTALL_PREFIX:-$HOME/.local}"
 
 # Logging functions
 log() {
@@ -119,9 +119,27 @@ install_arch_deps() {
     gettext
 }
 
+check_darwin_prereqs() {
+  local arch=$(uname -m)
+  case "$arch" in
+    x86_64|arm64)
+      log "macOS architecture: $arch"
+      ;;
+    *)
+      abort "Unsupported macOS architecture: $arch (expected x86_64 or arm64)"
+      ;;
+  esac
+
+  if ! command -v brew >/dev/null 2>&1; then
+    abort "Homebrew is required but not installed. Install it from https://brew.sh"
+  fi
+}
+
 install_darwin_deps() {
   log "Installing macOS build dependencies"
-  
+
+  check_darwin_prereqs
+
   # Ensure Xcode Command Line Tools are installed
   if ! xcode-select -p >/dev/null 2>&1; then
     log "Installing Xcode Command Line Tools"
@@ -130,11 +148,6 @@ install_darwin_deps() {
     # Wait for installation to complete
     echo "Press any key when Xcode Command Line Tools installation is complete..."
     read -n 1 -s
-  fi
-  
-  # Install dependencies via Homebrew
-  if ! command -v brew >/dev/null 2>&1; then
-    abort "Homebrew is required. Please install it first using install-core.sh"
   fi
   
   log "Installing dependencies via Homebrew"
@@ -200,7 +213,7 @@ install_neovim() {
   log "Installing Neovim to $INSTALL_PREFIX"
   
   cd "$BUILD_DIR"
-  sudo make install
+  make install
   
   # Verify installation
   if command -v nvim >/dev/null 2>&1; then
